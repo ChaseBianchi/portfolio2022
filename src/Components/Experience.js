@@ -2,7 +2,7 @@ import React from 'react'
 
 function Experience() {
   return (
-    <div className="comp-wrapper">
+    <div id='experience' className="comp-wrapper">
         <div>Experience</div>
     </div>
   )

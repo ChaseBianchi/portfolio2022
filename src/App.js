@@ -4,6 +4,7 @@ import Experience from './Components/Experience';
 import About from './Components/About';
 import Footer from './Components/Footer';
 import Nav from './Components/Nav';
+import Connect from './Components/Connect';
 import './App.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Projects/>
       <Experience />
       <About />
+      <Connect />
       <Footer />
     </div>
   );

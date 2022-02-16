@@ -2,7 +2,7 @@ import React from 'react'
 
 function About() {
   return (
-    <div className="comp-wrapper">
+    <div id='about' className="comp-wrapper">
         <div>About</div>
     </div>
   )
