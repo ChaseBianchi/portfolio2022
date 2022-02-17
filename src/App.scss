@@ -101,11 +101,15 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
+
 #nav a {
   text-decoration: none;
   color: white;
   font-size: 3rem;
 }
+
+// ARROW ANIMATION
+// https://codepen.io/z-/pen/BoyXKr
 $size: 30px;
 $speed: 3s;
 $peakopacity:0.7;
@@ -163,6 +167,8 @@ $peakopacity:0.7;
   }
 }
 
+
+// MEDIA QUERIES
 @media screen and (max-width: 768px) {
   .bm-burger-button {
     width: 45px;

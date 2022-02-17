@@ -1,33 +1,47 @@
 import React, {useState, useEffect} from 'react'
-import {Random} from 'react-animated-text'
+import {Random, Wave} from 'react-animated-text'
 
 
 function WebDev() {
-    const [state, setState] = useState({date: Date.now(), opacity: '1'});
+    const [bool, setBool] = useState(true)
+    
+    useEffect(()=>{
+        setTimeout(() => {
+            setBool(false)
+        }, 4000);
+    },[])
+
     const titleStyle={
         fontSize: '2rem',
-        opacity: `${state.opacity}`,
         marginBottom: '80px',
         transition: 'opacity 2s linear 2s'
     }
 
-    useEffect(() => {
-    
-    const interval2 = setInterval(() => setState({opacity: '1', date: Date.now()}), 5000);
-    return () => {
-        clearInterval(interval2);
-    };
-    }, []);
+    const mouseOver = () => setBool(true)
+    // const mouseExit = () => setBool(true)
+
   return (
-    <div style={titleStyle} className="textwrapper">
+    <div onMouseOver={mouseOver} style={titleStyle} className="textwrapper">
+            {bool 
+            ?
             <Random 
             text='Fullstack Web Developer'
-            //   paused={this.state.paused}
             iterations={1}
-            effect="verticalFadeIn"
-            effectChange={2}
+            effect='verticalFadeIn'
+            effectChange={7}
             effectDirection="up"
+            effectDuration='2'
             />
+            :
+            <Wave
+            text='Fullstack Web Developer'
+            effect="verticalFadeOut"
+            effectChange={2.5}
+            effectDirection='down'
+            iterations={1}
+            />
+            }
+            
         </div>
   )
 }
