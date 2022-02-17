@@ -5,7 +5,7 @@ import About from './Components/About';
 import Footer from './Components/Footer';
 import Nav from './Components/Nav';
 import Connect from './Components/Connect';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
