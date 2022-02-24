@@ -1,5 +1,4 @@
 import React from 'react'
-
 // {
 //     name: 'Reddit Bot',
 //     date: 'Feb 2022',
@@ -16,7 +15,8 @@ function ProjectTile(props) {
   console.log(name)
   return (
     <div className="projectTileContainer">
-        
+        {name}
+        <img src={`/media/${image}`} alt={name} />
     </div>
   )
 }

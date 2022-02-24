@@ -32,22 +32,74 @@ html{scroll-behavior:smooth}
 h1 {
   font-size: 4rem;
 }
+
 #projects{
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   background-color: #353a44;
+  width: 100%;
+  height: 800px;
+  align-items: center;
 }
 #projects h2{
   width: 100%;
   text-align: center;
   font-size: 2rem;
 }
+.projectContainer{
+  width: 90%;
+  // border: 1px solid rgb(79, 79, 102);
+  border-radius: 10px;
+  // background-color: rgba(0, 0, 0, 0.1);
+  // box-shadow: 5px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+.arrowWrapper{
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+
+}
+.arrow {
+  border: solid rgb(255, 255, 255);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+
+}
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.leftArrowWrapper{
+  margin-left: 8px;
+  left: 0;
+}
+.rightArrowWrapper{
+  margin-right: 8px;
+  right: 0;
+}
 .projectTileContainer{
-  width: 300px;
+  width: 100%;
   height: 400px;
-  background-color: #72778d;
+  // background-color: #72778d;
   margin: 20px;
 }
+
 
 /* Position and sizing of burger button */
 .bm-burger-button {

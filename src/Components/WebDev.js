@@ -5,11 +5,11 @@ import {Random, Wave} from 'react-animated-text'
 function WebDev() {
     const [bool, setBool] = useState(true)
     
-    useEffect(()=>{
-        setTimeout(() => {
-            setBool(false)
-        }, 4000);
-    },[])
+    // useEffect(()=>{
+    //     setTimeout(() => {
+    //         setBool(false)
+    //     }, 4000);
+    // },[])
 
     const titleStyle={
         fontSize: '2rem',
@@ -17,11 +17,11 @@ function WebDev() {
         transition: 'opacity 2s linear 2s'
     }
 
-    const mouseOver = () => setBool(true)
+    // const mouseOver = () => setBool(true)
     // const mouseExit = () => setBool(true)
 
   return (
-    <div onMouseOver={mouseOver} style={titleStyle} className="textwrapper">
+    <div /*onMouseOver={mouseOver}*/ style={titleStyle} className="textwrapper">
             {bool 
             ?
             <Random 
