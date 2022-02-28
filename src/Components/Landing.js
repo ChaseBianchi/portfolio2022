@@ -3,7 +3,7 @@ import {Random} from 'react-animated-text'
 import WebDev from './WebDev'
 
 const nameStyle={
-    fontSize: '4rem'
+    fontSize: '3rem'
 }
 
 

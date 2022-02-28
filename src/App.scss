@@ -1,4 +1,6 @@
-html{scroll-behavior:smooth}
+html {
+  scroll-behavior: smooth;
+}
 .App {
   width: 100%;
   height: 100%;
@@ -6,6 +8,14 @@ html{scroll-behavior:smooth}
   flex-flow: column nowrap;
   position: relative;
   color: #d7dfff;
+}
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.deadLink {
+  text-decoration: line-through;
+  color: white;
 }
 #nav {
   position: absolute;
@@ -33,33 +43,34 @@ h1 {
   font-size: 4rem;
 }
 
-#projects{
+#projects {
   display: flex;
   flex-flow: column nowrap;
   background-color: #353a44;
   width: 100%;
-  height: 800px;
+  height: auto;
+  padding-bottom: 100px;
   align-items: center;
 }
-#projects h2{
+#projects h2 {
   width: 100%;
   text-align: center;
   font-size: 2rem;
 }
-.projectContainer{
+.projectContainer {
   width: 90%;
-  // border: 1px solid rgb(79, 79, 102);
+  border: 1px solid rgb(61, 61, 82);
   border-radius: 10px;
-  // background-color: rgba(0, 0, 0, 0.1);
-  // box-shadow: 5px 8px rgba(0, 0, 0, 0.2);
-  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-evenly;
   position: relative;
 }
-.arrowWrapper{
+
+.arrowWrapper {
   width: 30px;
   height: 30px;
   border: 1px solid white;
@@ -68,14 +79,12 @@ h1 {
   align-items: center;
   justify-content: center;
   position: absolute;
-
 }
 .arrow {
   border: solid rgb(255, 255, 255);
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
-
 }
 .right {
   transform: rotate(-45deg);
@@ -85,19 +94,94 @@ h1 {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
 }
-.leftArrowWrapper{
+.leftArrowWrapper {
   margin-left: 8px;
   left: 0;
 }
-.rightArrowWrapper{
+.rightArrowWrapper {
   margin-right: 8px;
   right: 0;
 }
-.projectTileContainer{
+.projectTileContainer {
   width: 100%;
-  height: 400px;
-  // background-color: #72778d;
+  height: 100%;
+  // border: 1px solid red;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  margin: 0 40px;
+  padding: 10px;
+}
+.projName {
+  font-size: 1.75rem;
+  font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 5px;
+  // padding: 0;
+  margin: 0;
+}
+.projectImg {
+  object-fit: contain;
+  overflow: hidden;
+  // max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+}
+.imgWrapper {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border: 2px solid rgb(204, 204, 204);
   margin: 20px;
+  margin-top: 30px;
+}
+.github {
+  border-radius: 50%;
+  border: 2px solid rgb(121, 120, 120);
+}
+.projectBody {
+  display: flex;
+  // height: 100%;
+  max-width: 500px;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  // border: 1px solid green;
+  margin: 20px;
+}
+
+#experience {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #282C34;
+  width: 100%;
+  height: auto;
+  padding-bottom: 100px;
+  align-items: center;
+}
+
+#about {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #353a44;
+  width: 100%;
+  height: auto;
+  padding-bottom: 100px;
+  align-items: center;
+}
+
+#connect {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #282C34;
+  width: 100%;
+  height: auto;
+  padding-bottom: 100px;
+  align-items: center;
 }
 
 
@@ -181,61 +265,61 @@ Note: Beware of modifying this element as it can break the animations - you shou
 // https://codepen.io/z-/pen/BoyXKr
 $size: 30px;
 $speed: 3s;
-$peakopacity:0.7;
+$peakopacity: 0.7;
 .arrows {
   // position: relative;
   /**/
   position: absolute;
-  top:90%;
-  left:48%;
+  top: 90%;
+  left: 48%;
   /**/
-  width:$size;
-  height:$size;
-  transform:translate(-50%,-50%);
+  width: $size;
+  height: $size;
+  transform: translate(-50%, -50%);
   &:before {
     content: '';
     position: absolute;
-    width:100%;
-    height:100%;
-    border-left:$size/3 solid rgba(0,0,0,$peakopacity);
-    border-bottom:$size/3 solid rgba(0,0,0,$peakopacity);
-    transform:translate($size/3,$size*4/3)rotate(-45deg);
+    width: 100%;
+    height: 100%;
+    border-left: $size/3 solid rgba(0, 0, 0, $peakopacity);
+    border-bottom: $size/3 solid rgba(0, 0, 0, $peakopacity);
+    transform: translate($size/3, $size * 4/3) rotate(-45deg);
     animation: arrows $speed linear infinite;
   }
   &:after {
     content: '';
     position: absolute;
-    width:100%;
-    height:100%;
-    border-left:$size/3 solid rgba(0,0,0,$peakopacity);
-    border-bottom:$size/3 solid rgba(0,0,0,$peakopacity);
-    transform:translate($size*2/3,0px)rotate(-45deg) ;
+    width: 100%;
+    height: 100%;
+    border-left: $size/3 solid rgba(0, 0, 0, $peakopacity);
+    border-bottom: $size/3 solid rgba(0, 0, 0, $peakopacity);
+    transform: translate($size * 2/3, 0px) rotate(-45deg);
     animation: arrows $speed linear infinite $speed/-2;
   }
 }
 
 @keyframes arrows {
   0% {
-      border-left:$size/3 solid rgba(0,0,0,0);
-      border-bottom: $size/3 solid rgba(0,0,0,0);
-      transform: translate($size/-6,$size*4/-6)rotate(-45deg) ;
+    border-left: $size/3 solid rgba(0, 0, 0, 0);
+    border-bottom: $size/3 solid rgba(0, 0, 0, 0);
+    transform: translate($size/-6, $size * 4/-6) rotate(-45deg);
   }
-  10%, 90% {
-      border-left:$size/3 solid rgba(0,0,0,0);
-      border-bottom:$size/3 solid rgba(0,0,0,0);
+  10%,
+  90% {
+    border-left: $size/3 solid rgba(0, 0, 0, 0);
+    border-bottom: $size/3 solid rgba(0, 0, 0, 0);
   }
   50% {
-      border-left:$size/3 solid rgba(0,0,0,$peakopacity);
-      border-bottom:$size/3 solid rgba(0,0,0,$peakopacity);
-      transform:translate($size/-6,0px)rotate(-45deg) ;
+    border-left: $size/3 solid rgba(0, 0, 0, $peakopacity);
+    border-bottom: $size/3 solid rgba(0, 0, 0, $peakopacity);
+    transform: translate($size/-6, 0px) rotate(-45deg);
   }
   100% {
-      border-left:$size/3 solid rgba(0,0,0,0);
-      border-bottom:$size/3 solid rgba(0,0,0,0);
-      transform:translate($size/-6,$size*4/6)rotate(-45deg) ;
+    border-left: $size/3 solid rgba(0, 0, 0, 0);
+    border-bottom: $size/3 solid rgba(0, 0, 0, 0);
+    transform: translate($size/-6, $size * 4/6) rotate(-45deg);
   }
 }
-
 
 // MEDIA QUERIES
 @media screen and (max-width: 768px) {
@@ -244,5 +328,11 @@ $peakopacity:0.7;
     height: 30px;
     left: 30px;
     top: 30px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 2rem;
   }
 }

@@ -15,8 +15,18 @@ function ProjectTile(props) {
   console.log(name)
   return (
     <div className="projectTileContainer">
-        {name}
-        <img src={`/media/${image}`} alt={name} />
+        <h3 className='projName'>{name}</h3>
+        <div className="imgWrapper">
+          <img className='projectImg' src={`/media/${image}`} alt={name} />
+        </div>
+        
+        <div className="projectBody"> 
+          
+          {desc ? <p className="desc">{desc}</p> : {}}
+          {tech ? <p className="tech">Stack: {tech}</p> : {}}
+          <span>View at {git ? <a target='_blank' href={git} className="git">GITHUB</a> : <span className='deadLink'></span>} or {deploy ? <a target='_blank' href={deploy} className="git">DEPLOYED</a> : <span className='deadLink'>DEPLOYED</span>}</span>
+
+        </div>
     </div>
   )
 }
