@@ -20,7 +20,7 @@ const projectArr = [
         date: 'Nov 2021',
         dev: 'fullstack',
         tech: 'Javascript, React, API, chart.js, styled components',
-        desc: 'Read CSV file, query HUBZone, perform web scraping, and return results in a printable report',
+        desc: 'Read CSV file, query HUBZone database, web scrape results, and compile data in a printable report',
         video: '',
         image: 'hubzone.png',
         git: '',
@@ -79,12 +79,12 @@ function Projects() {
     const filteredProjects = projectArr.filter(proj => proj.id>=slideIndex)
   return (
     <div id='projects' className="comp-wrapper">
-        <h2>PROJECTS</h2>            
-        <div onClick={handleLeftArrow} style={slideIndex===0 ? {opacity: '50%'} : {opacity: '100%'}}className="arrowWrapper leftArrowWrapper"><i class="arrow left"></i></div>
+        <h2>projects</h2>            
+        <div onClick={handleLeftArrow} style={slideIndex===0 ? {opacity: '50%'} : {opacity: '100%'}}className="arrowWrapper leftArrowWrapper"><i className="arrow left"></i></div>
         <div className="projectContainer">
-                {filteredProjects.map(proj=><ProjectTile data={proj}/>)}
+                {filteredProjects.map(proj=><ProjectTile key={proj.id} data={proj}/>)}
         </div>
-        <div onClick={handleRightArrow} style={slideIndex===projectArr.length-1 ? {opacity: '50%'} : {opacity: '100%'}} className="arrowWrapper rightArrowWrapper"><i class="arrow right"></i></div>
+        <div onClick={handleRightArrow} style={slideIndex===projectArr.length-1 ? {opacity: '50%'} : {opacity: '100%'}} className="arrowWrapper rightArrowWrapper"><i className="arrow right"></i></div>
     </div>
   )
 }

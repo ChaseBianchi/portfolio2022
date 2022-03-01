@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
 html {
   scroll-behavior: smooth;
 }
@@ -40,7 +41,8 @@ a {
   justify-content: center;
 }
 h1 {
-  font-size: 4rem;
+  font-size: 4rem; 
+  
 }
 
 #projects {
@@ -53,11 +55,12 @@ h1 {
   align-items: center;
   position: relative;
 }
-#projects h2 {
+.comp-wrapper h2 {
   width: 100%;
   text-align: center;
   font-size: 2rem;
-}
+  text-transform: capitalize;
+  font-family: 'Bad Script', cursive;}
 
 
 .arrowWrapper {
@@ -202,6 +205,25 @@ span.tileLinks *{
   height: auto;
   padding-bottom: 100px;
   align-items: center;
+}
+.verticalTimeline{
+  width: 100%;
+  height: auto;
+}
+.iconWrapper{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.workImg{
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+
+}
+.date{
+  color: white;
 }
 
 #about {

@@ -1,9 +1,14 @@
 import React from 'react'
 import {Random} from 'react-animated-text'
-import WebDev from './WebDev'
 
 const nameStyle={
-    fontSize: '3rem'
+    fontSize: '3rem',
+    fontFamily: `'Bad Script', cursive`
+}
+const titleStyle={
+  fontSize: '2rem',
+  marginBottom: '80px',
+  transition: 'opacity 2s linear 2s'
 }
 
 
@@ -22,8 +27,19 @@ function Landing() {
             effectDuration='0.9'
             />
         </div>
-        <WebDev />
-        <div class="arrows"></div>
+        <div style={titleStyle} className="textwrapper">
+            
+            <Random 
+            text='Fullstack Web Developer'
+            iterations={1}
+            effect='verticalFadeIn'
+            effectChange={7}
+            effectDirection="up"
+            effectDuration='2'
+            />
+           
+        </div>
+        <div className="arrows"></div>
     </div>
   )
 }
