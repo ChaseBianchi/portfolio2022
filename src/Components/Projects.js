@@ -3,6 +3,7 @@ import ProjectTile from './ProjectTile'
 
 const projectArr = [
     {
+        id: 0,
         name: 'Reddit Bot',
         date: 'Feb 2022',
         dev: 'backend',
@@ -14,21 +15,23 @@ const projectArr = [
         deploy: 'https://www.reddit.com/user/Diablo-Bot/',
     },
     {
-        name: 'Boys & Girls Club Emotion Tracker',
-        date: 'Mar 2021',
+        id: 1,
+        name: 'HUBZone Check',
+        date: 'Nov 2021',
         dev: 'fullstack',
-        tech: 'Javascript, React, Java, Spring, Okta',
-        desc: 'Application allows children to provide real-time feedback on their experiences at club, giving staff actionable data',
+        tech: 'Javascript, React, API, chart.js, styled components',
+        desc: 'Read CSV file, query HUBZone, perform web scraping, and return results in a printable report',
         video: '',
-        image: 'bgclublarge.png',
-        git: 'https://github.com/Lambda-School-Labs/bg-emotion-tracker-fe-b',
-        deploy: '',
+        image: 'hubzone.png',
+        git: '',
+        deploy: 'https://hubzone-check.vercel.app/',
     },
     {
+        id: 2,
         name: 'Diablo II Armory',
         date: 'Sep 2021',
         dev: 'frontend',
-        tech: 'Javascript, React',
+        tech: 'Javascript, React, Semantic UI, Styled Components',
         desc: 'An intuitive tool giving D2 players a resource to test builds with customizable stats, skills, and items',
         video: '',
         image: 'd2armorybig.png',
@@ -36,11 +39,25 @@ const projectArr = [
         deploy: 'https://diablo2-armory.vercel.app/',
     },
     {
+        id: 3,
+        name: 'Boys & Girls Club',
+        date: 'Mar 2021',
+        dev: 'fullstack',
+        tech: 'Javascript, React, Java, Spring, Okta',
+        desc: 'Emotion tracking app allows children to provide real-time feedback on their experiences at club, giving staff actionable data',
+        video: '',
+        image: 'bgclublarge.png',
+        git: 'https://github.com/Lambda-School-Labs/bg-emotion-tracker-fe-b',
+        deploy: '',
+    },
+    
+    {
+        id: 4,
         name: 'Potluck Planner',
         date: 'Mar 2021',
         dev: 'frontend',
         tech: 'Javascript, React',
-        desc: 'Application for scheduling and maintaining potlucks',
+        desc: 'Application for scheduling, organizing, maintaining, and sharing potluck events',
         video: '',
         image: 'potluckplanner.png',
         git: 'https://github.com/PotLuck-BuildWeek-web38/frontend/tree/main/frontend',
@@ -59,14 +76,16 @@ function Projects() {
     const handleRightArrow = ()=>{
         if(slideIndex!==projectArr.length-1){setSlideIndex(slideIndex+1)} 
     }
+    const filteredProjects = projectArr.filter(proj => proj.id>=slideIndex)
   return (
     <div id='projects' className="comp-wrapper">
-        <h2>PROJECTS</h2>
+        <h2>PROJECTS</h2>            
+        <div onClick={handleLeftArrow} style={slideIndex===0 ? {opacity: '50%'} : {opacity: '100%'}}className="arrowWrapper leftArrowWrapper"><i class="arrow left"></i></div>
         <div className="projectContainer">
-            <div onClick={handleLeftArrow} style={slideIndex===0 ? {opacity: '50%'} : {opacity: '100%'}}className="arrowWrapper leftArrowWrapper"><i class="arrow left"></i></div>
-                <ProjectTile data={projectArr[slideIndex]}/>
-            <div onClick={handleRightArrow} style={slideIndex===projectArr.length-1 ? {opacity: '50%'} : {opacity: '100%'}} className="arrowWrapper rightArrowWrapper"><i class="arrow right"></i></div>
+                {filteredProjects.map(proj=><ProjectTile data={proj}/>)}
+                {/* <ProjectTile data={projectArr[slideIndex]}/> */}
         </div>
+        <div onClick={handleRightArrow} style={slideIndex===projectArr.length-1 ? {opacity: '50%'} : {opacity: '100%'}} className="arrowWrapper rightArrowWrapper"><i class="arrow right"></i></div>
     </div>
   )
 }
