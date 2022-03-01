@@ -32,7 +32,7 @@ const projectArr = [
         date: 'Sep 2021',
         dev: 'frontend',
         tech: 'Javascript, React, Semantic UI, Styled Components',
-        desc: 'An intuitive tool giving D2 players a resource to test builds with customizable stats, skills, and items',
+        desc: 'Intuitive tool giving D2 players a resource to test builds with customizable stats, skills, and items',
         video: '',
         image: 'd2armorybig.png',
         git: 'https://github.com/ChaseBianchi/Diablo2-Armory',
@@ -83,7 +83,6 @@ function Projects() {
         <div onClick={handleLeftArrow} style={slideIndex===0 ? {opacity: '50%'} : {opacity: '100%'}}className="arrowWrapper leftArrowWrapper"><i class="arrow left"></i></div>
         <div className="projectContainer">
                 {filteredProjects.map(proj=><ProjectTile data={proj}/>)}
-                {/* <ProjectTile data={projectArr[slideIndex]}/> */}
         </div>
         <div onClick={handleRightArrow} style={slideIndex===projectArr.length-1 ? {opacity: '50%'} : {opacity: '100%'}} className="arrowWrapper rightArrowWrapper"><i class="arrow right"></i></div>
     </div>
