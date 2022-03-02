@@ -44,6 +44,44 @@ h1 {
   font-size: 4rem; 
   
 }
+.landingEmail{
+  padding: 6px 13px 10px;
+}
+.emailWrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // margin: 0 10px;
+}
+// .emailWrapper :hover{
+//   background-color: rgba(255, 255, 255, 0.25);
+//   // border: 1px solid rgb(121, 120, 120)
+// }
+.landingBar{
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.linkedinLogo{
+  width: 30px;
+  height: 30px;
+}
+.linkedinWrapper{
+  // border: 1px solid red;
+  width: 50px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background-color: rgba(255, 255, 255, 0.25);
+
+}
+.navHover :hover{
+  background-color: rgba(255, 255, 255, 0.25);
+}
 
 #projects {
   display: flex;
@@ -194,7 +232,7 @@ span.tileLinks *{
   position: absolute;
   bottom: 0;
   right: 15px;
-  
+  color: black;
 }
 
 #experience {
@@ -222,7 +260,7 @@ span.tileLinks *{
   height: 100%;
 
 }
-.date{
+.tlDate{
   color: white;
 }
 

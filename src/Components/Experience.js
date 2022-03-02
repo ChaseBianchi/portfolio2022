@@ -12,7 +12,7 @@ function Experience() {
         <VerticalTimeline className='verticalTimeline'>
           <VerticalTimelineElement
           date='Sep 2021 - present'
-          dateClassName='date'
+          dateClassName='tlDate'
           contentStyle={{backgroundColor: '#D8DBDB', color: 'black'}}
           contentArrowStyle={{borderRight: '7px solid #D8DBDB'}}
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
@@ -25,7 +25,7 @@ function Experience() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
           date='May 2021 - Aug 2021'
-          dateClassName='date'
+          dateClassName='tlDate'
           contentStyle={{backgroundColor: '#D8DBDB', color: 'black',}}
           contentArrowStyle={{borderRight: '7px solid #D8DBDB'}}
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
@@ -38,7 +38,7 @@ function Experience() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
           date='Dec 2020 - May 2021'
-          dateClassName='date'
+          dateClassName='tlDate'
           contentStyle={{backgroundColor: '#D8DBDB', color: 'black'}}
           contentArrowStyle={{borderRight: '7px solid #D8DBDB'}}
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
@@ -49,7 +49,7 @@ function Experience() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
           date='2009 - 2020'
-          dateClassName='date'
+          dateClassName='tlDate'
           contentStyle={{backgroundColor: '#D8DBDB', color: 'black'}}
           contentArrowStyle={{borderRight: '7px solid #D8DBDB'}}
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
@@ -61,7 +61,7 @@ function Experience() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
           date='2006'
-          dateClassName='date'
+          dateClassName='tlDate'
           contentStyle={{backgroundColor: '#D8DBDB', color: 'black'}}
           contentArrowStyle={{borderRight: '7px solid #D8DBDB'}}
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
@@ -69,8 +69,8 @@ function Experience() {
           >
             <h3 className="timelineTitle">Golden High School</h3>
             <h4 className="timelineSubtitle">Diploma</h4>
-            <li>3.1 GPA</li>
-            <li>earned college graphics arts credits</li>
+            {/* <li>3.1 GPA</li>
+            <li>earned college graphics arts credits</li> */}
           </VerticalTimelineElement>
         </VerticalTimeline>
     </div>
