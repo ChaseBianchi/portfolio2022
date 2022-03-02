@@ -60,7 +60,7 @@ function Experience() {
             <p>World Series of Poker bracelet winner with net profits over 2 million dollars, highly self motivated, and performed under a high level of pressure</p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
-          date='Dec 2020 - May 2021'
+          date='2006'
           dateClassName='date'
           contentStyle={{backgroundColor: '#D8DBDB', color: 'black'}}
           contentArrowStyle={{borderRight: '7px solid #D8DBDB'}}
@@ -70,7 +70,7 @@ function Experience() {
             <h3 className="timelineTitle">Golden High School</h3>
             <h4 className="timelineSubtitle">Diploma</h4>
             <li>3.1 GPA</li>
-            <li>higher education and honors classes</li>
+            <li>earned college graphics arts credits</li>
           </VerticalTimelineElement>
         </VerticalTimeline>
     </div>
