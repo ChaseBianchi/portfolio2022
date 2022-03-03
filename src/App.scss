@@ -96,7 +96,6 @@ h1 {
   width: 100%;
   text-align: center;
   font-size: 2rem;
-  text-transform: capitalize;
   font-family: 'Bad Script', cursive;}
 
 
@@ -271,7 +270,58 @@ span.tileLinks *{
   height: auto;
   padding-bottom: 100px;
   align-items: center;
+  position: relative;
 }
+.aboutContainer{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.textContainer{
+  width: 60%;
+}
+.headshotContainer{
+  width: 30vw;
+  height: 30vw;
+  max-width: 300px;
+  max-height: 300px;
+  border: 3px solid #f3f5ff;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.textContainer h3{
+  font-size: 2rem;
+  margin: 0;
+}
+.textContainer h4{
+  margin: 0 0 30px;
+}
+
+.headshot{
+  object-fit: contain;
+  height: 100%;
+}
+.downloadResume{
+  margin-top: 40px;
+  width: 110px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: rgb(103, 167, 209);
+  border: 1px solid rgb(196, 217, 255);
+  color: white;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 3px;
+}
+
 
 #connect {
   display: flex;
@@ -423,8 +473,11 @@ $peakopacity: 0.7;
 // MEDIA QUERIES
 @media screen and (max-width: 1169px) {
   #experience{
-    height: 1150px;
+    height: 1280px;
   }  
+  .tlDate{
+    color: black
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -438,8 +491,17 @@ $peakopacity: 0.7;
     width: 80%;
   }
   #experience{
-    height: 1250px;
+    height: 1400px;
   }  
+  .aboutContainer{
+    flex-flow: column nowrap;
+  }
+  .headshotContainer{
+    order: 1
+  }
+  .textContainer{
+    order: 2
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -450,7 +512,7 @@ $peakopacity: 0.7;
     min-width: 95%;
   }
   #experience{
-    height: 1350px;
+    height: 1450px;
   }  
 }
 

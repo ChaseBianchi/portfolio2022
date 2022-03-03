@@ -79,7 +79,7 @@ function Projects() {
     const filteredProjects = projectArr.filter(proj => proj.id>=slideIndex)
   return (
     <div id='projects' className="comp-wrapper">
-        <h2>projects</h2>            
+        <h2>Projects</h2>            
         <div onClick={handleLeftArrow} style={slideIndex===0 ? {opacity: '50%'} : {opacity: '100%'}}className="arrowWrapper leftArrowWrapper"><i className="arrow left"></i></div>
         <div className="projectContainer">
                 {filteredProjects.map(proj=><ProjectTile key={proj.id} data={proj}/>)}
