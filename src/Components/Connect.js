@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import email from '../keys';
 
 function Connect() {
   const [message, setMessage] = useState('')
@@ -8,7 +7,6 @@ function Connect() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    const {templateId, serviceId, userId} = email
     emailjs.sendForm(serviceId, templateId, form.current, userId)
       .then((result) => {
           console.log(result.text);
