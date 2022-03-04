@@ -22,7 +22,7 @@ function About() {
             <p>
               Product & Design: Github, Jest, Cypress, Photoshop
             </p>
-            <a className='resumeLink' href="https://docs.google.com/document/d/1sPv5t-3fQUyT_rUwn4W-efEjQEq0vPhYJL1j4UbRq9s/edit?usp=sharing" target='_blank' rel='noreferrer'>
+            <a classname='resumeLink' href="https://docs.google.com/document/d/1sPv5t-3fQUyT_rUwn4W-efEjQEq0vPhYJL1j4UbRq9s/edit?usp=sharing" target='_blank' rel='noreferrer'>
               <div className='downloadResume'>Resume</div>
             </a>
             

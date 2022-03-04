@@ -42,7 +42,7 @@ function Landing() {
           effect="verticalFadeIn"
           effectChange={5}
           effectDirection="up"
-          effectDuration={0.9}
+          effectDuration='0.9'
           />
       </div>
       <div style={titleStyle} className="textwrapper">
@@ -53,7 +53,7 @@ function Landing() {
           effect='verticalFadeIn'
           effectChange={7}
           effectDirection="up"
-          effectDuration={2}
+          effectDuration='2'
           />
           
       </div>

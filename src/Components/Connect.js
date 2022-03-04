@@ -1,18 +1,13 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import email from '../keys';
 
-const temp = process.env.REACT_APP_templateId
-const service = process.env.REACT_APP_serviceId
-const user = process.env.REACT_APP_userId
 function Connect() {
   const [message, setMessage] = useState('')
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-    const {templateId, serviceId, userId} = email
-    emailjs.sendForm(service, temp, form.current, user)
+    emailjs.sendForm(serviceId, templateId, form.current, userId)
       .then((result) => {
           console.log(result.text);
           setMessage('Message sent. Talk to you soon!')
