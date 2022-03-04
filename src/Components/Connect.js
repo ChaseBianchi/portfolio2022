@@ -33,7 +33,7 @@ function Connect() {
       <label>Message</label>
       <textarea name="message" />
       <input className='submitBtn' type="submit" value="Send" />
-      <p>{message}</p>
+      <p className='messageNotification'>{message}</p>
     </form>
     </div>
   )

@@ -334,7 +334,7 @@ span.tileLinks *{
   height: auto;
   padding-bottom: 100px;
   align-items: center;
-  // padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 .connectForm{
   display: flex;
@@ -358,6 +358,11 @@ span.tileLinks *{
 }
 .submitBtn{
   margin: 15px;
+}
+.messageNotification{
+  height: 30px;
+  margin: 0;
+  padding: 0;
 }
 #footer{
   display: flex;
