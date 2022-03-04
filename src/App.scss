@@ -294,6 +294,12 @@ span.tileLinks *{
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+.headshot{
+  object-fit: contain;
+  height: 100%;
 }
 .textContainer h3{
   font-size: 2rem;
@@ -303,10 +309,7 @@ span.tileLinks *{
   margin: 0 0 30px;
 }
 
-.headshot{
-  object-fit: contain;
-  height: 100%;
-}
+
 .downloadResume{
   margin-top: 40px;
   width: 110px;
@@ -332,7 +335,29 @@ span.tileLinks *{
   padding-bottom: 100px;
   align-items: center;
 }
-
+.connectForm{
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.connectForm input{
+  width: 50%;
+  max-width: 150px;
+  margin-bottom: 10px;
+}
+.connectForm label{
+  margin-bottom: 10px;
+}
+.connectForm textarea{
+  width: 80%;
+  max-width: 400px;
+  min-height: 80px;
+}
+.submitBtn{
+  margin: 15px;
+}
 
 /* Position and sizing of burger button */
 .bm-burger-button {

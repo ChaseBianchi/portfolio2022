@@ -16,7 +16,7 @@ function App() {
       <Experience />
       <About />
       <Connect />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
