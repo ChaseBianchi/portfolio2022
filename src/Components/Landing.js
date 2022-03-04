@@ -32,7 +32,6 @@ function Landing() {
             <img className='linkedinLogo' src="/media/github2.png" alt="github" />
           </a>
         </div>
-
       </div>
       <div style={nameStyle} className="textwrapper">
           <Random 

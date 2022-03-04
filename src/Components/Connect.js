@@ -35,9 +35,7 @@ function Connect() {
       <input className='submitBtn' type="submit" value="Send" />
       <p>{message}</p>
     </form>
-
     </div>
-    
   )
 }
 
