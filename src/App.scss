@@ -2,6 +2,9 @@
 html {
   scroll-behavior: smooth;
 }
+html, body {
+  overflow-x:hidden 
+}
 .App {
   width: 100%;
   height: 100%;
@@ -23,6 +26,7 @@ a {
   left: 0;
   top: 0;
   color: white;
+  width: 100px;
 }
 .comp-wrapper {
   width: 100%;
@@ -55,11 +59,14 @@ h1 {
 }
 .landingBar{
   position: absolute;
-  top: 15px;
-  right: 30px;
+  top: 2vw;
+  right: 2vw;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+  justify-content: flex-end;
+  width: 50%;
+  // border: 1px solid white;
 }
 .linkedinLogo{
   width: 30px;
@@ -152,7 +159,8 @@ h1 {
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  margin: 0 20px 0 10px;
+  // margin: 0 20px 0 10px;
+  margin-right: 30px;
   color: black;
   border: 1px solid rgb(61, 61, 82);
   background-color: rgb(216, 219, 219);
@@ -386,8 +394,8 @@ span.tileLinks *{
   position: fixed;
   width: 60px;
   height: 40px;
-  left: 30px;
-  top: 30px;
+  left: 2vw;
+  top: 2vw;
 }
 
 /* Color/shape of burger icon bars */
@@ -519,9 +527,9 @@ $peakopacity: 0.7;
 
 // MEDIA QUERIES
 @media screen and (max-width: 1169px) {
-  #experience{
-    height: 1280px;
-  }  
+  // #experience{
+  //   height: 1280px;
+  // }  
   .tlDate{
     color: black
   }
@@ -537,9 +545,9 @@ $peakopacity: 0.7;
   .projectContainer{
     width: 80%;
   }
-  #experience{
-    height: 1400px;
-  }  
+  // #experience{
+  //   height: 1400px;
+  // }  
   .aboutContainer{
     flex-flow: column nowrap;
   }
@@ -556,10 +564,10 @@ $peakopacity: 0.7;
     font-size: 2rem;
   }
   .projectTileContainer{
-    min-width: 95%;
+    min-width: 99%;
   }
-  #experience{
-    height: 1450px;
-  }  
+  // #experience{
+  //   height: 1450px;
+  // }  
 }
 
