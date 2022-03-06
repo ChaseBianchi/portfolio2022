@@ -23,7 +23,7 @@ function ProjectTile(props) {
         <div className="projectBody"> 
           {tech ? <p className="tech">{tech}</p> : {}}
           {desc ? <p className="desc">{desc}</p> : {}}
-          <span className='tileLinks'>View {git ? <a target='_blank' href={git} className="git">GITHUB</a> : <span className='deadLink'>GITHUB</span>} or {deploy ? <a target='_blank' href={deploy} className="git">DEPLOYED</a> : <span className='deadLink'>DEPLOYED</span>}</span>
+          <span className='tileLinks'>{git ? <a target='_blank' href={git} className="git">GITHUB</a> : ''} {deploy ? <a target='_blank' href={deploy} className="git">DEPLOYED</a> : ''}</span>
 
         </div>
     </div>

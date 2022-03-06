@@ -36,7 +36,6 @@ function Landing() {
       <div style={nameStyle} className="textwrapper">
           <Random 
           text='Chase Bianchi'
-          //   paused={this.state.paused}
           iterations={1}
           effect="verticalFadeIn"
           effectChange={5}
@@ -52,7 +51,7 @@ function Landing() {
           effect='verticalFadeIn'
           effectChange={7}
           effectDirection="up"
-          effectDuration='2'
+          effectDuration='1'
           />
           
       </div>

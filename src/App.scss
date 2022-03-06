@@ -213,9 +213,11 @@ h1 {
 .tileLinks{
   position: absolute;
   bottom: 35px;
+  left: 0;
   width: 100%;
-  text-align: left;
-  left: 35px;
+  display: flex;
+  justify-content: space-evenly;
+  // border: 1px solid red;
 }
 span.tileLinks *{
   color: rgb(8, 61, 175);
@@ -349,23 +351,46 @@ span.tileLinks *{
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 90%;
+  max-width: 500px;
+  // border: 1px solid red;
 }
 .connectForm input{
-  width: 50%;
-  max-width: 150px;
   margin-bottom: 10px;
 }
 .connectForm label{
   margin-bottom: 10px;
 }
 .connectForm textarea{
-  width: 80%;
-  max-width: 400px;
+  width: 100%;
+  // max-width: 400px;
   min-height: 80px;
+}
+.nameEmail{
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  // border: 1px solid green;
+  justify-content: space-between;
+  // align-items: space-between;
+}
+.email, .name, .message{
+  width: 45%;
+  display: flex;
+  flex-flow: column nowrap;
+  // border: 1px solid ;
+}
+.message{
+  width: 100%;
+}
+.submit{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .submitBtn{
   margin: 15px;
+  width: 120px;
 }
 .messageNotification{
   height: 30px;

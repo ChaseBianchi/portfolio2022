@@ -26,15 +26,25 @@ function Connect() {
     <div id='connect' className="comp-wrapper">
       <h2>Connect</h2>
       <form className='connectForm' ref={form} onSubmit={sendEmail}>
-      <label>Name</label>
-      <input type="text" name="name" />
-      <label>Email</label>
-      <input type="email" name="email" />
-      <label>Message</label>
-      <textarea name="message" />
-      <input className='submitBtn' type="submit" value="Send" />
-      <p className='messageNotification'>{message}</p>
-    </form>
+        <div className="nameEmail">
+          <div className="name">
+            <label>Name</label>
+            <input type="text" name="name" />
+          </div>
+          <div className="email">
+            <label>Email</label>
+            <input type="email" name="email" />
+          </div>
+        </div>
+        <div className="message">
+          <label>Message</label>
+          <textarea name="message" />
+        </div>
+        <div className="submit">
+          <input className='submitBtn' type="submit" value="Send" />
+        </div>
+        <p className='messageNotification'>{message}</p>
+      </form>
     </div>
   )
 }

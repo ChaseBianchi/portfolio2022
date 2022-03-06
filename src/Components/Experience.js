@@ -20,8 +20,8 @@ function Experience() {
           >
             <h3 className="timelineTitle">Fullstack Web Developer</h3>
             <h4 className="timelineSubtitle">Freelance</h4>
-            <li>End to end production, one man operation, problem solving, and getting it done</li>
-            <li>taking client needs from concept to deployment with clean code and attention to detail</li>
+            <li>End-to-end production, one-man operation</li>
+            <li>Taking client needs from concept to deployment with clean code and attention to detail</li>
           </VerticalTimelineElement>
           <VerticalTimelineElement
           date='May 2021 - Aug 2021'
