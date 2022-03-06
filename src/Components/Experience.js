@@ -59,7 +59,7 @@ function Experience() {
             <h4 className="timelineSubtitle">Self Employed</h4>
             <p>World Series of Poker bracelet winner with net profits over 2 million dollars, highly self motivated, and performed under a high level of pressure</p>
           </VerticalTimelineElement>
-          <VerticalTimelineElement
+          {/* <VerticalTimelineElement
           date='2006'
           dateClassName='tlDate'
           contentStyle={{backgroundColor: '#D8DBDB', color: 'black'}}
@@ -69,9 +69,7 @@ function Experience() {
           >
             <h3 className="timelineTitle">Golden High School</h3>
             <h4 className="timelineSubtitle">Diploma</h4>
-            {/* <li>3.1 GPA</li>
-            <li>earned college graphics arts credits</li> */}
-          </VerticalTimelineElement>
+          </VerticalTimelineElement> */}
         </VerticalTimeline>
     </div>
   )
