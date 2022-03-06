@@ -33,7 +33,9 @@ function Landing() {
           </a>
         </div>
       </div>
-      <div style={nameStyle} className="textwrapper">
+      <h1>Chase Bianchi</h1>
+      <h2>Fullstack Web Developer</h2>
+      {/* <div style={nameStyle} className="textwrapper">
           <Random 
           text='Chase Bianchi'
           iterations={1}
@@ -54,7 +56,7 @@ function Landing() {
           effectDuration='1'
           />
           
-      </div>
+      </div> */}
       <div className="arrows"></div>
     </div>
   )
