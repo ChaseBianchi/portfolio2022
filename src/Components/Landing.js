@@ -1,15 +1,15 @@
 import React from 'react'
-import {Random} from 'react-animated-text'
+// import {Random} from 'react-animated-text'
 
-const nameStyle={
-    fontSize: '3rem',
-    fontFamily: `'Bad Script', cursive`
-}
-const titleStyle={
-  fontSize: '2rem',
-  marginBottom: '80px',
-  transition: 'opacity 2s linear 2s'
-}
+// const nameStyle={
+//     fontSize: '3rem',
+//     fontFamily: `'Bad Script', cursive`
+// }
+// const titleStyle={
+//   fontSize: '2rem',
+//   marginBottom: '80px',
+//   transition: 'opacity 2s linear 2s'
+// }
 
 
 function Landing() {
