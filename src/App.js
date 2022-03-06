@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import Landing from './Components/Landing';
 import Projects from './Components/Projects';
 import Experience from './Components/Experience';
@@ -8,9 +9,12 @@ import Connect from './Components/Connect';
 import './App.scss';
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false)
+  const handleMenuClose = () => setIsOpen(false)
+  const handleMenuOpen = () => setIsOpen(true)
   return (
     <div className="App">
-      <Nav/>
+      <Nav isOpen={isOpen} handleMenuClose={handleMenuClose} handleMenuOpen={handleMenuOpen}/>
       <Landing />
       <Projects/>
       <Experience />

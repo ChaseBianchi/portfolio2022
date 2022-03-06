@@ -394,8 +394,8 @@ span.tileLinks *{
   position: fixed;
   width: 60px;
   height: 40px;
-  left: 2vw;
-  top: 2vw;
+  left: 3vw !important;
+  top: 3vw !important;
 }
 
 /* Color/shape of burger icon bars */
@@ -412,6 +412,7 @@ span.tileLinks *{
 .bm-cross-button {
   height: 24px;
   width: 24px;
+  right: 150px !important;
 }
 
 /* Color/shape of close button cross */
@@ -425,14 +426,15 @@ Note: Beware of modifying this element as it can break the animations - you shou
 */
 .bm-menu-wrap {
   position: fixed;
-  height: 100%;
+  height: 250px !important;
 }
 
 /* General sidebar styles */
 .bm-menu {
-  background: #373a47;
+  background: #373a47d7;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
+  width: 160px;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -443,16 +445,21 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Wrapper for item list */
 .bm-item-list {
   color: #b8b7ad;
-  /* padding: 0.8em; */
-  padding-left: 0.8em;
+  padding: 0em;
+  padding-left: 0em;
   display: flex;
   flex-flow: column nowrap;
+  
 }
 
 /* Individual item */
 .bm-item {
   display: inline-block;
+  // font-size: 2rem !important;
+  // border: 1px solid white;
+  width: 130px !important;
 }
+
 
 /* Styling of overlay */
 .bm-overlay {
@@ -462,7 +469,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 #nav a {
   text-decoration: none;
   color: white;
-  font-size: 3rem;
+  font-size: 1.5rem !important;
 }
 
 // ARROW ANIMATION
