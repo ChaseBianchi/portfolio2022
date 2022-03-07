@@ -14,7 +14,7 @@ function About() {
               Fullstack Web Development graduate from Bloom Institute of Technology.
             </p>
             <p>
-              Frontend: JavasSript, React, Redux, CSS, HTML
+              Frontend: JavaScript, React, Redux, CSS, HTML
             </p>
             <p>
               Backend: Java, Spring Framework, Python, SQL, Okta

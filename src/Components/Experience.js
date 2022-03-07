@@ -62,7 +62,6 @@ function Experience() {
             <h4 className="timelineSubtitle">Self Employed</h4>
             <li>World Series of Poker bracelet winner with net profits over 2 million dollars</li>
             <li>Studied with data visualization tools to create and refine strategies</li>
-            <li></li>
           </VerticalTimelineElement>
           {/* <VerticalTimelineElement
           date='2006'
