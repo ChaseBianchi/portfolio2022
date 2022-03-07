@@ -46,8 +46,9 @@ function Experience() {
           >
             <h3 className="timelineTitle">Bloom Institute of Technology</h3>
             <h4 className="timelineSubtitle">Fullstack Development & Computer Science</h4>
-            <li>6 month intensive bootcamp</li>
-            <li></li>
+            <li>6 month full-time program</li>
+            <li>JavaScript, React, Redux, Python, SQL, Java</li>
+            <li>Weekly sprints, monthly team build-week, concluding with 1 month working for Boys & Girls Club</li>
           </VerticalTimelineElement>
           <VerticalTimelineElement
           date='2009 - 2020'
