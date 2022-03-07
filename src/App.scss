@@ -21,13 +21,7 @@ a {
   text-decoration: line-through;
   color: white;
 }
-#nav {
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: white;
-  width: 100px;
-}
+
 .comp-wrapper {
   width: 100%;
   height: auto;
@@ -50,6 +44,76 @@ a {
 h1 {
   font-size: 4rem; 
   
+}
+#nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: white;
+  width: 100px;
+}
+.navMobileContainer{
+  width: 150px;
+  height: 225px;
+  // border: 1px solid white;
+  display: flex;
+  flex-flow: column nowrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 9999;
+}
+
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #D7DFFF;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+.container {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 0 0 10px;
+}
+.menuMobile{
+  width: 100%;
+  height: auto;
+}
+.hidden{
+  height: 0;
+  display: none;
+}
+.navMobileLinksContainer{
+  list-style-type: none;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.navMobileLinksContainer a{
+  font-size: 1.5rem;
+  width: 80%;
+  text-align: left;
+  padding: 0 8% 7px 12%;
+  margin: none;
+  // border-top: 1px solid rgb(105, 105, 163);
+  // background-color: hsla(0, 0%, 0%, 0.767);
 }
 .landingEmail{
   padding: 6px 13px 10px;

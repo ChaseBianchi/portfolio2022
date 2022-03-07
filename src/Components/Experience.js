@@ -46,6 +46,8 @@ function Experience() {
           >
             <h3 className="timelineTitle">Bloom Institute of Technology</h3>
             <h4 className="timelineSubtitle">Fullstack Development & Computer Science</h4>
+            <li>6 month intensive bootcamp</li>
+            <li></li>
           </VerticalTimelineElement>
           <VerticalTimelineElement
           date='2009 - 2020'
@@ -57,7 +59,9 @@ function Experience() {
           >
             <h3 className="timelineTitle">Professional Poker Player</h3>
             <h4 className="timelineSubtitle">Self Employed</h4>
-            <p>World Series of Poker bracelet winner with net profits over 2 million dollars, highly self motivated, and performed under a high level of pressure</p>
+            <li>World Series of Poker bracelet winner with net profits over 2 million dollars</li>
+            <li>Studied with data visualization tools to create and refine strategies</li>
+            <li></li>
           </VerticalTimelineElement>
           {/* <VerticalTimelineElement
           date='2006'

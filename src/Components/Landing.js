@@ -1,21 +1,13 @@
 import React from 'react'
-// import {Random} from 'react-animated-text'
-
-// const nameStyle={
-//     fontSize: '3rem',
-//     fontFamily: `'Bad Script', cursive`
-// }
-// const titleStyle={
-//   fontSize: '2rem',
-//   marginBottom: '80px',
-//   transition: 'opacity 2s linear 2s'
-// }
-
+import NavMobile from './NavMobile'
+import NavDesktop from './NavDesktop'
 
 function Landing() {
 
   return (
     <div id='landing' className="comp-wrapper">
+      {/* <NavDesktop className='NavDesktop' /> */}
+      <NavMobile />
       <div className="landingBar">
         <div className='emailWrapper navHover'>
           <a className='landingEmail' href="mailto:yourmail@gmail.com" rel='noreferrer' target='_blank'>
