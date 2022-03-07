@@ -54,7 +54,7 @@ h1 {
 }
 .navMobileContainer{
   width: 150px;
-  height: 225px;
+  height: 235px;
   // border: 1px solid white;
   display: flex;
   flex-flow: column nowrap;
@@ -68,7 +68,7 @@ h1 {
 
 
 .bar1, .bar2, .bar3 {
-  width: 35px;
+  width: 50px;
   height: 5px;
   background-color: #D7DFFF;
   margin: 6px 0;
@@ -94,6 +94,7 @@ h1 {
 .menuMobile{
   width: 100%;
   height: auto;
+  margin-top: 10px;
 }
 .hidden{
   height: 0;
@@ -481,6 +482,7 @@ span.tileLinks *{
   text-align: center;
   margin-right: 20px;
 }
+
 
 /* Position and sizing of burger button */
 .bm-burger-button {
