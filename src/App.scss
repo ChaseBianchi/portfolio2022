@@ -64,6 +64,7 @@ h1 {
   justify-content: flex-start;
   align-items: flex-start;
   z-index: 9999;
+  transition: left 0.4s ease-in-out, background-color 0.7s;
 }
 
 
@@ -95,10 +96,13 @@ h1 {
   width: 100%;
   height: auto;
   margin-top: 10px;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  transition: left .4s ease-in-out;
 }
 .hidden{
-  height: 0;
-  display: none;
+  left: -150px;
 }
 .navMobileLinksContainer{
   list-style-type: none;
