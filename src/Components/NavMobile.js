@@ -19,7 +19,7 @@ function NavMobile() {
     }
 
   return (
-    <div style={isOpen ? {background: 'hsl(220, 6%, 9%, .8)'} : {}} id='navbar' className='navMobileContainer'>
+    <div style={isOpen ? {background: 'hsl(220, 6%, 9%, .85)'} : {}} id='navbar' className='navMobileContainer'>
         <div onClick={handleClick} className={isOpen ? "container change" : "container"} onclick="myFunction(this)">
             <div class="bar1"></div>
             <div class="bar2"></div>
@@ -27,11 +27,11 @@ function NavMobile() {
         </div>
         <div id='menuMobileId' className={isOpen ? 'menuMobile' : 'menuMobile hidden'}>
             <div className="navMobileLinksContainer">
-            <a onClick={handleMenuClose} className="menuItem" href="#landing">Home</a>
-            <a onClick={handleMenuClose} className="menuItem" href="#projects">Projects</a>
-            <a onClick={handleMenuClose} className="menuItem" href="#experience">Experience</a>
-            <a onClick={handleMenuClose} className="menuItem" href="#about">About</a>
-            <a onClick={handleMenuClose} className="menuItem" href="#connect">Connect</a>
+                <a onClick={handleMenuClose} href="#landing"><p className="menuItem">Home</p></a>
+                <a onClick={handleMenuClose} href="#projects"><p className="menuItem">Projects</p></a>
+                <a onClick={handleMenuClose} href="#experience"><p className="menuItem">Experience</p></a>
+                <a onClick={handleMenuClose} href="#about"><p className="menuItem">About</p></a>
+                <a onClick={handleMenuClose} href="#connect"><p className="menuItem">Connect</p></a>
             </div>
             
         </div>

@@ -54,7 +54,7 @@ h1 {
 }
 .navMobileContainer{
   width: 150px;
-  height: 235px;
+  height: 295px;
   // border: 1px solid white;
   display: flex;
   flex-flow: column nowrap;
@@ -101,6 +101,12 @@ h1 {
   left: 0;
   transition: left .4s ease-in-out;
 }
+.menuItem{
+  font-size: 1.5rem;
+  line-height: 3rem;
+  margin: 0;
+  padding-left: 20px;
+}
 .hidden{
   left: -150px;
 }
@@ -112,13 +118,16 @@ h1 {
   justify-content: flex-start;
 }
 .navMobileLinksContainer a{
-  font-size: 1.5rem;
-  width: 80%;
+  width: 100%;
+  height: auto;
   text-align: left;
-  padding: 0 8% 7px 12%;
+  // padding: 0 8% 7px 12%;
   margin: none;
   // border-top: 1px solid rgb(105, 105, 163);
   // background-color: hsla(0, 0%, 0%, 0.767);
+}
+.navMobileLinksContainer a :hover{
+  background-color: rgba(255, 255, 255, 0.151);
 }
 .landingEmail{
   padding: 6px 13px 10px;
