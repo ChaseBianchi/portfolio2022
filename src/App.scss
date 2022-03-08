@@ -57,7 +57,7 @@ h1 {
   width: 150px;
   height: 295px;
   // border: 1px solid white;
-  display: flex;
+  display: none;
   flex-flow: column nowrap;
   position: fixed;
   top: 0;
@@ -141,13 +141,13 @@ h1 {
 }
 .landingBar{
   position: absolute;
-  top: 2vw;
-  right: 2vw;
+  top: 50px;
+  right: 20px;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: flex-end;
-  width: 50%;
+  // width: 50%;
   // border: 1px solid white;
 }
 .linkedinLogo{
@@ -170,7 +170,73 @@ h1 {
   transition: background-color .2s ease;
 
 }
+// DESKTOP NAVBAR
+.navDesktopWrapper{
+  display: flex;
+  position: absolute;
+  top: 45px;
+  left: 0px;
+}
+.gradient{
+  position: absolute;
+  top: 45px;
+  left: 620px;
+  width: 300px;
+  height: 48px;
+  background-image: linear-gradient(to right, #D8DBDB, #282C34);
 
+}
+.navDesktopContainer{
+  // border: 1px solid green;
+  width: 600px;
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row nowrap;
+  // height: 80px;
+  // margin-right: 160px;
+  background-color: #d8dbdb;
+  padding-right: 40px;
+}
+.desktop{
+  // border: 1px double gray;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  // margin-right: 20px;
+  // border-radius: 5px;
+  color: black;
+  // background-color: blue;
+  transition: background-color .4s;
+
+}
+.navDesktopContainer :hover{
+  background-color: #ffffff49;
+}
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #000000;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0px;
+  left: 0%;
+  background-color: #396ed6;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 #projects {
   display: flex;
   flex-flow: column nowrap;
@@ -653,6 +719,21 @@ $peakopacity: 0.7;
     color: black
   }
 }
+@media screen and (max-width: 1026px) {
+  .navMobileContainer{
+    display: flex;
+  }
+  .navDesktopWrapper{
+    display: none;
+  }
+  .gradient{
+    display: none;
+  }
+  .landingBar{
+    top: 2vw;
+    right: 2vw;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .bm-burger-button {
@@ -678,9 +759,7 @@ $peakopacity: 0.7;
   h1 {
     font-size: 3rem;
   }
-  .projectTileContainer{
-    // min-width: 99%;
-  }
+ 
   .projectContainer{
     margin-left: 35px;
   }

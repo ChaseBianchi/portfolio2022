@@ -6,7 +6,7 @@ function Landing() {
 
   return (
     <div id='landing' className="comp-wrapper">
-      {/* <NavDesktop className='NavDesktop' /> */}
+      <NavDesktop />
       <NavMobile/>
       <div className="landingBar">
         {/* <div className='emailWrapper navHover'>
