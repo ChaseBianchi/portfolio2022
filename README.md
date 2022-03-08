@@ -2,6 +2,8 @@
 
 Welcome to my personal website and portfolio! Take a look around, and I hope you like what you see. If you'd like to get in touch, email me cbianchi@protonmail.com
 
+Live at www.chasebianchi.com
+
 ## Technology
 
 Technology used to build this website:
