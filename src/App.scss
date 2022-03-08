@@ -167,7 +167,7 @@ h1 {
   background-color: #353a44;
   width: 100%;
   height: auto;
-  padding-bottom: 100px;
+  padding-bottom: 70px;
   align-items: flex-start;
   position: relative;
 }
@@ -191,6 +191,7 @@ h1 {
   top: 45%;
   z-index: 99;
 }
+
 .arrow {
   border: solid rgb(255, 255, 255);
   border-width: 0 3px 3px 0;
@@ -211,14 +212,9 @@ h1 {
 .rightArrowWrapper {
   right: 3px;
 }
+
 .projectContainer {
   height: 590px;
-  // border: 1px solid rgb(61, 61, 82);
-  // border-radius: 10px;
-  // display: flex;
-  // flex-flow: row nowrap;
-  // align-items: center;
-  // justify-content: flex-start;
   position: relative;
   overflow: hidden;
   margin-left: 35px;
@@ -655,12 +651,7 @@ $peakopacity: 0.7;
     left: 30px;
     top: 30px;
   }
-  .projectContainer{
-    width: 80%;
-  }
-  // #experience{
-  //   height: 1400px;
-  // }  
+ 
   .aboutContainer{
     flex-flow: column nowrap;
   }
@@ -668,7 +659,8 @@ $peakopacity: 0.7;
     order: 1
   }
   .textContainer{
-    order: 2
+    order: 2;
+    width: 80%;
   }
 }
 
@@ -679,8 +671,18 @@ $peakopacity: 0.7;
   .projectTileContainer{
     // min-width: 99%;
   }
-  // #experience{
-  //   height: 1450px;
-  // }  
+  .projectContainer{
+    margin-left: 70px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .projectContainer{
+    margin-left: 60px;
+  }
 }
 
+@media screen and (max-width: 375px) {
+  .projectContainer{
+    margin-left: 35px;
+  }
+}

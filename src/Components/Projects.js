@@ -8,7 +8,7 @@ const projectArr = [
         date: 'Mar 2022',
         dev: 'frontend',
         tech: 'JavaScript, React, SCSS',
-        desc: 'Single page application showcasing my development skills',
+        desc: 'Single page application showcasing my web development skills and experience',
         video: '',
         image: 'portfolio.png',
         git: 'https://github.com/ChaseBianchi/portfolio2022',
@@ -88,13 +88,12 @@ function Projects() {
     const handleRightArrow = ()=>{
         if(slideIndex!==projectArr.length-1){setSlideIndex(slideIndex+1)} 
     }
-    const filteredProjects = projectArr.filter(proj => proj.id>=slideIndex)
   return (
     <div id='projects' className="comp-wrapper">
         <h2>Projects</h2>            
         <div onClick={handleLeftArrow} style={slideIndex===0 ? {opacity: '50%'} : {opacity: '100%'}}className="arrowWrapper leftArrowWrapper"><i className="arrow left"></i></div>
         <div style={{width: `${350*projectArr.length}px`}} className="projectContainer">
-                {projectArr.map(proj=><ProjectTile slideIndex={slideIndex} isActive={proj.id<slideIndex ? false : true} key={proj.id} arrInd={proj.id} data={proj} leftPx={`${350*(proj.id-slideIndex)}px`}/>)}
+                {projectArr.map(proj=><ProjectTile  key={proj.id} data={proj} leftPx={`${350*(proj.id-slideIndex)}px`}/>)}
         </div>
         <div onClick={handleRightArrow} style={slideIndex===projectArr.length-1 ? {opacity: '50%'} : {opacity: '100%'}} className="arrowWrapper rightArrowWrapper"><i className="arrow right"></i></div>
     </div>
