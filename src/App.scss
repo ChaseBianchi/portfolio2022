@@ -168,7 +168,7 @@ h1 {
   width: 100%;
   height: auto;
   padding-bottom: 100px;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
 }
 .comp-wrapper h2 {
@@ -189,6 +189,7 @@ h1 {
   justify-content: center;
   position: absolute;
   top: 45%;
+  z-index: 99;
 }
 .arrow {
   border: solid rgb(255, 255, 255);
@@ -205,35 +206,41 @@ h1 {
   -webkit-transform: rotate(135deg);
 }
 .leftArrowWrapper {
-  left: 8px;
+  left: 3px;
 }
 .rightArrowWrapper {
-  right: 8px;
+  right: 3px;
 }
 .projectContainer {
-  width: 90%;
-  height: 600px;
+  height: 590px;
   // border: 1px solid rgb(61, 61, 82);
-  border-radius: 10px;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: flex-start;
+  // border-radius: 10px;
+  // display: flex;
+  // flex-flow: row nowrap;
+  // align-items: center;
+  // justify-content: flex-start;
   position: relative;
   overflow: hidden;
+  margin-left: 35px;
+}
+.tileWrapper{
+  // border: 1px solid red;
+  height: 100%;
+  width: auto;
+  position: absolute;
+  // left: 0px;
+  transition: left .5s;
 }
 .projectTileContainer {
-  min-width: 280px;
+  // min-width: 280px;
   width: 280px;
   height: 95%;
-  // border: 1px solid red;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  // margin: 0 20px 0 10px;
-  margin-right: 30px;
+  // margin-left: 35px;
   color: black;
   border: 1px solid rgb(61, 61, 82);
   background-color: rgb(216, 219, 219);
@@ -670,7 +677,7 @@ $peakopacity: 0.7;
     font-size: 3rem;
   }
   .projectTileContainer{
-    min-width: 99%;
+    // min-width: 99%;
   }
   // #experience{
   //   height: 1450px;

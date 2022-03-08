@@ -11,21 +11,24 @@ import React from 'react'
 //     deploy: 'https://www.reddit.com/user/Diablo-Bot/',
 // },
 function ProjectTile(props) {
-  const {name, date, dev, tech, desc, video, image, git, deploy} = props.data
+  const { isActive, arrInd, slideIndex, data, leftPx} = props
+  const {name, date, dev, tech, desc, video, image, git, deploy} = data
+  console.log(leftPx)
+  const isActiveStyle = isActive ? {left: `${350*(slideIndex-arrInd)}px`} : {left: '-400px'}
   return (
-    <div className="projectTileContainer">
-        <h3 className='projName'>{name}</h3>
-        <p className="date">{date}</p>
-        <div className="imgWrapper">
-          <img className='projectImg' src={`/media/${image}`} alt={name} />
-        </div>
-        
-        <div className="projectBody"> 
-          {tech ? <p className="tech">{tech}</p> : {}}
-          {desc ? <p className="desc">{desc}</p> : {}}
-          <span className='tileLinks'>{git ? <a target='_blank' href={git} className="git">GITHUB</a> : ''} {deploy ? <a target='_blank' href={deploy} className="git">DEPLOYED</a> : ''}</span>
-
-        </div>
+    <div style={{left: leftPx}} className="tileWrapper">
+      <div className="projectTileContainer">
+          <h3 className='projName'>{name}</h3>
+          <p className="date">{date}</p>
+          <div className="imgWrapper">
+            <img className='projectImg' src={`/media/${image}`} alt={name} />
+          </div>
+          <div className="projectBody"> 
+            {tech ? <p className="tech">{tech}</p> : {}}
+            {desc ? <p className="desc">{desc}</p> : {}}
+            <span className='tileLinks'>{git ? <a target='_blank' href={git} className="git">GITHUB</a> : ''} {deploy ? <a target='_blank' href={deploy} className="git">DEPLOYED</a> : ''}</span>
+          </div>
+      </div>
     </div>
   )
 }
