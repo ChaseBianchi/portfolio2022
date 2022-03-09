@@ -44,14 +44,6 @@ a {
 }
 h1 {
   font-size: 4rem; 
-  
-}
-#nav {
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: white;
-  width: 100px;
 }
 .navMobileContainer{
   width: 150px;
@@ -67,8 +59,6 @@ h1 {
   z-index: 9999;
   transition: left 0.4s ease-in-out, background-color 0.7s;
 }
-
-
 .bar1, .bar2, .bar3 {
   width: 50px;
   height: 5px;
@@ -76,14 +66,11 @@ h1 {
   margin: 6px 0;
   transition: 0.4s;
 }
-
 .change .bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
   transform: rotate(-45deg) translate(-9px, 6px);
 }
-
 .change .bar2 {opacity: 0;}
-
 .change .bar3 {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
@@ -139,16 +126,14 @@ h1 {
   justify-content: center;
   transition: background-color .2s ease;
 }
-.landingBar{
+.landingBarMobile{
   position: absolute;
-  top: 50px;
-  right: 20px;
-  display: flex;
+  top: 9px;
+  right: 9px;
+  display: none;
   flex-flow: row wrap;
   align-items: center;
   justify-content: flex-end;
-  // width: 50%;
-  // border: 1px solid white;
 }
 .linkedinLogo{
   width: 30px;
@@ -163,39 +148,46 @@ h1 {
   align-items: center;
   // background-color: rgba(255, 255, 255, 0.25);
   transition: background-color .2s ease;
-
+  
 }
-.navHover :hover{
-  background-color: rgba(255, 255, 255, 0.25);
-  transition: background-color .2s ease;
 
-}
 // DESKTOP NAVBAR
-.navDesktopWrapper{
+#desktopNavbar{
   display: flex;
-  position: absolute;
-  top: 45px;
+  position: fixed;
+  top: 0px;
   left: 0px;
+  z-index: 999999;
+  transition: top .5s ease-in-out; 
+  border-bottom: 3px solid rgba(12, 16, 41, 0.322);
+}
+.landingBar{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 15px;
+  background-color: #282C34;
 }
 .gradient{
-  position: absolute;
-  top: 45px;
-  left: 620px;
-  width: 300px;
-  height: 48px;
+  // position: fixed;
+  // top: 0px;
+  // left: 650px;
+  width: 239px;
+  height: 100%;
   background-image: linear-gradient(to right, #D8DBDB, #282C34);
-
 }
 .navDesktopContainer{
+  position: relative;
   // border: 1px solid green;
-  width: 600px;
+  width: 100vw;
   display: flex;
   justify-content: flex-end;
   flex-flow: row nowrap;
   // height: 80px;
   // margin-right: 160px;
   background-color: #d8dbdb;
-  padding-right: 40px;
+  // padding-right: 40px;
 }
 .desktop{
   // border: 1px double gray;
@@ -211,8 +203,8 @@ h1 {
   transition: background-color .4s;
 
 }
-.navDesktopContainer :hover{
-  background-color: #ffffff49;
+.linkedinWrapper :hover{
+  background-color: #ffffff8c;
 }
 .hover-underline-animation {
   display: inline-block;
@@ -258,7 +250,7 @@ h1 {
 .arrowWrapper {
   width: 30px;
   height: 30px;
-  border: 1px solid white;
+  border: 3px solid white;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -266,13 +258,14 @@ h1 {
   position: absolute;
   top: 45%;
   z-index: 99;
+  cursor: pointer;
 }
 
 .arrow {
   border: solid rgb(255, 255, 255);
   border-width: 0 3px 3px 0;
   display: inline-block;
-  padding: 3px;
+  padding: 5px;
 }
 .right {
   transform: rotate(-45deg);
@@ -566,150 +559,6 @@ span.tileLinks *{
   margin-right: 20px;
 }
 
-
-/* Position and sizing of burger button */
-.bm-burger-button {
-  position: fixed;
-  width: 60px;
-  height: 40px;
-  left: 3vw !important;
-  top: 3vw !important;
-}
-
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-  background: #72778d;
-}
-
-/* Color/shape of burger icon bars on hover*/
-.bm-burger-bars-hover {
-  background: #ffffff;
-}
-
-/* Position and sizing of clickable cross button */
-.bm-cross-button {
-  height: 24px;
-  width: 24px;
-  right: 150px !important;
-}
-
-/* Color/shape of close button cross */
-.bm-cross {
-  background: #bdc3c7;
-}
-
-/*
-Sidebar wrapper styles
-Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
-*/
-.bm-menu-wrap {
-  position: fixed;
-  height: 250px !important;
-}
-
-/* General sidebar styles */
-.bm-menu {
-  background: #373a47;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
-  width: 160px;
-}
-
-/* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
-  fill: #373a47;
-}
-
-/* Wrapper for item list */
-.bm-item-list {
-  color: #b8b7ad;
-  padding: 0em;
-  padding-left: 0em;
-  display: flex;
-  flex-flow: column nowrap;
-  
-}
-
-/* Individual item */
-.bm-item {
-  display: inline-block;
-  // font-size: 2rem !important;
-  // border: 1px solid white;
-  width: 130px !important;
-}
-
-
-/* Styling of overlay */
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
-}
-
-#nav a {
-  text-decoration: none;
-  color: white;
-  font-size: 1.5rem !important;
-}
-
-// ARROW ANIMATION
-// https://codepen.io/z-/pen/BoyXKr
-$size: 30px;
-$speed: 3s;
-$peakopacity: 0.7;
-.arrows {
-  // position: relative;
-  /**/
-  position: absolute;
-  top: 90%;
-  left: 48%;
-  /**/
-  width: $size;
-  height: $size;
-  transform: translate(-50%, -50%);
-  &:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-left: $size/3 solid rgba(0, 0, 0, $peakopacity);
-    border-bottom: $size/3 solid rgba(0, 0, 0, $peakopacity);
-    transform: translate($size/3, $size * 4/3) rotate(-45deg);
-    animation: arrows $speed linear infinite;
-  }
-  &:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-left: $size/3 solid rgba(0, 0, 0, $peakopacity);
-    border-bottom: $size/3 solid rgba(0, 0, 0, $peakopacity);
-    transform: translate($size * 2/3, 0px) rotate(-45deg);
-    animation: arrows $speed linear infinite $speed/-2;
-  }
-}
-
-@keyframes arrows {
-  0% {
-    border-left: $size/3 solid rgba(0, 0, 0, 0);
-    border-bottom: $size/3 solid rgba(0, 0, 0, 0);
-    transform: translate($size/-6, $size * 4/-6) rotate(-45deg);
-  }
-  10%,
-  90% {
-    border-left: $size/3 solid rgba(0, 0, 0, 0);
-    border-bottom: $size/3 solid rgba(0, 0, 0, 0);
-  }
-  50% {
-    border-left: $size/3 solid rgba(0, 0, 0, $peakopacity);
-    border-bottom: $size/3 solid rgba(0, 0, 0, $peakopacity);
-    transform: translate($size/-6, 0px) rotate(-45deg);
-  }
-  100% {
-    border-left: $size/3 solid rgba(0, 0, 0, 0);
-    border-bottom: $size/3 solid rgba(0, 0, 0, 0);
-    transform: translate($size/-6, $size * 4/6) rotate(-45deg);
-  }
-}
-
 // MEDIA QUERIES
 @media screen and (max-width: 1169px) {
   // #experience{
@@ -723,15 +572,19 @@ $peakopacity: 0.7;
   .navMobileContainer{
     display: flex;
   }
-  .navDesktopWrapper{
+  #desktopNavbar{
     display: none;
   }
   .gradient{
     display: none;
   }
   .landingBar{
+    position: absolute;
     top: 2vw;
     right: 2vw;
+  }
+  .landingBarMobile{
+    display: flex;
   }
 }
 

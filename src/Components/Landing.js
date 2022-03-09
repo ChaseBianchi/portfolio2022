@@ -8,12 +8,7 @@ function Landing() {
     <div id='landing' className="comp-wrapper">
       <NavDesktop />
       <NavMobile/>
-      <div className="landingBar">
-        {/* <div className='emailWrapper navHover'>
-          <a className='landingEmail' href="mailto:yourmail@gmail.com" rel='noreferrer' target='_blank'>
-            cbianchi@protonmail.com
-          </a>
-        </div> */}
+      <div className="landingBarMobile">
         <div className="navHover">
           <a className='linkedinWrapper' href="mailto:yourmail@gmail.com" target='_blank' rel='noreferrer'>
             <img className='linkedinLogo' src="/media/email.png" alt="email" />

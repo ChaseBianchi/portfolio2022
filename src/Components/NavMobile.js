@@ -11,8 +11,10 @@ function NavMobile() {
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
         document.getElementById("navbar").style.left = "0";
+        document.getElementById("desktopNavbar").style.top = "0";
         } else {
         document.getElementById("navbar").style.left = "-150px";
+        document.getElementById("desktopNavbar").style.top = "-100px";
         setIsOpen(false)
         }
         prevScrollpos = currentScrollPos;
