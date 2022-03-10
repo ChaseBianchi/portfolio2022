@@ -22,10 +22,10 @@ function NavMobile() {
 
   return (
     <div style={isOpen ? {background: 'hsl(220, 6%, 9%, .85)'} : {}} id='navbar' className='navMobileContainer'>
-        <div onClick={handleClick} className={isOpen ? "container change" : "container"} onclick="myFunction(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
+        <div onClick={handleClick} className={isOpen ? "container change" : "container"}>
+            <div className="bar1"></div>
+            <div className="bar2"></div>
+            <div className="bar3"></div>
         </div>
         <div id='menuMobileId' className={isOpen ? 'menuMobile' : 'menuMobile hidden'}>
             <div className="navMobileLinksContainer">
