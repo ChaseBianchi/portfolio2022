@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function ProjectTile(props) {
   const { data, leftPx} = props
   const {name, date, dev, tech, desc, video, image, git, deploy} = data

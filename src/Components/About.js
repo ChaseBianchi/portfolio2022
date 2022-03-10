@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router'
 
 function About() {
   return (
@@ -25,7 +26,7 @@ function About() {
             <p>
               Product & Design: Github, Jest, Cypress, Photoshop
             </p>
-            <a classname='resumeLink' href="https://docs.google.com/document/d/1sPv5t-3fQUyT_rUwn4W-efEjQEq0vPhYJL1j4UbRq9s/edit?usp=sharing" target='_blank' rel='noreferrer'>
+            <a className='resumeLink' href="/media/resume.pdf" target='_blank' rel='noreferrer' download>
               <div className='downloadResume'>Resume</div>
             </a>
             
