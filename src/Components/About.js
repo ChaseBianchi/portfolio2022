@@ -18,13 +18,13 @@ function About() {
               Familiar with unit and integration testing frameworks. 
             </p>
             <p>
-              Frontend: JavaScript, React, Redux, CSS, HTML
+              Frontend: JavaScript, React, Redux, jQuery, AAA accessibility
             </p>
             <p>
-              Backend: Java, Spring Framework, Python, SQL, Okta
+              Backend: Java, Spring, AEM, Python, SQL, Okta
             </p>
             <p>
-              Product & Design: Github, Jest, Cypress, Photoshop
+              Product & Design: Github, Jira, ADO
             </p>
             <a className='resumeLink' href="/media/resume.pdf" target='_blank' rel='noreferrer' download>
               <div className='downloadResume'>Resume</div>
