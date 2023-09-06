@@ -20,7 +20,7 @@ function Experience() {
           >
             <h3 className="timelineTitle">Slalom Consulting</h3>
             <h4 className="timelineSubtitle">Consultant - Full Stack Developer</h4>
-            <li>Digital Experience Management team focused on user experience including CMS(AEM), marketing automation, platform migrations, website redesigns and optimizations</li>
+            <li>Digital Experience Management team focused on user experience including CMS, marketing automation, platform migrations, website redesigns and optimizations</li>
             <li>Took initiative to lead dev on features, seek guidance and mentorship, as well as mentor and train others</li>
             <li>Gave clients confidence in our team's ability to deliver by leading demos, participating in discovery, triage issues, UAT, and lead training</li>
           </VerticalTimelineElement>
@@ -35,7 +35,7 @@ function Experience() {
             <h3 className="timelineTitle">Fullstack Web Developer</h3>
             <h4 className="timelineSubtitle">Freelance</h4>
             <li>End-to-end production, one-man operation</li>
-            <li>Taking client needs from concept to deliverable products.</li>
+            <li>Taking client needs from concept to deliverable products</li>
           </VerticalTimelineElement>
           <VerticalTimelineElement
           date='May 2021 - Aug 2021'
