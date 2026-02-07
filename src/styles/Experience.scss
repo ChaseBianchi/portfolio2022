@@ -8,6 +8,10 @@
   height: auto;
   padding: $section-padding;
   align-items: center;
+
+  h2::after {
+    width: 100%;
+  }
 }
 
 .verticalTimeline {
