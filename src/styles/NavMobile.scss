@@ -16,9 +16,10 @@
 
 .navMobileContainer.menuOpen {
   width: 9.375rem;
-  background: hsla(220, 6%, 9%, 0.85);
+  background: hsla(220, 6%, 9%, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  border-radius: 0 0 $radius-sm 0;
 }
 
 .bar1, .bar2, .bar3 {
@@ -50,11 +51,12 @@
 .menuMobile {
   width: 100%;
   height: auto;
-  margin-top: 0.5rem;
-  position: absolute;
-  top: 2.8125rem;
-  left: 0;
-  transition: left 0.4s ease-in-out;
+  padding-bottom: 0.75rem;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.menuMobile.hidden {
+  display: none;
 }
 
 .menuItem {
@@ -71,9 +73,6 @@
   }
 }
 
-.hidden {
-  left: -9.375rem;
-}
 
 .navMobileLinksContainer {
   list-style-type: none;
