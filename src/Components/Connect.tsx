@@ -1,11 +1,11 @@
 import { useState, useRef, type FormEvent } from 'react'
 import emailjs from '@emailjs/browser'
 
-const temp = import.meta.env.VITE_templateId
 const service = import.meta.env.VITE_serviceId
-const user = import.meta.env.VITE_userId
+const template = import.meta.env.VITE_templateId
+const publicKey = import.meta.env.VITE_userId
 
-if (!service || !temp || !user) {
+if (!service || !template || !publicKey) {
   console.warn('EmailJS environment variables are not set. Contact form will not work.')
 }
 
@@ -27,15 +27,20 @@ function Connect() {
       return
     }
 
+    if (!service || !template || !publicKey) {
+      console.error('EmailJS config missing:', { service: !!service, template: !!template, publicKey: !!publicKey })
+      setMessage('Error, message not sent. Email directly cbianchi@protonmail.com')
+      return
+    }
+
     setSending(true)
-    emailjs.sendForm(service, temp, form.current!, user)
-      .then((result) => {
-        console.log(result.text)
+    emailjs.sendForm(service, template, form.current!, publicKey)
+      .then(() => {
         setMessage('Message sent. Talk to you soon!')
         form.current?.reset()
       })
       .catch((error) => {
-        console.log(error.text)
+        console.error('EmailJS error:', typeof error === 'string' ? error : error?.text ?? error)
         setMessage('Error, message not sent. Email directly cbianchi@protonmail.com')
       })
       .finally(() => {

@@ -36,4 +36,61 @@ test.describe('Contact Form', () => {
   test('submit button exists', async ({ page }) => {
     await expect(page.locator('.submitBtn')).toBeVisible()
   })
+
+  test('shows success message when EmailJS API returns OK', async ({ page }) => {
+    // Intercept the EmailJS API call and return a success response
+    await page.route('**/api.emailjs.com/**', (route) => {
+      route.fulfill({
+        status: 200,
+        contentType: 'text/plain',
+        body: 'OK',
+      })
+    })
+
+    await page.fill('#contact-name', 'Test User')
+    await page.fill('#contact-email', 'test@example.com')
+    await page.fill('#contact-message', 'Hello, this is a test message.')
+
+    await page.locator('.submitBtn').click()
+
+    await expect(page.locator('.messageNotification')).toHaveText(
+      'Message sent. Talk to you soon!',
+      { timeout: 5000 }
+    )
+  })
+
+  test('shows error message when EmailJS API fails', async ({ page }) => {
+    // Intercept the EmailJS API call and return an error
+    await page.route('**/api.emailjs.com/**', (route) => {
+      route.fulfill({
+        status: 400,
+        contentType: 'text/plain',
+        body: 'Bad Request',
+      })
+    })
+
+    await page.fill('#contact-name', 'Test User')
+    await page.fill('#contact-email', 'test@example.com')
+    await page.fill('#contact-message', 'Hello, this is a test message.')
+
+    await page.locator('.submitBtn').click()
+
+    await expect(page.locator('.messageNotification')).toContainText(
+      'Error',
+      { timeout: 5000 }
+    )
+  })
+
+  test('EmailJS env vars are present in production build', async ({ page }) => {
+    // Check that the console warning about missing env vars does NOT fire
+    const warnings: string[] = []
+    page.on('console', (msg) => {
+      if (msg.type() === 'warning') warnings.push(msg.text())
+    })
+
+    await page.goto('/', { waitUntil: 'networkidle' })
+
+    const envVarWarning = warnings.find((w) => w.includes('EmailJS environment variables'))
+    expect(envVarWarning, 'EmailJS env vars should be set in the build').toBeUndefined()
+  })
 })
