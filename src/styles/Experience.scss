@@ -3,34 +3,63 @@
 #experience {
   display: flex;
   flex-flow: column nowrap;
-  background-color: $dark-bg;
+  background-color: $bg-primary;
   width: 100%;
   height: auto;
-  padding-bottom: 6.25rem;
+  padding: $section-padding;
   align-items: center;
-  padding: 0.3125rem;
 }
+
 .verticalTimeline {
   width: 100%;
   height: auto;
 }
+
 .iconWrapper {
   width: 100%;
   height: 100%;
   border-radius: 50%;
   overflow: hidden;
 }
+
 .workImg {
   object-fit: contain;
   width: 100%;
   height: 100%;
 }
+
+.timelineTitle {
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+}
+
+.timelineSubtitle {
+  font-weight: 500;
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-top: 0.25rem;
+}
+
+.timelineBullets {
+  margin: 0.75rem 0;
+  padding-left: 1.25rem;
+
+  li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    font-size: 0.9rem;
+  }
+}
+
 .tlDate {
-  color: white;
+  color: $text-secondary;
+  font-family: $font-mono;
+  font-size: 0.85rem;
 }
 
 @media screen and (max-width: $bp-timeline) {
   .tlDate {
-    color: black;
+    color: $text-muted;
   }
 }

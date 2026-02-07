@@ -7,10 +7,11 @@ Chase Bianchi's personal portfolio site — www.chasebianchi.com
 - **React 18** + **TypeScript** (strict mode)
 - **Vite** (build tool, dev server on port 3000)
 - **SCSS** with component-scoped files in `src/styles/`
-- **Vitest** + **React Testing Library** for unit/integration tests
+- **Vitest** + **React Testing Library** for unit/integration tests (86 tests)
 - **Playwright** for E2E tests (Chromium + Mobile Chrome)
 - **EmailJS** for contact form (`@emailjs/browser`)
 - **react-vertical-timeline-component** for Experience section
+- **Inter** + **JetBrains Mono** fonts via Google Fonts
 - Deployed on **Vercel**
 
 ## Commands
@@ -42,8 +43,10 @@ tests/e2e/            # Playwright E2E specs
 - **SocialLinks**: Shared component replaces triplicated social link markup (Landing, NavDesktop, Footer)
 - **Environment variables**: Use `VITE_*` prefix (not `REACT_APP_*`). Access via `import.meta.env.VITE_*`
 - **SCSS**: `App.scss` imports all component SCSS files via `@use`. Variables/breakpoints in `_variables.scss`
+- **Design system**: Modern dark theme with blue (#60a5fa) / violet (#a78bfa) accent gradient. Glass morphism effects. Inter font.
 - **Accessibility**: Semantic HTML (header/section/footer/nav/main), aria-labels, keyboard nav on carousel, skip-to-content link, focus-visible styles
-- **No routing**: Single-page design, hash anchors for navigation (#projects, #experience, etc.)
+- **Resume page**: `/resume` route renders printable HTML resume (Resume.tsx). PDF at `/media/resume.pdf` for download.
+- **No routing library**: Single-page with hash anchors (#projects, #experience, etc.) + pathname check for /resume
 
 ## Environment Variables
 
@@ -60,3 +63,8 @@ VITE_userId=...
 - Playwright tests exclude visual regression by default; run `--update-snapshots` to regenerate baselines
 - E2E tests use `vite build && vite preview` as web server (port 4173)
 - EmailJS mock pattern: `vi.mock('@emailjs/browser', () => ({ default: { sendForm: vi.fn() } }))`
+
+## Git Notes
+
+- Use personal GitHub account only (ChaseBianchi). Do NOT use ChaseBianchiSlalom work credentials.
+- Remote: origin -> github.com:ChaseBianchi/portfolio2022.git

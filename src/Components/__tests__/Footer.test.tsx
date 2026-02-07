@@ -31,4 +31,9 @@ describe('Footer', () => {
     const githubLink = screen.getByLabelText('github')
     expect(githubLink).toHaveAttribute('href', 'https://github.com/ChaseBianchi/')
   })
+
+  it('renders credit line', () => {
+    render(<Footer />)
+    expect(screen.getByText(/Built with React, TypeScript & Claude Code/)).toBeInTheDocument()
+  })
 })

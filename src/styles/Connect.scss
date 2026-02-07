@@ -3,60 +3,119 @@
 #connect {
   display: flex;
   flex-flow: column nowrap;
-  background-color: $dark-bg;
+  background-color: $bg-primary;
   width: 100%;
   height: auto;
   align-items: center;
-  padding-bottom: 1.25rem;
+  padding: $section-padding;
 }
+
 .connectForm {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
   width: 90%;
-  max-width: 31.25rem;
+  max-width: 32rem;
 }
-.connectForm input {
-  margin-bottom: 0.625rem;
+
+.connectForm input,
+.connectForm textarea {
+  background-color: $bg-card;
+  border: 1px solid $border-subtle;
+  border-radius: $radius-sm;
+  color: $text-primary;
+  padding: 0.75rem 1rem;
+  font-family: $font-sans;
+  font-size: 0.95rem;
+  transition: border-color $transition-fast, box-shadow $transition-fast;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+    border-color: $accent-blue;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.15);
+  }
+
+  &::placeholder {
+    color: $text-muted;
+  }
 }
+
 .connectForm label {
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: $text-secondary;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
+
 .connectForm textarea {
   width: 100%;
-  min-height: 5rem;
+  min-height: 8rem;
+  resize: vertical;
 }
+
 .nameEmail {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
   justify-content: space-between;
+  gap: 1rem;
 }
-.email, .name, .message {
-  width: 45%;
+
+.email, .name {
+  flex: 1;
+  min-width: 0;
   display: flex;
   flex-flow: column nowrap;
 }
+
 .message {
   width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  margin-top: 1rem;
 }
+
 .submit {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 1.5rem;
 }
+
 .submitBtn {
-  margin: 0.9375rem;
-  width: 7.5rem;
+  padding: 0.75rem 3rem;
+  background: $accent-gradient;
+  border: none;
+  border-radius: $radius-sm;
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all $transition-fast;
+  box-shadow: $shadow-sm;
+
+  &:hover:not(:disabled) {
+    background: $accent-gradient-hover;
+    box-shadow: $shadow-md, $shadow-glow;
+    transform: translateY(-1px);
+  }
 
   &:disabled {
-    opacity: 0.6;
+    opacity: 0.5;
     cursor: not-allowed;
+    transform: none;
   }
 }
+
 .messageNotification {
   height: 1.875rem;
-  margin: 0;
+  margin: 1rem 0 0;
   padding: 0;
+  color: $accent-blue;
+  font-size: 0.9rem;
+  text-align: center;
 }

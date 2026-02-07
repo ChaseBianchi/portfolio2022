@@ -10,7 +10,17 @@ describe('Landing', () => {
 
   it('renders the title', () => {
     render(<Landing />)
-    expect(screen.getByText('Fullstack Web Developer')).toBeInTheDocument()
+    expect(screen.getByText('Full Stack Developer')).toBeInTheDocument()
+  })
+
+  it('renders the hero subtitle', () => {
+    render(<Landing />)
+    expect(screen.getByText('AEM | React | AI-Augmented Development')).toBeInTheDocument()
+  })
+
+  it('renders scroll indicator', () => {
+    const { container } = render(<Landing />)
+    expect(container.querySelector('.scrollIndicator')).toBeInTheDocument()
   })
 
   it('renders as a header element', () => {

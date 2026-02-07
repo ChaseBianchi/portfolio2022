@@ -6,29 +6,34 @@
   top: 0;
   left: 0;
   z-index: 999999;
-  transition: top .5s ease-in-out;
-  border-bottom: 3px solid rgba(12, 16, 41, 0.322);
+  transition: top 0.4s ease-in-out;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid $border-subtle;
 }
+
 .landingBar {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: flex-end;
   padding-right: 1.5rem;
-  background-color: $dark-bg;
+  background-color: transparent;
 }
+
 .gradient {
-  width: 14rem;
+  width: 8rem;
   height: 100%;
-  background-image: linear-gradient(to right, $light-bg, $dark-bg);
+  background: linear-gradient(to right, rgba($bg-primary, 0), rgba($bg-primary, 0.95));
 }
+
 .navDesktopContainer {
   position: relative;
   width: 100vw;
   display: flex;
   justify-content: flex-start;
   flex-flow: row nowrap;
-  background-color: $light-bg;
+  background-color: rgba($bg-primary, 0.85);
 
   a {
     &:first-of-type {
@@ -39,32 +44,45 @@
     }
   }
 }
+
 .desktop {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   padding: 0 1.25rem;
-  color: black;
-  transition: background-color .4s;
+  color: $text-secondary;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: color $transition-fast;
 }
+
 .hover-underline-animation {
   display: inline-block;
   position: relative;
-  color: #000000;
+  color: $text-secondary;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $text-primary;
+  }
 }
+
 .hover-underline-animation:after {
   content: '';
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 0.1875rem;
-  bottom: 0rem;
+  height: 2px;
+  bottom: 0;
   left: 0;
-  background-color: $link-blue;
+  background: $accent-gradient;
   transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+  transition: transform 0.3s ease-out;
+  border-radius: 1px;
 }
+
 .hover-underline-animation:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;

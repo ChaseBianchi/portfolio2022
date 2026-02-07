@@ -3,17 +3,18 @@
 #projects {
   display: flex;
   flex-flow: column nowrap;
-  background-color: $medium-bg;
+  background-color: $bg-secondary;
   width: 100%;
   height: auto;
   padding-bottom: 4.375rem;
   align-items: flex-start;
   position: relative;
 }
+
 .arrowWrapper {
-  width: 1.875rem;
-  height: 1.875rem;
-  border: 3px solid white;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1.5px solid $border-medium;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -22,50 +23,62 @@
   top: 45%;
   z-index: 99;
   cursor: pointer;
-  background: none;
+  background: rgba($bg-primary, 0.6);
+  backdrop-filter: blur(8px);
   color: inherit;
   padding: 0;
+  transition: all $transition-fast;
+
+  &:hover:not(:disabled) {
+    border-color: $accent-blue;
+    background: rgba($accent-blue, 0.1);
+    box-shadow: $shadow-glow;
+  }
 
   &:disabled {
     cursor: default;
+    opacity: 0.3;
   }
 }
+
 .arrow {
-  border: solid rgb(255, 255, 255);
-  border-width: 0 3px 3px 0;
+  border: solid $text-secondary;
+  border-width: 0 2px 2px 0;
   display: inline-block;
-  padding: 0.3125rem;
+  padding: 4px;
 }
+
 .right {
   transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
 }
 .left {
   transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
 }
 .leftArrowWrapper {
-  left: 0.1875rem;
+  left: 0.5rem;
 }
 .rightArrowWrapper {
-  right: 0.1875rem;
+  right: 0.5rem;
 }
+
 .projectContainer {
   height: 36.875rem;
   position: relative;
   overflow: hidden;
 
   &:focus-visible {
-    outline: 3px solid $accent-blue;
-    outline-offset: -3px;
+    outline: 2px solid $accent-blue;
+    outline-offset: -2px;
   }
 }
+
 .tileWrapper {
   height: 100%;
   width: auto;
   position: absolute;
-  transition: left .5s;
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .projectTileContainer {
   width: 17.5rem;
   height: 95%;
@@ -74,83 +87,126 @@
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  color: black;
-  border: 1px solid rgb(61, 61, 82);
-  background-color: rgb(216, 219, 219);
-  box-shadow: 5px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+  color: $text-primary;
+  border: 1px solid $border-subtle;
+  background-color: $bg-card;
+  box-shadow: $shadow-md;
+  border-radius: $radius-md;
+  transition: all $transition-base;
+  overflow: hidden;
+
+  &:hover {
+    border-color: $border-accent;
+    box-shadow: $shadow-lg, $shadow-glow;
+    transform: translateY(-2px);
+  }
 }
+
 .projectTileContainer p {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
 }
+
 .projName {
-  font-size: 1.75rem;
-  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: $font-sans;
   width: 100%;
   text-align: center;
-  top: 0.9375rem;
-  color: black;
-  margin: 0.625rem;
+  color: $text-primary;
+  margin: 1rem 0 0.5rem;
+  letter-spacing: -0.01em;
 }
+
 .projectImg {
   object-fit: contain;
   overflow: hidden;
   max-height: 100%;
   border-radius: 50%;
 }
+
 .imgWrapper {
   border-radius: 50%;
-  width: 12.5rem;
-  height: 12.5rem;
-  border: 2px solid rgb(204, 204, 204);
+  width: 10rem;
+  height: 10rem;
+  border: 2px solid $border-medium;
   margin: 0 1.25rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.02);
 }
+
 .github {
   border-radius: 50%;
-  border: 2px solid rgb(121, 120, 120);
+  border: 2px solid $border-medium;
 }
+
 .tech {
-  color: $tech-red;
-  font-weight: bold;
+  color: $accent-blue;
+  font-weight: 600;
   text-align: center;
   width: 100%;
+  font-size: 0.8rem;
+  font-family: $font-mono;
+  letter-spacing: 0.02em;
 }
+
 .desc {
   margin-left: 0.5rem;
+  color: $text-secondary;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
+
 .tileLinks {
   position: absolute;
-  bottom: 2.1875rem;
+  bottom: 2.5rem;
   left: 0;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 0.9375rem;
+  margin-bottom: 0.5rem;
 }
+
 span.tileLinks * {
-  color: rgb(8, 61, 175);
-  font-weight: bold;
+  color: $accent-blue;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $accent-violet;
+  }
 }
+
 .projectBody {
   display: flex;
   max-width: 31.25rem;
   flex-flow: column nowrap;
   align-items: flex-start;
   justify-content: center;
-  margin: 20px;
+  margin: 12px 16px;
 }
+
 .date {
   position: absolute;
-  bottom: 0;
+  bottom: 0.5rem;
   right: 1rem;
-  color: black;
+  color: $text-muted;
+  font-size: 0.8rem;
+  font-family: $font-mono;
 }
+
 .slideIndicator {
   text-align: center;
   width: 100%;
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  opacity: 0.8;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: $text-muted;
+  font-family: $font-mono;
 }
 
 @media screen and (max-width: $bp-mobile-lg) {

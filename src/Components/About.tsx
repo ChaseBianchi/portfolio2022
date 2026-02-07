@@ -8,11 +8,15 @@ function About() {
         <div className="textContainer">
           <h3>{profile.name}</h3>
           <h4>{profile.title}</h4>
-          <p>{profile.bio}</p>
-          <p>Frontend: {profile.skills.frontend}</p>
-          <p>Backend: {profile.skills.backend}</p>
-          <p>Adobe Stack: {profile.skills.adobe}</p>
-          <p>Product & Design: {profile.skills.tools}</p>
+          <p className="aboutBio">{profile.bio}</p>
+          <div className="skillsGrid">
+            {profile.skills.map((skill) => (
+              <div key={skill.label} className="skillCategory">
+                <span className="skillLabel">{skill.label}</span>
+                <span className="skillItems">{skill.items}</span>
+              </div>
+            ))}
+          </div>
           <a className='resumeLink' href="/media/resume.pdf" target='_blank' rel='noreferrer' download>
             <div className='downloadResume'>Resume</div>
           </a>

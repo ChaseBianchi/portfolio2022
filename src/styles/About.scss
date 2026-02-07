@@ -3,30 +3,33 @@
 #about {
   display: flex;
   flex-flow: column nowrap;
-  background-color: $medium-bg;
+  background-color: $bg-secondary;
   width: 100%;
   height: auto;
-  padding-bottom: 6.25rem;
+  padding: $section-padding;
   align-items: center;
   position: relative;
 }
+
 .aboutContainer {
   width: 100%;
+  max-width: $content-max-width;
   height: auto;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-evenly;
+  padding: $content-padding;
 }
+
 .textContainer {
   width: 60%;
 }
+
 .headshotContainer {
-  width: 30vw;
-  height: 30vw;
-  max-width: 18.75rem;
-  max-height: 18.75rem;
-  border: 3px solid #f3f5ff;
+  width: 16rem;
+  height: 16rem;
+  border: 3px solid $border-medium;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
@@ -34,31 +37,113 @@
   justify-content: center;
   margin-bottom: 20px;
   margin-top: 0;
+  box-shadow: $shadow-lg, 0 0 30px rgba(96, 165, 250, 0.1);
+  transition: all $transition-slow;
+
+  &:hover {
+    border-color: $accent-blue;
+    box-shadow: $shadow-lg, 0 0 40px rgba(96, 165, 250, 0.2);
+  }
 }
+
 .headshot {
   object-fit: contain;
   height: 100%;
 }
+
 .textContainer h3 {
   font-size: 2rem;
+  font-weight: 700;
   margin: 0;
+  letter-spacing: -0.02em;
 }
+
 .textContainer h4 {
-  margin: 0 0 1.875rem;
+  margin: 0.25rem 0 1.25rem;
+  color: $accent-blue;
+  font-weight: 500;
+  font-size: 1.1rem;
 }
+
+.aboutBio {
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: $text-secondary;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.skillCategory {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 1rem;
+  background-color: $glass-bg;
+  border: 1px solid $glass-border;
+  border-radius: $radius-sm;
+  border-left: 3px solid $accent-blue;
+  transition: all $transition-fast;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-left-color: $accent-violet;
+  }
+
+  &:nth-child(even) {
+    border-left-color: $accent-violet;
+
+    &:hover {
+      border-left-color: $accent-blue;
+    }
+
+    .skillLabel {
+      color: $accent-violet;
+    }
+  }
+}
+
+.skillLabel {
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $accent-blue;
+  margin-bottom: 0.375rem;
+  font-family: $font-mono;
+}
+
+.skillItems {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: $text-secondary;
+}
+
 .downloadResume {
   margin-top: 2.5rem;
-  width: 6.875rem;
-  height: 2.5rem;
-  border-radius: 4px;
-  background-color: $accent-blue;
-  border: 1px solid rgb(196, 217, 255);
+  padding: 0.75rem 2rem;
+  border-radius: $radius-sm;
+  background: $accent-gradient;
+  border: none;
   color: white;
-  font-weight: bolder;
-  display: flex;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 0.1875rem;
+  transition: all $transition-fast;
+  box-shadow: $shadow-sm;
+
+  &:hover {
+    background: $accent-gradient-hover;
+    box-shadow: $shadow-md, $shadow-glow;
+    transform: translateY(-1px);
+  }
 }
 
 @media screen and (max-width: $bp-tablet) {
@@ -67,9 +152,14 @@
   }
   .headshotContainer {
     order: 1;
+    width: 12rem;
+    height: 12rem;
   }
   .textContainer {
     order: 2;
-    width: 80%;
+    width: 90%;
+  }
+  .skillsGrid {
+    grid-template-columns: 1fr;
   }
 }

@@ -11,50 +11,65 @@
   justify-content: flex-start;
   align-items: flex-start;
   z-index: 9999;
-  transition: left 0.4s ease-in-out, background-color 0.7s;
+  transition: left 0.4s ease-in-out, background-color 0.5s;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
+
 .bar1, .bar2, .bar3 {
-  width: 3.125rem;
-  height: 0.3125rem;
-  background-color: #D7DFFF;
-  margin: 0.375rem 0;
+  width: 2rem;
+  height: 3px;
+  background-color: $text-secondary;
+  margin: 4px 0;
   transition: 0.4s;
+  border-radius: 2px;
 }
+
 .change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-7px, 5px);
 }
 .change .bar2 { opacity: 0; }
 .change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
-  transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-7px, -5px);
 }
+
 .container {
   display: inline-block;
   cursor: pointer;
-  padding: 0.625rem 0 0 0.625rem;
+  padding: 0.75rem;
   background: none;
   border: none;
   color: inherit;
 }
+
 .menuMobile {
   width: 100%;
   height: auto;
-  margin-top: 0.625rem;
+  margin-top: 0.5rem;
   position: absolute;
   top: 2.8125rem;
   left: 0;
-  transition: left .4s ease-in-out;
+  transition: left 0.4s ease-in-out;
 }
+
 .menuItem {
-  font-size: 1.5rem;
-  line-height: 3rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 2.75rem;
   margin: 0;
-  padding-left: 1.25rem;
+  padding-left: 1rem;
+  color: $text-secondary;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $text-primary;
+  }
 }
+
 .hidden {
   left: -9.375rem;
 }
+
 .navMobileLinksContainer {
   list-style-type: none;
   display: flex;
@@ -62,14 +77,16 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .navMobileLinksContainer a {
   width: 100%;
   height: auto;
   text-align: left;
   margin: none;
 }
-.navMobileLinksContainer a :hover {
-  background-color: rgba(255, 255, 255, 0.151);
+
+.navMobileLinksContainer a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 @media screen and (max-width: $bp-desktop-nav) {

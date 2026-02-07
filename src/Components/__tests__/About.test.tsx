@@ -18,14 +18,24 @@ describe('About', () => {
     expect(screen.getByText('Consultant at Slalom')).toBeInTheDocument()
   })
 
-  it('displays frontend skills', () => {
+  it('displays bio text', () => {
     render(<About />)
-    expect(screen.getByText(/TypeScript/)).toBeInTheDocument()
+    expect(screen.getByText(/enterprise Adobe Experience Manager/)).toBeInTheDocument()
   })
 
-  it('displays Adobe stack', () => {
+  it('renders skill categories', () => {
     render(<About />)
-    expect(screen.getByText(/AEM Sites/)).toBeInTheDocument()
+    expect(screen.getByText('Frontend')).toBeInTheDocument()
+    expect(screen.getByText('Backend')).toBeInTheDocument()
+    expect(screen.getByText('Adobe Stack')).toBeInTheDocument()
+    expect(screen.getByText('AI & Automation')).toBeInTheDocument()
+    expect(screen.getByText('Product & Design')).toBeInTheDocument()
+    expect(screen.getByText('Testing & Quality')).toBeInTheDocument()
+  })
+
+  it('displays TypeScript in frontend skills', () => {
+    render(<About />)
+    expect(screen.getByText(/TypeScript/)).toBeInTheDocument()
   })
 
   it('renders headshot image', () => {

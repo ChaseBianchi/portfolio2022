@@ -1,11 +1,45 @@
-// Colors
-$dark-bg: #282c34;
-$medium-bg: #353a44;
-$light-bg: #d8dbdb;
-$text-light: #ecf0ff;
-$accent-blue: rgb(103, 167, 209);
-$link-blue: #396ed6;
-$tech-red: rgb(143, 21, 21);
+// Color Palette — Modern Dark Theme
+$bg-primary: #0a0a1a;
+$bg-secondary: #111827;
+$bg-surface: #1a1a2e;
+$bg-card: #1f2937;
+$bg-card-hover: #283548;
+$bg-elevated: #374151;
+
+$text-primary: #f1f5f9;
+$text-secondary: #94a3b8;
+$text-muted: #64748b;
+
+$accent-blue: #60a5fa;
+$accent-blue-bright: #3b82f6;
+$accent-violet: #a78bfa;
+$accent-gradient: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+$accent-gradient-hover: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+
+$border-subtle: rgba(255, 255, 255, 0.06);
+$border-medium: rgba(255, 255, 255, 0.1);
+$border-accent: rgba(96, 165, 250, 0.3);
+
+$glass-bg: rgba(255, 255, 255, 0.03);
+$glass-border: rgba(255, 255, 255, 0.08);
+
+// Legacy aliases for components that still reference old names
+$dark-bg: $bg-primary;
+$medium-bg: $bg-secondary;
+$light-bg: #e2e8f0;
+$text-light: $text-primary;
+$link-blue: $accent-blue-bright;
+$tech-red: $accent-violet;
+
+// Typography
+$font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+
+// Spacing
+$section-padding: 6rem 0;
+$section-padding-mobile: 4rem 0;
+$content-max-width: 1200px;
+$content-padding: 0 2rem;
 
 // Breakpoints
 $bp-desktop-nav: 1026px;
@@ -14,3 +48,20 @@ $bp-tablet: 768px;
 $bp-mobile-lg: 450px;
 $bp-mobile-md: 410px;
 $bp-mobile-sm: 375px;
+
+// Shadows
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+$shadow-glow: 0 0 20px rgba(96, 165, 250, 0.15);
+
+// Transitions
+$transition-fast: 150ms ease;
+$transition-base: 250ms ease;
+$transition-slow: 400ms ease;
+
+// Border radius
+$radius-sm: 6px;
+$radius-md: 10px;
+$radius-lg: 16px;
+$radius-xl: 24px;

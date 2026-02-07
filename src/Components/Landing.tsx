@@ -13,6 +13,10 @@ function Landing() {
       </div>
       <h1>{profile.name}</h1>
       <h2>{profile.heroTitle}</h2>
+      <p className="heroSubtitle">{profile.heroSubtitle}</p>
+      <div className="scrollIndicator" aria-hidden="true">
+        <div className="scrollArrow" />
+      </div>
     </header>
   )
 }
