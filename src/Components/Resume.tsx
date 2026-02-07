@@ -25,33 +25,33 @@ function Resume() {
           <div className="resume-skills-grid">
             <div className="resume-skill-row">
               <span className="resume-skill-label">Frontend</span>
-              <span>JavaScript, TypeScript, React, Redux, jQuery, SCSS, HTML, AAA Accessibility</span>
+              <span>JavaScript, TypeScript, React, Redux, jQuery, SCSS, HTML, WCAG AAA Accessibility</span>
             </div>
             <div className="resume-skill-row">
               <span className="resume-skill-label">Backend</span>
-              <span>Java, Spring, AEM (Sites, Assets), Python, SQL, Okta, JWT</span>
+              <span>Java, Spring, AEM (Sites, Assets, Dispatcher), Python, SQL, Okta, JWT</span>
             </div>
             <div className="resume-skill-row">
               <span className="resume-skill-label">Adobe Stack</span>
-              <span>AEM Sites, AEM Assets, GenStudio, Workfront, Workfront Fusion</span>
+              <span>AEM Sites, AEM Assets, AEM Dispatcher, GenStudio, Workfront, Workfront Fusion</span>
             </div>
             <div className="resume-skill-row">
               <span className="resume-skill-label">AI & Automation</span>
-              <span>Claude Code, Prompt Engineering, AI-Augmented Development Workflows</span>
+              <span>Claude Code, Prompt Engineering, AI-Augmented Dev Workflows, Workfront Fusion</span>
             </div>
             <div className="resume-skill-row">
-              <span className="resume-skill-label">Product & Design</span>
-              <span>GitHub, Jira, ADO, Agile/Scrum, CI/CD Pipelines</span>
+              <span className="resume-skill-label">DevOps & Tooling</span>
+              <span>Git, GitHub, Jira, ADO, Agile/Scrum, CI/CD Pipelines, Maven, Vite</span>
             </div>
             <div className="resume-skill-row">
               <span className="resume-skill-label">Testing</span>
-              <span>Vitest, Playwright, Jest, Cypress, React Testing Library</span>
+              <span>Vitest, Playwright, Jest, Cypress, React Testing Library, JUnit</span>
             </div>
           </div>
         </section>
 
         <section className="resume-section">
-          <h2>Employment</h2>
+          <h2>Professional Experience</h2>
 
           <div className="resume-entry">
             <div className="resume-entry-header">
@@ -60,42 +60,59 @@ function Resume() {
               </div>
               <div className="resume-date">Jun 2022 — Present</div>
             </div>
-            <p className="resume-tech">AEM | JavaScript | React | Java | TypeScript | Claude Code</p>
+            <p className="resume-tech">AEM | Java | JavaScript | TypeScript | React | jQuery | Claude Code</p>
             <ul>
-              <li>Lead developer on enterprise AEM implementations for clients including Dentaquest and Mass General Brigham, delivering CMS solutions, platform migrations, and website redesigns</li>
-              <li>Specialize in Adobe Experience Manager (AEM Sites & Assets), building custom components, workflows, and integrations using Java, JavaScript, and React</li>
-              <li>Pioneer AI-augmented development practices — leveraging Claude Code and prompt engineering to accelerate delivery, improve code quality, and automate repetitive tasks</li>
-              <li>Lead client demos, discovery sessions, UAT, and developer training; mentor junior developers on AEM architecture and best practices</li>
-              <li>Promoted from Associate Consultant to Consultant within 6 months; nominated for Employee of the Quarter</li>
+              <li>Digital Experience Management consultant delivering enterprise CMS solutions, platform migrations, website redesigns, and marketing automation for Fortune 500 and large healthcare clients</li>
+              <li>Promoted from Associate Consultant to Consultant within 6 months; nominated for Employee of the Quarter for exceptional client delivery and team leadership</li>
+              <li>Pioneer AI-augmented development practices on the team — leveraging Claude Code and prompt engineering to accelerate delivery timelines, improve code quality, and automate repetitive development tasks</li>
+              <li>Lead client-facing activities including technical demos, discovery workshops, requirements gathering, UAT sessions, and post-launch training for content authors and administrators</li>
+              <li>Mentor junior developers on AEM architecture, component development patterns, and enterprise development best practices</li>
             </ul>
           </div>
 
-          <div className="resume-entry">
+          <div className="resume-entry resume-sub-entry">
             <div className="resume-entry-header">
               <div>
-                <strong>Fullstack Web Developer</strong> | Freelance
+                <strong>Dentaquest</strong> — Enterprise AEM Implementation
               </div>
-              <div className="resume-date">Sep 2021 — Jun 2022</div>
+              <div className="resume-date">2023</div>
             </div>
-            <p className="resume-tech">JavaScript | React | Redux</p>
+            <p className="resume-tech">AEM Sites | Java | JavaScript | React | SCSS | Maven</p>
             <ul>
-              <li>End-to-end development as a solo practitioner — taking client needs from concept through deployment</li>
-              <li>Built responsive web applications with React, Redux, and modern JavaScript</li>
-              <li>Managed full project lifecycle including client communication, requirements, development, testing, and delivery</li>
+              <li>Lead developer on a greenfield AEM Sites implementation for a leading dental benefits provider serving millions of members</li>
+              <li>Architected and built custom AEM components integrating React SPA modules into the AEM page editor, enabling content authors to manage dynamic content without developer intervention</li>
+              <li>Developed AEM Sling Models, servlets, and OSGi services in Java to support complex content structures and third-party API integrations</li>
+              <li>Implemented responsive SCSS design system ensuring consistent brand experience across desktop, tablet, and mobile breakpoints</li>
             </ul>
           </div>
 
-          <div className="resume-entry">
+          <div className="resume-entry resume-sub-entry">
             <div className="resume-entry-header">
               <div>
-                <strong>Frontend Web Developer</strong> | Range Trainer Pro
+                <strong>Mass General Brigham</strong> — Enterprise Website Redesign
               </div>
-              <div className="resume-date">May 2021 — Aug 2021</div>
+              <div className="resume-date">2022 — 2023</div>
             </div>
-            <p className="resume-tech">JavaScript | React | Redux</p>
+            <p className="resume-tech">AEM Sites | Java | JavaScript | jQuery | SCSS | Dispatcher</p>
             <ul>
-              <li>Developed JavaScript algorithms to transform user input into backend-compatible data structures, enabling flexible yet customizable data entry</li>
-              <li>Built and maintained reusable React components with Redux for state management</li>
+              <li>Core developer on a full website redesign for Massachusetts' largest healthcare employer, serving 80,000+ employees and millions of patients</li>
+              <li>Built accessible AEM components achieving WCAG AAA compliance across the site, meeting strict healthcare accessibility requirements</li>
+              <li>Developed custom AEM workflows and content fragment models to streamline editorial processes for a large distributed content team</li>
+              <li>Configured AEM Dispatcher caching rules and CDN integration for high-traffic pages, improving page load performance</li>
+              <li>Participated in triage, issue resolution, and cross-team coordination across multiple vendor teams during parallel development</li>
+            </ul>
+          </div>
+
+          <div className="resume-entry resume-sub-entry">
+            <div className="resume-entry-header">
+              <div>
+                <strong>Internal & Cross-Client Initiatives</strong>
+              </div>
+            </div>
+            <ul>
+              <li>Developed reusable AEM project archetypes and component libraries to accelerate onboarding for new Slalom AEM engagements</li>
+              <li>Led internal knowledge-sharing sessions on AEM development patterns, AI-augmented workflows, and accessibility best practices</li>
+              <li>Contributed to pre-sales technical discovery and estimation for prospective Adobe/AEM client engagements</li>
             </ul>
           </div>
 
@@ -107,9 +124,9 @@ function Resume() {
               <div className="resume-date">2009 — 2020</div>
             </div>
             <ul>
-              <li>World Series of Poker bracelet winner with career net profits exceeding $2 million</li>
-              <li>Applied data analysis, probability theory, and risk management to inform strategic decision-making</li>
-              <li>Self-directed career requiring exceptional discipline, bankroll management, and performance under pressure</li>
+              <li>World Series of Poker bracelet winner with career net profits exceeding $2 million across live and online tournaments</li>
+              <li>Applied rigorous data analysis, probability modeling, and risk management frameworks to inform real-time strategic decisions under uncertainty</li>
+              <li>Self-directed career requiring exceptional discipline, continuous skill development, and sustained performance under high-pressure conditions</li>
             </ul>
           </div>
         </section>
@@ -120,57 +137,29 @@ function Resume() {
           <div className="resume-entry">
             <div className="resume-entry-header">
               <div>
-                <strong>Portfolio Website</strong> — AI-Augmented Modernization
+                <strong>Portfolio Website</strong> — AI-Augmented Full Stack Modernization
               </div>
               <div className="resume-date">2024</div>
             </div>
             <p className="resume-tech">React 18 | TypeScript | Vite | Vitest | Playwright | Claude Code</p>
             <ul>
-              <li>Modernized personal portfolio from CRA/JavaScript to Vite/TypeScript using AI-augmented development with Claude Code</li>
-              <li>Implemented comprehensive testing: 73+ unit/integration tests (Vitest) and 33+ E2E tests (Playwright)</li>
-              <li>Achieved WCAG AAA accessibility compliance with semantic HTML, keyboard navigation, and ARIA attributes</li>
+              <li>Modernized personal portfolio from Create React App / JavaScript to Vite / TypeScript using AI-augmented development with Claude Code, demonstrating modern full-stack engineering practices</li>
+              <li>Implemented 86+ unit/integration tests (Vitest + React Testing Library) and 33+ E2E tests (Playwright) with visual regression baselines</li>
+              <li>Achieved WCAG AAA accessibility compliance with semantic HTML, full keyboard navigation, ARIA attributes, and automated axe-core audits</li>
             </ul>
           </div>
 
           <div className="resume-entry">
             <div className="resume-entry-header">
               <div>
-                <strong>Dentaquest Website</strong> — Enterprise AEM Implementation
+                <strong>Boys & Girls Club Emotion Tracker</strong> — Full Stack Capstone
               </div>
-              <div className="resume-date">2023</div>
-            </div>
-            <p className="resume-tech">AEM | Java | JavaScript | React | SCSS</p>
-            <ul>
-              <li>Built responsive React SPA components integrated into Adobe Experience Manager architecture</li>
-              <li>Delivered enterprise-grade CMS solution for a leading dental benefits provider</li>
-            </ul>
-          </div>
-
-          <div className="resume-entry">
-            <div className="resume-entry-header">
-              <div>
-                <strong>Mass General Brigham Website</strong> — Enterprise Redesign
-              </div>
-              <div className="resume-date">2022—2023</div>
-            </div>
-            <p className="resume-tech">AEM | Java | JavaScript | jQuery | SCSS</p>
-            <ul>
-              <li>Led website redesign with AAA accessibility compliance for Massachusetts' largest healthcare employer</li>
-            </ul>
-          </div>
-
-          <div className="resume-entry">
-            <div className="resume-entry-header">
-              <div>
-                <strong>Boys & Girls Club Emotion Tracker</strong> — Capstone Project
-              </div>
-              <div className="resume-date">Mar 2021</div>
+              <div className="resume-date">2021</div>
             </div>
             <p className="resume-tech">React | Java | Spring | Okta | Ant Design</p>
             <ul>
-              <li>Full stack application allowing children to provide real-time feedback, giving staff actionable data</li>
-              <li>Architected Spring backend designed to scale from 4,400 to 4,000,000+ users</li>
-              <li>Agile workflow with regular stakeholder meetings ensuring strict adherence to requirements</li>
+              <li>Full stack application enabling children to provide real-time emotional feedback, giving staff actionable data for program improvement</li>
+              <li>Architected Spring backend with Okta authentication designed to scale from 4,400 current users to 4,000,000+</li>
             </ul>
           </div>
         </section>
@@ -182,8 +171,11 @@ function Resume() {
               <div>
                 <strong>Bloom Institute of Technology</strong> | Full Stack Web Development & Computer Science
               </div>
-              <div className="resume-date">May 2021</div>
+              <div className="resume-date">2021</div>
             </div>
+            <ul>
+              <li>6-month intensive covering JavaScript, React, Redux, Java, Spring, Python, SQL, and agile methodology</li>
+            </ul>
           </div>
         </section>
 

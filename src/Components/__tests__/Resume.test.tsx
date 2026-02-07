@@ -25,10 +25,16 @@ describe('Resume', () => {
     expect(screen.getAllByText(/Claude Code/).length).toBeGreaterThan(0)
   })
 
-  it('renders Employment section with Slalom', () => {
+  it('renders Professional Experience section with Slalom', () => {
     render(<Resume />)
-    expect(screen.getByText('Employment')).toBeInTheDocument()
+    expect(screen.getByText('Professional Experience')).toBeInTheDocument()
     expect(screen.getByText(/Slalom Consulting/)).toBeInTheDocument()
+  })
+
+  it('renders Slalom client sub-entries', () => {
+    render(<Resume />)
+    expect(screen.getByText(/Dentaquest/)).toBeInTheDocument()
+    expect(screen.getByText(/Mass General Brigham/)).toBeInTheDocument()
   })
 
   it('renders Projects section', () => {
