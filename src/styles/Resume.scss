@@ -172,6 +172,10 @@
 
 // Print styles
 @media print {
+  html, body {
+    background: white !important;
+  }
+
   .no-print {
     display: none !important;
   }
