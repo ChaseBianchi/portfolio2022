@@ -175,6 +175,8 @@ span.tileLinks * {
   font-size: 0.85rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 3px;
   transition: color $transition-fast;
 
   &:hover {
