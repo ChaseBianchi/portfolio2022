@@ -32,9 +32,8 @@ function NavMobile() {
   return (
     <nav
       ref={navbarRef}
-      style={isOpen ? { background: 'hsl(220, 6%, 9%, .85)' } : {}}
       id='navbar'
-      className='navMobileContainer'
+      className={`navMobileContainer${isOpen ? ' menuOpen' : ''}`}
       aria-label="Mobile navigation"
     >
       <button

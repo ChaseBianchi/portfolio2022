@@ -1,8 +1,8 @@
 @use 'variables' as *;
 
 .navMobileContainer {
-  width: 9.375rem;
-  height: 18.4375rem;
+  width: auto;
+  height: auto;
   display: none;
   flex-flow: column nowrap;
   position: fixed;
@@ -11,7 +11,12 @@
   justify-content: flex-start;
   align-items: flex-start;
   z-index: 9999;
-  transition: left 0.4s ease-in-out, background-color 0.5s;
+  transition: left 0.4s ease-in-out;
+}
+
+.navMobileContainer.menuOpen {
+  width: 9.375rem;
+  background: hsla(220, 6%, 9%, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
