@@ -1,0 +1,170 @@
+@use 'variables' as *;
+
+#projects {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: $medium-bg;
+  width: 100%;
+  height: auto;
+  padding-bottom: 4.375rem;
+  align-items: flex-start;
+  position: relative;
+}
+.arrowWrapper {
+  width: 1.875rem;
+  height: 1.875rem;
+  border: 3px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 45%;
+  z-index: 99;
+  cursor: pointer;
+  background: none;
+  color: inherit;
+  padding: 0;
+
+  &:disabled {
+    cursor: default;
+  }
+}
+.arrow {
+  border: solid rgb(255, 255, 255);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 0.3125rem;
+}
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.leftArrowWrapper {
+  left: 0.1875rem;
+}
+.rightArrowWrapper {
+  right: 0.1875rem;
+}
+.projectContainer {
+  height: 36.875rem;
+  position: relative;
+  overflow: hidden;
+
+  &:focus-visible {
+    outline: 3px solid $accent-blue;
+    outline-offset: -3px;
+  }
+}
+.tileWrapper {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  transition: left .5s;
+}
+.projectTileContainer {
+  width: 17.5rem;
+  height: 95%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  color: black;
+  border: 1px solid rgb(61, 61, 82);
+  background-color: rgb(216, 219, 219);
+  box-shadow: 5px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.projectTileContainer p {
+  font-size: 1.1rem;
+}
+.projName {
+  font-size: 1.75rem;
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+  width: 100%;
+  text-align: center;
+  top: 0.9375rem;
+  color: black;
+  margin: 0.625rem;
+}
+.projectImg {
+  object-fit: contain;
+  overflow: hidden;
+  max-height: 100%;
+  border-radius: 50%;
+}
+.imgWrapper {
+  border-radius: 50%;
+  width: 12.5rem;
+  height: 12.5rem;
+  border: 2px solid rgb(204, 204, 204);
+  margin: 0 1.25rem;
+}
+.github {
+  border-radius: 50%;
+  border: 2px solid rgb(121, 120, 120);
+}
+.tech {
+  color: $tech-red;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+.desc {
+  margin-left: 0.5rem;
+}
+.tileLinks {
+  position: absolute;
+  bottom: 2.1875rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 0.9375rem;
+}
+span.tileLinks * {
+  color: rgb(8, 61, 175);
+  font-weight: bold;
+}
+.projectBody {
+  display: flex;
+  max-width: 31.25rem;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 20px;
+}
+.date {
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
+  color: black;
+}
+.slideIndicator {
+  text-align: center;
+  width: 100%;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: $bp-mobile-lg) {
+  .projectContainer {
+    margin-left: 2.1875rem;
+  }
+}
+@media screen and (max-width: $bp-mobile-md) {
+  .projectContainer {
+    margin-left: 1.5625rem;
+  }
+}
+@media screen and (max-width: $bp-mobile-sm) {
+  .projectContainer {
+    margin-left: 0.625rem;
+  }
+}

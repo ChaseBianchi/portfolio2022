@@ -1,0 +1,85 @@
+@use 'variables' as *;
+
+#desktopNavbar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  transition: top .5s ease-in-out;
+  border-bottom: 3px solid rgba(12, 16, 41, 0.322);
+}
+.landingBar {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1.5rem;
+  background-color: $dark-bg;
+}
+.gradient {
+  width: 14rem;
+  height: 100%;
+  background-image: linear-gradient(to right, $light-bg, $dark-bg);
+}
+.navDesktopContainer {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+  background-color: $light-bg;
+
+  a {
+    &:first-of-type {
+      margin: 0 0 0 1.5rem;
+    }
+    &:last-of-type {
+      margin-right: auto;
+    }
+  }
+}
+.desktop {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.25rem;
+  color: black;
+  transition: background-color .4s;
+}
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #000000;
+}
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 0.1875rem;
+  bottom: 0rem;
+  left: 0;
+  background-color: $link-blue;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@media screen and (max-width: $bp-desktop-nav) {
+  #desktopNavbar {
+    display: none;
+  }
+  .gradient {
+    display: none;
+  }
+  .landingBar {
+    position: absolute;
+    top: 2vw;
+    right: 2vw;
+  }
+}

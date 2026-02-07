@@ -1,0 +1,83 @@
+@use 'variables' as *;
+
+html {
+  scroll-behavior: smooth;
+}
+html, body {
+  overflow-x: hidden;
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+}
+.App {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+  color: $text-light;
+}
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.deadLink {
+  text-decoration: line-through;
+  color: white;
+}
+.comp-wrapper {
+  width: 100%;
+  height: auto;
+}
+.comp-wrapper h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+}
+
+// Skip-to-content
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: $accent-blue;
+  color: white;
+  padding: 0.5rem 1rem;
+  z-index: 9999999;
+  border-radius: 0 0 4px 4px;
+  font-weight: bold;
+  transition: top 0.2s;
+
+  &:focus {
+    top: 0;
+  }
+}
+
+// Focus-visible global styles
+:focus-visible {
+  outline: 3px solid $accent-blue;
+  outline-offset: 2px;
+}
+
+// Shared icon/link styles
+.linkedinLogo {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+.linkedinWrapper {
+  width: 3.125rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color .2s ease;
+}
+.linkedinWrapper :hover {
+  background-color: #ffffff8c;
+}
+.emailWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color .2s ease;
+}

@@ -1,0 +1,36 @@
+@use 'variables' as *;
+
+#experience {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: $dark-bg;
+  width: 100%;
+  height: auto;
+  padding-bottom: 6.25rem;
+  align-items: center;
+  padding: 0.3125rem;
+}
+.verticalTimeline {
+  width: 100%;
+  height: auto;
+}
+.iconWrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.workImg {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.tlDate {
+  color: white;
+}
+
+@media screen and (max-width: $bp-timeline) {
+  .tlDate {
+    color: black;
+  }
+}
