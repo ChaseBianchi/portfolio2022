@@ -14,8 +14,12 @@ function Landing() {
       <h1>{profile.name}</h1>
       <h2>{profile.heroTitle}</h2>
       <p className="heroSubtitle">{profile.heroSubtitle}</p>
-      <div className="scrollIndicator" aria-hidden="true">
-        <div className="scrollArrow" />
+      <div className="scrollIndicator">
+        <button
+          className="scrollArrow"
+          onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+          aria-label="Scroll to Projects"
+        />
       </div>
     </header>
   )

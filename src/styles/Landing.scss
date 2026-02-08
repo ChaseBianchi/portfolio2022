@@ -97,9 +97,13 @@
 .scrollArrow {
   width: 1.5rem;
   height: 1.5rem;
+  border: none;
   border-right: 2px solid $text-secondary;
   border-bottom: 2px solid $text-secondary;
   transform: rotate(45deg);
+  background: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 @keyframes bounce {
