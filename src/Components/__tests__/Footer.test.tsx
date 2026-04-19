@@ -11,19 +11,13 @@ describe('Footer', () => {
   it('renders social links', () => {
     render(<Footer />)
     const links = screen.getAllByRole('link')
-    expect(links.length).toBe(3)
+    expect(links.length).toBe(2)
   })
 
   it('contains email link', () => {
     render(<Footer />)
     const emailLink = screen.getByLabelText('email')
     expect(emailLink).toHaveAttribute('href', 'mailto:cbianchi@protonmail.com')
-  })
-
-  it('contains LinkedIn link', () => {
-    render(<Footer />)
-    const linkedinLink = screen.getByLabelText('linkedin')
-    expect(linkedinLink).toHaveAttribute('href', 'https://www.linkedin.com/in/chasebianchi/')
   })
 
   it('contains GitHub link', () => {

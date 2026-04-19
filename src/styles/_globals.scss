@@ -96,7 +96,7 @@ a {
 }
 
 // Social icon styles
-.linkedinLogo {
+.socialIcon {
   width: 1.5rem;
   height: 1.5rem;
   opacity: 0.7;
@@ -104,7 +104,7 @@ a {
   filter: brightness(0) invert(1);
 }
 
-.linkedinWrapper {
+.socialLink {
   width: 2.5rem;
   height: 2.5rem;
   display: flex;
@@ -116,7 +116,7 @@ a {
   &:hover {
     background-color: rgba(255, 255, 255, 0.08);
 
-    .linkedinLogo {
+    .socialIcon {
       opacity: 1;
       transform: translateY(-1px);
     }

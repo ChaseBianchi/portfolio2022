@@ -20,7 +20,6 @@ describe('NavDesktop', () => {
   it('renders social links', () => {
     render(<NavDesktop />)
     expect(screen.getByLabelText('email')).toBeInTheDocument()
-    expect(screen.getByLabelText('linkedin')).toBeInTheDocument()
     expect(screen.getByLabelText('github')).toBeInTheDocument()
   })
 

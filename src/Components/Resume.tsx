@@ -14,8 +14,6 @@ function Resume() {
             </p>
             <p className="resume-contact-line">
               <a href="https://github.com/ChaseBianchi">github.com/ChaseBianchi</a>
-              <span className="resume-separator">|</span>
-              <a href="https://linkedin.com/in/chasebianchi">linkedin.com/in/chasebianchi</a>
             </p>
           </div>
         </header>

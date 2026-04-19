@@ -11,11 +11,6 @@ export const socialLinks: SocialLink[] = [
     alt: 'email',
   },
   {
-    href: 'https://www.linkedin.com/in/chasebianchi/',
-    img: '/media/linkedin3.png',
-    alt: 'linkedin',
-  },
-  {
     href: 'https://github.com/ChaseBianchi/',
     img: '/media/github2.png',
     alt: 'github',

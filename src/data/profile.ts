@@ -4,7 +4,6 @@ export const profile = {
   heroTitle: 'Full Stack Developer',
   heroSubtitle: 'AEM | React | AI-Augmented Development',
   email: 'cbianchi@protonmail.com',
-  linkedin: 'https://www.linkedin.com/in/chasebianchi/',
   github: 'https://github.com/ChaseBianchi/',
   bio: 'Full Stack Developer specializing in enterprise Adobe Experience Manager (AEM) solutions and modern web development. Former Professional Poker Player turned software engineer — I bring the same analytical mindset and calculated risk-taking to building great software. Currently delivering digital experience solutions for enterprise clients at Slalom, with a focus on AI-augmented development workflows to accelerate delivery and quality.',
   skills: [

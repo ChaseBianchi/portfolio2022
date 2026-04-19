@@ -6,13 +6,13 @@ function SocialLinks() {
       {socialLinks.map((link) => (
         <div key={link.alt} className="navHover">
           <a
-            className='linkedinWrapper'
+            className='socialLink'
             href={link.href}
             target='_blank'
             rel='noreferrer'
             aria-label={link.alt}
           >
-            <img className='linkedinLogo' src={link.img} alt={link.alt} />
+            <img className='socialIcon' src={link.img} alt={link.alt} />
           </a>
         </div>
       ))}
