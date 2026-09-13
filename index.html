@@ -1,24 +1,332 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#07111f" />
-    <meta
-      name="description"
-      content="Chase Bianchi is a full-stack developer specializing in Adobe Experience Cloud, scalable component systems, accessibility-first interfaces, and AI-enabled workflow automation."
-    />
-    <link rel="apple-touch-icon" href="/favicon.ico" />
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
-    <title>Chase Bianchi | Adobe Experience Cloud + Full-Stack Developer</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!doctype html>
+<html lang="en" data-theme="atlas">
+
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Chase Bianchi — AI Engineering &amp; Agentic Systems</title><meta name="description" content="I build the systems that help engineering teams turn AI into dependable, everyday work."><meta name="theme-color" content="#080f1b"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/src/styles/atlas-base.css"><link rel="stylesheet" href="/src/styles/atlas.css">
+<script type="module" src="/src/atlas.js">
+
+</script>
+<link rel="canonical" href="https://www.chasebianchi.com/">
+</head>
+
+<body class="theme-atlas">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header wrap">
+<a href="/" class="brand" aria-label="Chase Bianchi home"><span class="brand-mark" aria-hidden="true">cb<span>_</span></span>Chase Bianchi</a><button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">Menu <span aria-hidden="true">+</span></button>
+<nav id="nav-links" class="nav-links" aria-label="Main navigation">
+<a href="/#work">Work</a><a href="/#about">About</a><a href="/assets/chase-bianchi-resume.pdf" target="_blank" rel="noopener">Resume <span aria-hidden="true">↗</span></a><a href="/#contact" class="nav-contact">Get in touch <span aria-hidden="true">↗</span></a>
+</nav>
+
+</header>
+
+<main id="main">
+
+<section class="atlas-hero wrap">
+
+<div class="atlas-heading">
+
+<div>
+
+<p class="eyebrow">
+AI engineering / a connected practice
+</p>
+
+<h1>
+Follow the<br><em>connections.</em>
+</h1>
+
+</div>
+
+<p>
+I build the systems that help engineering teams turn AI into dependable, everyday work.<br><span>Select a node to explore.</span>
+</p>
+
+</div>
+
+<div class="atlas-map-layout">
+
+<div class="map-stage">
+<svg class="map-lines" viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true"><g><line x1="500" y1="300" x2="180" y2="138"/><line x1="500" y1="300" x2="770" y2="126"/><line x1="500" y1="300" x2="820" y2="438"/><line x1="500" y1="300" x2="190" y2="468"/></g><circle cx="500" cy="300" r="110"/><circle cx="500" cy="300" r="215"/><circle cx="500" cy="300" r="290"/></svg>
+<div class="map-center">
+<span>CHASE BIANCHI</span><strong>Engineering<br>in context.</strong><small>SELECT A CONNECTION</small>
+</div>
+<button class="map-node selected" data-node="agentic-delivery" style="--x:18%;--y:23%" aria-pressed="true"><span>01 / ORCHESTRATION</span><strong>Agentic delivery</strong><small>Explore the workflow ↗</small></button><button class="map-node " data-node="ai-hub" style="--x:77%;--y:21%" aria-pressed="false"><span>02 / PORTABILITY</span><strong>AI Hub</strong><small>Explore the platform ↗</small></button><button class="map-node " data-node="developer-enablement" style="--x:82%;--y:73%" aria-pressed="false"><span>03 / ENABLEMENT</span><strong>Developer enablement</strong><small>Explore the handoff ↗</small></button><button class="map-node " data-node="enterprise-engineering" style="--x:19%;--y:78%" aria-pressed="false"><span>04 / FOUNDATIONS</span><strong>Enterprise engineering</strong><small>Explore the foundations ↗</small></button><span class="map-caption">A map of actual projects and their connections.</span>
+</div>
+
+<aside class="map-inspector" aria-live="polite">
+
+<div class="inspector-top">
+<span>CONNECTION <span id="map-number">01</span></span><span aria-hidden="true">↗</span>
+</div>
+
+<p class="eyebrow" id="map-category">
+Enterprise SaaS engagement
+</p>
+
+<h2 id="map-title">
+Agentic delivery
+</h2>
+
+<p id="map-summary">
+An event-driven agent fleet that moves a ticket through planning, implementation, review, and human approval.
+</p>
+
+<div class="map-metric">
+<strong id="map-metric">&lt; 5 weeks</strong><span id="map-metric-label">from prototype stabilization to rollout</span>
+</div>
+<a class="button" id="map-link" href="/work/agentic-delivery/">Open case study ↗</a>
+</aside>
+
+</div>
+
+<script type="application/json" id="project-data">
+[{"id": "agentic-delivery", "number": "01", "title": "Agentic delivery", "subtitle": "From stalled prototype to repeatable delivery.", "category": "Enterprise SaaS engagement", "year": "2026", "role": "AI enablement, architecture & rollout", "summary": "An event-driven agent fleet that moves a ticket through planning, implementation, review, and human approval.", "metric": "\u003c 5 weeks", "metricLabel": "from prototype stabilization to rollout", "tags": ["Multi-agent systems", "Claude Code", "Cosmos", "MCP", "Jira / GitHub"], "challenge": "The client's autonomous delivery pipeline was not reliably firing. Multiple agent fleets, brittle configuration, and unclear operational ownership made it difficult to distinguish a workflow problem from an integration failure.", "approach": "I traced Jira state through webhook delivery, trigger evaluation, and agent sessions, isolating stale event-source identifiers. With the pipeline running end to end, I consolidated the fleets and made the workflow portable enough for other product teams to adopt.", "decisions": [{"title": "Make state explicit", "text": "Ticket-driven state transitions, durable external state, and per-agent idempotency make retries understandable and recoverable."}, {"title": "Put judgment at the gates", "text": "Two mandatory human approval points and bounded retries keep consequential decisions visible to the people responsible for the code."}, {"title": "Design for the next team", "text": "Environment-based configuration, team-scoped run state, service-account credentials, and reusable wiring references support repeatable onboarding."}], "outcomes": ["Moved from a non-firing prototype to production rollout and team onboarding in under five weeks.", "Restored repeated end-to-end completion, including approval gates and terminal states.", "Consolidated two fleets and retired six superseded agent bundles.", "Delivered reusable onboarding guides, configuration references, and live configuration drift checks."], "lesson": "The hard part of an agentic system is often the surrounding software: state, credentials, retries, ownership, and the path back when something goes wrong.", "scope": "Client identity and implementation identifiers are omitted. This case study describes my contribution to a consulting engagement."}, {"id": "ai-hub", "number": "02", "title": "AI Hub", "subtitle": "Team knowledge that travels between tools.", "category": "Internal developer platform", "year": "2026", "role": "Product architecture, full stack & releases", "summary": "A desktop app and CLI for governing and distributing reusable skills, playbooks, source evidence, and project context.", "metric": "32", "metricLabel": "desktop releases in July\u2013August 2026", "tags": ["TypeScript", "React", "Electron", "CLI", "GitHub Actions"], "challenge": "Useful AI context can become trapped in a single editor or model, duplicated across repositories, and separated from the evidence that originally supported it. Teams need a maintainable source of truth that can adapt as their tools change.", "approach": "I built a portable Markdown/YAML content model with adapters for Codex, Claude Code, GitHub Copilot, Cursor, and Junie-oriented workflows. A desktop application and CLI handle discovery, validation, installation, synchronization, sharing, and source management.", "decisions": [{"title": "Separate knowledge from adapters", "text": "Personal, base, and project context resolve independently of any one AI development environment."}, {"title": "Keep the evidence connected", "text": "Lineage, provenance, source snapshots, and review locking preserve the connection between a reusable capability and its supporting material."}, {"title": "Treat local software as a security boundary", "text": "Sandboxing, IPC validation, path-traversal defenses, atomic imports, update integrity checks, and rollback address real failure paths."}], "outcomes": ["Published 32 desktop releases between July 2 and August 11, 2026.", "Reached recorded validation milestones of 191 core tests, 30 desktop tests, and seven end-to-end journeys.", "Delivered portable project and capability sharing with dependency validation, collision handling, and rollback.", "Built macOS delivery and a Windows packaging foundation; signing and Windows device validation remained separate release gates."], "lesson": "The tools will change. The team's knowledge, its provenance, and the way people govern it should survive that change.", "scope": "An internal Slalom project. Release and test counts are documented milestones, not claims about adoption or measured productivity gains."}, {"id": "developer-enablement", "number": "03", "title": "Developer enablement", "subtitle": "The handoff is part of the product.", "category": "Training & reusable engineering practices", "year": "2026", "role": "Reference implementation & instructional design", "summary": "Runnable reference projects, focused training, and reusable playbooks that help engineers build with AI and validate the result.", "metric": "11", "metricLabel": "modules in a validated training build", "tags": ["Java", "AEM", "Maven", "AI workflows", "Technical teaching"], "challenge": "A demonstration can make AI-assisted development look easy without teaching the engineer how to constrain the task, inspect the result, or recover when the output is wrong. Enablement needs a working environment and a repeatable learning loop.", "approach": "I created a pinned, multi-module AEM training repository, validated its build and Java tests, and paired it with concise demonstrations and captioned tutorials. The teaching sequence moves through constraints, planning, generation, critique, and validation.", "decisions": [{"title": "Start with something runnable", "text": "A known project, pinned dependencies, and a validated build keep the lesson focused on engineering practice rather than setup friction."}, {"title": "Make critique a normal step", "text": "Code generation is one stage in the workflow. Engineers practice inspecting assumptions and validating behavior before treating the output as complete."}, {"title": "Make teaching reusable", "text": "Shared capabilities cover discovery, spec-driven delivery, code review, human validation, Jira, and pull-request practices."}], "outcomes": ["Delivered a runnable AEM training environment with a validated 11-module Maven build and Java tests.", "Produced focused training videos with synchronized narration and captions.", "Created reusable training-production and engineering-workflow capabilities.", "Condensed training documentation while preserving the prompts, build steps, and validation material learners need."], "lesson": "A good accelerator is one that the next engineer understands well enough to change.", "scope": "Internal enablement work. No unsupported claims about learner counts or measured adoption are included."}, {"id": "enterprise-engineering", "number": "04", "title": "Enterprise engineering", "subtitle": "Useful software inside real constraints.", "category": "Consulting & digital experience", "year": "2022\u20132026", "role": "Full stack development & client delivery", "summary": "Enterprise web platforms, accessible component systems, and reusable accelerators across healthcare, financial services, and the public sector.", "metric": "2022 \u2192", "metricLabel": "enterprise consulting at Slalom", "tags": ["Java / Sling", "React", "JavaScript", "AEM", "Accessibility"], "challenge": "Enterprise delivery means working with existing platforms, distributed content teams, accessibility expectations, and real release constraints. The software must serve both the person using the site and the person maintaining it.", "approach": "I built and maintained Java/Sling, JavaScript, React, and AEM implementations, contributed to discovery and UAT, led demonstrations and training, and mentored developers. I also led work on a reusable Digital Front Door accelerator for future engagements.", "decisions": [{"title": "Give authors useful control", "text": "Authorable components, dialogs, content policies, and reusable modules let content teams manage experiences without relying on code changes."}, {"title": "Build access into the interaction", "text": "Keyboard flow, focus management, semantic markup, and screen-reader behavior are engineering concerns throughout implementation."}, {"title": "Reuse without hardcoding the client", "text": "Provider and location search, filtering, sorting, and a data abstraction layer support reuse across engagements and data sources."}], "outcomes": ["Delivered enterprise AEM components, responsive navigation, authoring features, and accessibility improvements.", "Built reusable provider and location modules for the Digital Front Door accelerator.", "Shipped AEM AI Starter Kit dashboard auto-refresh and metadata scoring with 16 automated tests.", "Promoted from Associate Consultant to Consultant within six months of joining Slalom."], "lesson": "The most useful systems accommodate the people, constraints, and workflows that already exist.", "scope": "Selected work across several Slalom engagements and internal accelerators. Accessibility improvements are described without claiming blanket site-wide compliance."}]
+</script>
+
+</section>
+
+<section class="atlas-work wrap" id="work">
+
+<div class="section-heading">
+
+<div>
+
+<p class="eyebrow">
+The projects, in detail
+</p>
+
+<h2>
+Explore the terrain.
+</h2>
+
+</div>
+<span class="eyebrow">04 connected case studies</span>
+</div>
+
+<div class="atlas-case-list">
+<a href="/work/agentic-delivery/"><span class="atlas-case-no">01</span>
+<div>
+
+<h3>
+Agentic delivery
+</h3>
+
+<p>
+From stalled prototype to repeatable delivery.
+</p>
+
+</div>
+<span class="atlas-case-category">Enterprise SaaS engagement</span><span aria-hidden="true">↗</span></a><a href="/work/ai-hub/"><span class="atlas-case-no">02</span>
+<div>
+
+<h3>
+AI Hub
+</h3>
+
+<p>
+Team knowledge that travels between tools.
+</p>
+
+</div>
+<span class="atlas-case-category">Internal developer platform</span><span aria-hidden="true">↗</span></a><a href="/work/developer-enablement/"><span class="atlas-case-no">03</span>
+<div>
+
+<h3>
+Developer enablement
+</h3>
+
+<p>
+The handoff is part of the product.
+</p>
+
+</div>
+<span class="atlas-case-category">Training & reusable engineering practices</span><span aria-hidden="true">↗</span></a><a href="/work/enterprise-engineering/"><span class="atlas-case-no">04</span>
+<div>
+
+<h3>
+Enterprise engineering
+</h3>
+
+<p>
+Useful software inside real constraints.
+</p>
+
+</div>
+<span class="atlas-case-category">Consulting & digital experience</span><span aria-hidden="true">↗</span></a>
+</div>
+
+</section>
+
+<section class="atlas-interests wrap">
+
+<p class="eyebrow">
+Where my curiosity goes next
+</p>
+
+<div class="interest-grid">
+
+<article>
+<span class="interest-index">01</span>
+<h3>
+Agentic engineering
+</h3>
+
+<p>
+Autonomous workflows with explicit state, observable failures, and human judgment at the right points.
+</p>
+
+</article>
+
+<article>
+<span class="interest-index">02</span>
+<h3>
+Developer experience
+</h3>
+
+<p>
+Portable context, useful tooling, and systems that teams can operate and extend without their creator.
+</p>
+
+</article>
+
+<article>
+<span class="interest-index">03</span>
+<h3>
+Decision systems
+</h3>
+
+<p>
+Probability, incentives, feedback loops, and the difference between a good decision and a lucky outcome.
+</p>
+
+</article>
+
+<article>
+<span class="interest-index">04</span>
+<h3>
+Human enablement
+</h3>
+
+<p>
+Runnable examples, concise documentation, and teaching that changes how people actually work.
+</p>
+
+</article>
+
+</div>
+
+</section>
+
+<section class="atlas-about wrap" id="about">
+
+<div>
+
+<p class="eyebrow">
+An unconventional path
+</p>
+
+<h2>
+Different disciplines.<br>One way of thinking.
+</h2>
+
+<p class="lead">
+I'm a full stack consultant at Slalom, working across agentic delivery, developer platforms, and enterprise software. My work runs from discovery and architecture through implementation, security, release engineering, and the handoff to people who will operate it.
+</p>
+
+<p>
+Before software, I spent more than a decade as a professional poker player and won a World Series of Poker bracelet. That experience still shapes how I work: model the system, question the assumptions, and make the best decision the evidence supports.
+</p>
+
+</div>
+
+<ol class="atlas-timeline">
+
+<li>
+<span>2009–2020</span>
+<h3>
+Professional poker player
+</h3>
+
+<p>
+Probability, independent study, and decisions under uncertainty. World Series of Poker bracelet winner.
+</p>
+
+</li>
+
+<li>
+<span>2021</span>
+<h3>
+Software engineering
+</h3>
+
+<p>
+Full stack training at Bloom Institute of Technology and development at Range Trainer Pro.
+</p>
+
+</li>
+
+<li>
+<span>2022–NOW</span>
+<h3>
+Enterprise delivery → AI engineering
+</h3>
+
+<p>
+At Slalom since June 2022. Transfer to AI Engineering and promotion to Senior in progress.
+</p>
+
+</li>
+
+</ol>
+
+</section>
+
+<section class="contact-section wrap" id="contact">
+
+<div>
+
+<p class="eyebrow">
+Start a conversation
+</p>
+
+<h2>
+Make a connection.
+</h2>
+
+<p>
+AI engineering, agentic systems, developer tooling, or a problem worth thinking through.
+</p>
+<a class="email-link" href="mailto:cbianchi@protonmail.com">cbianchi@protonmail.com <span aria-hidden="true">↗</span></a><button class="text-button copy-email" type="button">Copy email address</button>
+</div>
+
+<form class="contact-form">
+
+<h3>
+A little context goes a long way.
+</h3>
+<label>Your name<input name="name" autocomplete="name" required maxlength="100" placeholder="Name"></label><label>Your email<input name="email" type="email" autocomplete="email" required maxlength="200" placeholder="you@company.com"></label><label>What’s on your mind?<textarea name="message" required maxlength="4000" rows="3" placeholder="Tell me about it…"></textarea></label><button class="button" type="submit">Open email draft <span aria-hidden="true">↗</span></button>
+<p class="form-note">
+Opens your email app with a draft. Nothing is sent or stored by this site.
+</p>
+
+<p class="form-status" role="status">
+
+</p>
+
+</form>
+
+</section>
+
+</main>
+
+<footer class="footer wrap">
+<a href="/" class="footer-name">Chase Bianchi</a><span>AI engineering. Human judgment.</span>
+<div>
+<a href="https://github.com/ChaseBianchi" target="_blank" rel="noopener">GitHub · Personal ↗</a><a href="https://github.com/ChaseBianchiSlalom" target="_blank" rel="noopener">GitHub · Work ↗</a><a href="https://www.linkedin.com/in/chasebianchi" target="_blank" rel="noopener">LinkedIn ↗</a><a href="#main">Back to top ↑</a>
+</div>
+
+</footer>
+
+</body>
+
 </html>

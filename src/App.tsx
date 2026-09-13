@@ -451,7 +451,7 @@ function PortfolioPage() {
               {siteMeta.email}
             </a>
             <a href={siteMeta.github} target="_blank" rel="noreferrer" className="button button--dark-ghost">
-              GitHub
+              GitHub · Personal
             </a>
           </div>
         </section>
@@ -467,7 +467,7 @@ function PortfolioPage() {
             Email
           </a>
           <a href={siteMeta.github} target="_blank" rel="noreferrer">
-            GitHub
+            GitHub · Personal
           </a>
         </div>
       </footer>
@@ -522,8 +522,9 @@ function ResumePage() {
           </div>
           <a href={`mailto:${siteMeta.email}`}>{siteMeta.email}</a>
           <a href={siteMeta.github} target="_blank" rel="noreferrer">
-            GitHub
+            GitHub · Personal
           </a>
+          <a href="https://github.com/ChaseBianchiSlalom" target="_blank" rel="noreferrer">GitHub · Work</a>
           <a href={siteMeta.resumePdf} download>
             Download PDF
           </a>
@@ -611,8 +612,9 @@ function ResumePage() {
           <a href="/">Portfolio</a>
           <a href={`mailto:${siteMeta.email}`}>Email</a>
           <a href={siteMeta.github} target="_blank" rel="noreferrer">
-            GitHub
+            GitHub · Personal
           </a>
+          <a href="https://github.com/ChaseBianchiSlalom" target="_blank" rel="noreferrer">GitHub · Work</a>
         </div>
       </footer>
     </div>
@@ -620,7 +622,7 @@ function ResumePage() {
 }
 
 function App() {
-  const isResumePage = window.location.pathname === '/resume'
+  const isResumePage = window.location.pathname.replace(/\/$/, '') === '/resume'
 
   useEffect(() => {
     document.title = isResumePage

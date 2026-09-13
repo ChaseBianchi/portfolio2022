@@ -1,55 +1,35 @@
 # Chase Bianchi
 
-Personal portfolio website. Live at [www.chasebianchi.com](https://www.chasebianchi.com)
-
-## Tech Stack
-
-- **Framework:** React 18 + TypeScript
-- **Build Tool:** Vite
-- **Styling:** SCSS (component-scoped)
-- **Testing:** Vitest + React Testing Library (unit/integration), Playwright (E2E)
-- **Email:** EmailJS
-- **Deployment:** Vercel
+Personal portfolio for [www.chasebianchi.com](https://www.chasebianchi.com), using the selected Atlas design: a connected project map, four detailed case studies, professional background, and contact.
 
 ## Development
 
 ```bash
-npm install       # Install dependencies
-npm run dev       # Start dev server (port 3000)
-npm run build     # TypeScript check + production build
-npm run preview   # Preview production build
+npm ci
+npm run dev      # Vite development server, port 3000
+npm run build    # TypeScript check and multi-page production build in build/
+npm run preview  # Serve the production build, port 4173
+npm test         # Vitest component, interaction, and route checks
+npm run test:e2e # Playwright desktop/mobile journeys
 ```
 
-## Testing
+The Atlas homepage and case studies are static HTML entry points. Vite bundles their CSS and small JavaScript interactions; the main portfolio content remains available without JavaScript. The existing React/TypeScript printable resume is preserved at `/resume` with its own entry point. Vercel serves the resulting multi-page build.
 
-```bash
-npm test          # Run unit + integration tests (Vitest)
-npm run test:watch # Run tests in watch mode
-npm run test:e2e   # Run E2E tests (Playwright)
-```
+## Editing the site
 
-## Environment Variables
+- `index.html`: Atlas homepage, About timeline, and embedded project data used by the map inspector.
+- `work/*/index.html`: four complete case studies, each with its own title, description, and canonical URL.
+- `src/atlas.js`: project-map selection, mobile navigation, email drafting/copying, and the illustrative delivery walkthrough.
+- `src/styles/atlas-base.css` and `src/styles/atlas.css`: shared and Atlas styles, including mobile and reduced-motion rules.
+- `public/assets/`: locally hosted fonts, favicon, and the current PDF resume.
+- `resume/index.html`, `src/App.tsx`, and `src/data/siteContent.ts`: the existing printable React resume and its content.
 
-Create a `.env` file with:
+The footer distinguishes [personal GitHub](https://github.com/ChaseBianchi) from [Slalom GitHub](https://github.com/ChaseBianchiSlalom). Use personal GitHub credentials for this repository.
 
-```
-VITE_serviceId=your_emailjs_service_id
-VITE_templateId=your_emailjs_template_id
-VITE_userId=your_emailjs_user_id
-```
+The contact form opens a draft in the visitor's email application. It does not send or store messages and requires no service credentials. Project-map and walkthrough interactions run locally; they do not call agents or models.
 
-## Project Structure
+The AI Engineering transfer and Senior promotion are described as **in progress**, as provided in September 2026. Update that wording when the status changes. Case studies omit client-identifying information and private repository links.
 
-```
-src/
-  Components/     # React components (.tsx)
-  data/           # Structured data files
-  styles/         # Component-scoped SCSS files
-  test/           # Test setup and integration tests
-tests/
-  e2e/            # Playwright E2E tests
-```
+The five-direction comparison preview remains separate; comparison controls and its `noindex` metadata are omitted from this selected portfolio.
 
-## Contact
-
-cbianchi@protonmail.com
+Contact: cbianchi@protonmail.com

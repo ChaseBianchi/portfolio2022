@@ -2,6 +2,18 @@
 
 Chase Bianchi's personal portfolio site — www.chasebianchi.com
 
+## Atlas entry points
+
+The selected Atlas portfolio uses static Vite HTML entry points at `index.html`
+and `work/*/index.html`, with `src/atlas.js` and `src/styles/atlas*.css`.
+Edit those files for the homepage, project map, About timeline, shared navigation,
+and case studies. Fonts and the current PDF are self-hosted in `public/assets/`.
+The existing React implementation below is retained for the printable `/resume`
+entry point at `resume/index.html`; it no longer renders the public homepage.
+The Atlas contact form opens an email draft and does not use EmailJS.
+Keep both GitHub profile links clearly labeled Personal and Work. Linking the
+work profile does not change the personal-account Git credential rule below.
+
 ## Tech Stack
 
 - **React 18** + **TypeScript** (strict mode)

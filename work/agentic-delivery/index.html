@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en" data-theme="atlas">
+
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Agentic delivery — Chase Bianchi</title><meta name="description" content="An event-driven agent fleet that moves a ticket through planning, implementation, review, and human approval."><meta name="theme-color" content="#080f1b"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/src/styles/atlas-base.css"><link rel="stylesheet" href="/src/styles/atlas.css">
+<script type="module" src="/src/atlas.js">
+
+</script>
+<link rel="canonical" href="https://www.chasebianchi.com/work/agentic-delivery/">
+</head>
+
+<body class="theme-atlas">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header wrap">
+<a href="/" class="brand" aria-label="Chase Bianchi home"><span class="brand-mark" aria-hidden="true">cb<span>_</span></span>Chase Bianchi</a><button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">Menu <span aria-hidden="true">+</span></button>
+<nav id="nav-links" class="nav-links" aria-label="Main navigation">
+<a href="/#work">Work</a><a href="/#about">About</a><a href="/assets/chase-bianchi-resume.pdf" target="_blank" rel="noopener">Resume <span aria-hidden="true">↗</span></a><a href="/#contact" class="nav-contact">Get in touch <span aria-hidden="true">↗</span></a>
+</nav>
+
+</header>
+
+<main id="main" class="case-page">
+
+<section class="case-hero wrap">
+<a class="back-link" href="/#work">← Selected work</a>
+<div class="case-kicker">
+<span>CASE 01</span><span>Enterprise SaaS engagement / 2026</span>
+</div>
+
+<h1>
+From stalled prototype to repeatable delivery.
+</h1>
+
+<div class="case-intro">
+
+<p>
+An event-driven agent fleet that moves a ticket through planning, implementation, review, and human approval.
+</p>
+
+<div>
+<span class="small-label">MY ROLE</span>
+<p>
+AI enablement, architecture & rollout
+</p>
+
+</div>
+
+</div>
+
+<div class="tags">
+<span>Multi-agent systems</span><span>Claude Code</span><span>Cosmos</span><span>MCP</span><span>Jira / GitHub</span>
+</div>
+
+</section>
+
+<div class="case-layout wrap">
+
+<aside class="case-aside">
+<span class="small-label">IN THIS CASE</span>
+<nav aria-label="Case study contents">
+<a href="#challenge">The challenge</a><a href="#approach">The approach</a><a href="#decisions">Engineering decisions</a><a href="#outcomes">The result</a><a href="#reflection">What stayed with me</a>
+</nav>
+
+<div class="case-metric">
+<strong>&lt; 5 weeks</strong><span>from prototype stabilization to rollout</span>
+</div>
+
+</aside>
+
+<article class="case-body">
+
+<section id="challenge">
+
+<p class="eyebrow">
+01 / The challenge
+</p>
+
+<h2>
+Where the work began.
+</h2>
+
+<p>
+The client's autonomous delivery pipeline was not reliably firing. Multiple agent fleets, brittle configuration, and unclear operational ownership made it difficult to distinguish a workflow problem from an integration failure.
+</p>
+
+</section>
+
+<section id="approach">
+
+<p class="eyebrow">
+02 / The approach
+</p>
+
+<h2>
+Agentic delivery, end to end.
+</h2>
+
+<p>
+I traced Jira state through webhook delivery, trigger evaluation, and agent sessions, isolating stale event-source identifiers. With the pipeline running end to end, I consolidated the fleets and made the workflow portable enough for other product teams to adopt.
+</p>
+
+<div class="pipeline-widget" data-pipeline>
+
+<div class="widget-top">
+<span>DELIVERY / WALKTHROUGH</span><span>Interactive example</span>
+</div>
+
+<div class="flow-track">
+
+<div class="flow-step active" data-step="0">
+<span>01</span><strong>Ticket scoped</strong><small>Intent + acceptance criteria</small>
+</div>
+
+<div class="flow-step" data-step="1">
+<span>02</span><strong>Plan reviewed</strong><small>Human approval gate</small>
+</div>
+
+<div class="flow-step" data-step="2">
+<span>03</span><strong>Agent builds</strong><small>Isolated implementation</small>
+</div>
+
+<div class="flow-step" data-step="3">
+<span>04</span><strong>Change verified</strong><small>Tests + human review</small>
+</div>
+
+</div>
+
+<div class="flow-status" aria-live="polite">
+A useful workflow starts with a clear task. Explore the checkpoints.
+</div>
+
+<div class="widget-actions">
+<button class="button pipeline-next">Run walkthrough <span aria-hidden="true">→</span></button><button class="text-button pipeline-reset">Reset</button>
+</div>
+
+<p class="widget-footnote">
+Illustrative workflow. No agents are running and no data leaves your browser.
+</p>
+
+</div>
+
+</section>
+
+<section id="decisions">
+
+<p class="eyebrow">
+03 / Engineering decisions
+</p>
+
+<h2>
+The choices that mattered.
+</h2>
+
+<div class="decision-list">
+
+<article>
+<span>01</span>
+<div>
+
+<h3>
+Make state explicit
+</h3>
+
+<p>
+Ticket-driven state transitions, durable external state, and per-agent idempotency make retries understandable and recoverable.
+</p>
+
+</div>
+
+</article>
+
+<article>
+<span>02</span>
+<div>
+
+<h3>
+Put judgment at the gates
+</h3>
+
+<p>
+Two mandatory human approval points and bounded retries keep consequential decisions visible to the people responsible for the code.
+</p>
+
+</div>
+
+</article>
+
+<article>
+<span>03</span>
+<div>
+
+<h3>
+Design for the next team
+</h3>
+
+<p>
+Environment-based configuration, team-scoped run state, service-account credentials, and reusable wiring references support repeatable onboarding.
+</p>
+
+</div>
+
+</article>
+
+</div>
+
+</section>
+
+<section id="outcomes">
+
+<p class="eyebrow">
+04 / The result
+</p>
+
+<h2>
+What shipped.
+</h2>
+
+<ul class="outcome-list">
+
+<li>
+Moved from a non-firing prototype to production rollout and team onboarding in under five weeks.
+</li>
+
+<li>
+Restored repeated end-to-end completion, including approval gates and terminal states.
+</li>
+
+<li>
+Consolidated two fleets and retired six superseded agent bundles.
+</li>
+
+<li>
+Delivered reusable onboarding guides, configuration references, and live configuration drift checks.
+</li>
+
+</ul>
+
+<p class="scope-note">
+Client identity and implementation identifiers are omitted. This case study describes my contribution to a consulting engagement.
+</p>
+
+</section>
+
+<section id="reflection">
+
+<p class="eyebrow">
+05 / What stayed with me
+</p>
+<blockquote>The hard part of an agentic system is often the surrounding software: state, credentials, retries, ownership, and the path back when something goes wrong.</blockquote>
+</section>
+
+</article>
+
+</div>
+
+<section class="next-case wrap">
+<span class="eyebrow">Keep exploring / 02</span><a href="/work/ai-hub/">AI Hub <span>→</span></a>
+</section>
+
+<section class="contact-section wrap" id="contact">
+
+<div>
+
+<p class="eyebrow">
+Start a conversation
+</p>
+
+<h2>
+Talk about the work.
+</h2>
+
+<p>
+AI engineering, agentic systems, developer tooling, or a problem worth thinking through.
+</p>
+<a class="email-link" href="mailto:cbianchi@protonmail.com">cbianchi@protonmail.com <span aria-hidden="true">↗</span></a><button class="text-button copy-email" type="button">Copy email address</button>
+</div>
+
+<form class="contact-form">
+
+<h3>
+A little context goes a long way.
+</h3>
+<label>Your name<input name="name" autocomplete="name" required maxlength="100" placeholder="Name"></label><label>Your email<input name="email" type="email" autocomplete="email" required maxlength="200" placeholder="you@company.com"></label><label>What’s on your mind?<textarea name="message" required maxlength="4000" rows="3" placeholder="Tell me about it…"></textarea></label><button class="button" type="submit">Open email draft <span aria-hidden="true">↗</span></button>
+<p class="form-note">
+Opens your email app with a draft. Nothing is sent or stored by this site.
+</p>
+
+<p class="form-status" role="status">
+
+</p>
+
+</form>
+
+</section>
+
+</main>
+
+<footer class="footer wrap">
+<a href="/" class="footer-name">Chase Bianchi</a><span>AI engineering. Human judgment.</span>
+<div>
+<a href="https://github.com/ChaseBianchi" target="_blank" rel="noopener">GitHub · Personal ↗</a><a href="https://github.com/ChaseBianchiSlalom" target="_blank" rel="noopener">GitHub · Work ↗</a><a href="https://www.linkedin.com/in/chasebianchi" target="_blank" rel="noopener">LinkedIn ↗</a><a href="#main">Back to top ↑</a>
+</div>
+
+</footer>
+
+</body>
+
+</html>
