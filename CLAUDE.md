@@ -1,82 +1,56 @@
-# Portfolio2022
+# Portfolio
 
 Chase Bianchi's personal portfolio site — www.chasebianchi.com
 
-## Atlas entry points
+## Structure
 
-The selected Atlas portfolio uses static Vite HTML entry points at `index.html`
-and `work/*/index.html`, with `src/atlas.js` and `src/styles/atlas*.css`.
-Edit those files for the homepage, project map, About timeline, shared navigation,
-and case studies. Fonts and the current PDF are self-hosted in `public/assets/`.
-The existing React implementation below is retained for the printable `/resume`
-entry point at `resume/index.html`; it no longer renders the public homepage.
-The Atlas contact form opens an email draft and does not use EmailJS.
-Keep both GitHub profile links clearly labeled Personal and Work. Linking the
-work profile does not change the personal-account Git credential rule below.
+Static multi-page site bundled by Vite. No framework.
 
-## Tech Stack
+```
+index.html             # Homepage
+work/*/index.html      # Four case studies
+resume/index.html      # HTML resume; source of the PDF
+src/run.js             # Homepage hero: simulated delivery run with two visitor approval gates
+src/lab.js             # Homepage decision lab: one poker spot per situation, call/fold, 1,000-hand simulation and chart
+src/poker.js           # Hand evaluator (globalThis.Poker), shared by lab, tests, and generator
+src/lab-data.js        # Generated scenarios; regenerate with node scripts/generate-lab-scenarios.mjs
+src/site.js            # Nav toggle, scroll reveals, contact draft/copy, case-study walkthrough
+src/styles/site.css    # Design system (light/dark: system setting by default, header toggle overrides)
+src/styles/resume.css  # Resume sheet and print rules
+public/assets/         # Self-hosted fonts, favicon, resume PDF
+scripts/build-resume-pdf.mjs
+tests/unit/site.test.js, tests/e2e/portfolio.spec.ts
+```
 
-- **React 18** + **TypeScript** (strict mode)
-- **Vite** (build tool, dev server on port 3000)
-- **SCSS** with component-scoped files in `src/styles/`
-- **Vitest** + **React Testing Library** for unit/integration tests (86 tests)
-- **Playwright** for E2E tests (Chromium + Mobile Chrome)
-- **EmailJS** for contact form (`@emailjs/browser`)
-- **react-vertical-timeline-component** for Experience section
-- **Inter** + **JetBrains Mono** fonts via Google Fonts
-- Deployed on **Vercel**
+New pages must be added to `build.rollupOptions.input` in `vite.config.ts`.
 
 ## Commands
 
 ```
-npm run dev          # Dev server (port 3000)
-npm run build        # tsc + vite build (output: build/)
-npm run preview      # Preview production build (port 4173)
-npm test             # Unit + integration tests (Vitest)
-npm run test:watch   # Tests in watch mode
-npm run test:e2e     # E2E tests (Playwright, requires build)
+npm run dev               # Dev server (port 3000)
+npm run build             # vite build (output: build/)
+npm run preview           # Preview production build (port 4173)
+npm test                  # Vitest (jsdom) content, link, and interaction checks
+npm run test:e2e          # Playwright (Chromium + Mobile Chrome), builds and previews first
+npm run build:resume-pdf  # Build, then print /resume/ to public/assets/chase-bianchi-resume.pdf
 ```
 
-## Project Structure
+## Conventions
 
-```
-src/
-  Components/         # React components (.tsx)
-  Components/__tests__/ # Vitest component tests
-  data/               # Structured data (projects, experience, profile, socialLinks)
-  styles/             # Component-scoped SCSS + _variables.scss, _globals.scss
-  test/               # Test setup + integration tests
-tests/e2e/            # Playwright E2E specs
-```
-
-## Key Conventions
-
-- **Data-driven components**: Content lives in `src/data/*.ts`, not hardcoded in JSX
-- **SocialLinks**: Shared component replaces triplicated social link markup (Landing, NavDesktop, Footer)
-- **Environment variables**: Use `VITE_*` prefix (not `REACT_APP_*`). Access via `import.meta.env.VITE_*`
-- **SCSS**: `App.scss` imports all component SCSS files via `@use`. Variables/breakpoints in `_variables.scss`
-- **Design system**: Modern dark theme with blue (#60a5fa) / violet (#a78bfa) accent gradient. Glass morphism effects. Inter font.
-- **Accessibility**: Semantic HTML (header/section/footer/nav/main), aria-labels, keyboard nav on carousel, skip-to-content link, focus-visible styles
-- **Resume page**: `/resume` route renders printable HTML resume (Resume.tsx). PDF at `/media/resume.pdf` for download.
-- **No routing library**: Single-page with hash anchors (#projects, #experience, etc.) + pathname check for /resume
-
-## Environment Variables
-
-Required in `.env` for contact form:
-```
-VITE_serviceId=...
-VITE_templateId=...
-VITE_userId=...
-```
-
-## Testing Notes
-
-- Vitest setup mocks `IntersectionObserver` (needed by react-vertical-timeline-component)
-- Playwright tests exclude visual regression by default; run `--update-snapshots` to regenerate baselines
-- E2E tests use `vite build && vite preview` as web server (port 4173)
-- EmailJS mock pattern: `vi.mock('@emailjs/browser', () => ({ default: { sendForm: vi.fn() } }))`
+- The header, footer, and contact block are duplicated across all six HTML files. Change them everywhere; the unit tests check nav and footer consistency.
+- After editing `resume/index.html`, regenerate and commit the PDF. It must be two Letter pages or fewer (the script fails otherwise).
+- Colors come from the custom properties at the top of `site.css`; define both light and dark values. The theme follows `prefers-color-scheme` until the visitor uses the header toggle, which sets `data-theme` on `<html>` and stores it in `localStorage`. The inline script in each page's `<head>` applies it before first paint; keep it in all six pages. The resume sheet is always black on white.
+- Fonts are self-hosted and the CSP in `vercel.json` allows only same-origin fonts and styles. Do not add external font or script hosts without updating it.
+- The homepage header and hero sit in `.dark`, which is dark in both themes; everything below follows the system theme.
+- The header sits in a sticky `[data-topbar]` wrapper on every page. `site.js` hides it while scrolling down, shows it on the way up, and sets `aria-current` on the nav link for the section in view. A new homepage section needs a nav link with `href="/#id"` to be tracked.
+- The interactive pieces are simulations and are labelled as such on the page. Do not word them as live agents or model calls.
+- Each script is a self-contained IIFE so the unit tests can run it against the parsed HTML with fake timers. Guard browser-only APIs (canvas, `matchMedia`, `IntersectionObserver`, SVG path geometry) because jsdom lacks them.
+- Content must work without JavaScript: hero tickets are plain links until `run.js` takes over. The contact form opens an email draft; nothing is sent or stored.
+- Case studies omit client names and private repository links.
+- Keep the two GitHub links labeled "Personal" and "Slalom work".
 
 ## Git Notes
 
-- Use personal GitHub account only (ChaseBianchi). Do NOT use ChaseBianchiSlalom work credentials.
+- Use personal GitHub account only (ChaseBianchi). Do NOT use ChaseBianchiSlalom credentials.
 - Remote: origin -> github.com:ChaseBianchi/portfolio2022.git
+- Deployed on Vercel from `master`.
