@@ -1,26 +1,19 @@
 import { resolve } from 'node:path'
 import { defineConfig } from 'vitest/config'
-import react from '@vitejs/plugin-react'
+
+// Vercel rewrites /resume to the resume page; do the same for the dev and preview servers.
+const resumeRoute = {
+  name: 'resume-route',
+  configureServer(server: any) { server.middlewares.use(rewrite) },
+  configurePreviewServer(server: any) { server.middlewares.use(rewrite) },
+}
+function rewrite(req: any, _res: any, next: () => void) {
+  if (req.url?.split('?')[0] === '/resume') req.url = req.url.replace('/resume', '/resume/')
+  next()
+}
 
 export default defineConfig({
-  plugins: [
-    react(),
-    {
-      name: 'resume-route',
-      configureServer(server) {
-        server.middlewares.use((req, _res, next) => {
-          if (req.url?.split('?')[0] === '/resume') req.url = req.url.replace('/resume', '/resume/')
-          next()
-        })
-      },
-      configurePreviewServer(server) {
-        server.middlewares.use((req, _res, next) => {
-          if (req.url?.split('?')[0] === '/resume') req.url = req.url.replace('/resume', '/resume/')
-          next()
-        })
-      },
-    },
-  ],
+  plugins: [resumeRoute],
   server: {
     port: 3000,
     open: false,
@@ -41,8 +34,6 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: './src/test/setup.ts',
-    css: true,
     exclude: ['tests/e2e/**', 'node_modules/**'],
   },
 })

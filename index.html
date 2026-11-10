@@ -1,330 +1,298 @@
 <!doctype html>
-<html lang="en" data-theme="atlas">
+<html lang="en">
 
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Chase Bianchi — AI Engineering &amp; Agentic Systems</title><meta name="description" content="I build the systems that help engineering teams turn AI into dependable, everyday work."><meta name="theme-color" content="#080f1b"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/src/styles/atlas-base.css"><link rel="stylesheet" href="/src/styles/atlas.css">
-<script type="module" src="/src/atlas.js">
-
-</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chase Bianchi — Forward Deployed Engineer &amp; Agentic Systems</title>
+<meta name="description" content="Chase Bianchi is a forward deployed engineer at Vista Equity Partners who builds agentic delivery systems and developer platforms inside engineering teams.">
+<meta name="theme-color" content="#f3efe6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111315" media="(prefers-color-scheme: dark)">
+<script>try{var t=localStorage.getItem('theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){}</script>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.json">
 <link rel="canonical" href="https://www.chasebianchi.com/">
+<link rel="stylesheet" href="/src/styles/site.css">
+<script type="module" src="/src/site.js"></script>
+<script type="module" src="/src/run.js"></script>
+<script type="module" src="/src/poker.js"></script>
+<script type="module" src="/src/lab-data.js"></script>
+<script type="module" src="/src/lab.js"></script>
 </head>
 
-<body class="theme-atlas">
+<body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="site-header wrap">
-<a href="/" class="brand" aria-label="Chase Bianchi home"><span class="brand-mark" aria-hidden="true">cb<span>_</span></span>Chase Bianchi</a><button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">Menu <span aria-hidden="true">+</span></button>
-<nav id="nav-links" class="nav-links" aria-label="Main navigation">
-<a href="/#work">Work</a><a href="/#about">About</a><a href="/assets/chase-bianchi-resume.pdf" target="_blank" rel="noopener">Resume <span aria-hidden="true">↗</span></a><a href="/#contact" class="nav-contact">Get in touch <span aria-hidden="true">↗</span></a>
-</nav>
 
+<div class="topbar dark" data-topbar>
+<header class="site-header wrap">
+<a href="/" class="brand" aria-label="Chase Bianchi home">Chase Bianchi <span class="brand-mark" aria-hidden="true">/ FDE</span></a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+<nav id="nav-links" class="nav-links" aria-label="Main navigation">
+<a href="/#work">Work</a>
+<a href="/#path">Experience</a>
+<a href="/#lab">Lab</a>
+<a href="/resume/">Resume</a>
+<a href="/#contact" class="nav-contact">Get in touch</a>
+<button class="theme-toggle" type="button" aria-label="Switch color theme"><span aria-hidden="true">◐</span> <span data-theme-label>Theme</span></button>
+</nav>
 </header>
+</div>
 
 <main id="main">
 
-<section class="atlas-hero wrap">
-
-<div class="atlas-heading">
-
-<div>
-
-<p class="eyebrow">
-AI engineering / a connected practice
-</p>
-
-<h1>
-Follow the<br><em>connections.</em>
-</h1>
-
-</div>
-
-<p>
-I build the systems that help engineering teams turn AI into dependable, everyday work.<br><span>Select a node to explore.</span>
-</p>
-
-</div>
-
-<div class="atlas-map-layout">
-
-<div class="map-stage">
-<svg class="map-lines" viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true"><g><line x1="500" y1="300" x2="180" y2="138"/><line x1="500" y1="300" x2="770" y2="126"/><line x1="500" y1="300" x2="820" y2="438"/><line x1="500" y1="300" x2="190" y2="468"/></g><circle cx="500" cy="300" r="110"/><circle cx="500" cy="300" r="215"/><circle cx="500" cy="300" r="290"/></svg>
-<div class="map-center">
-<span>CHASE BIANCHI</span><strong>Engineering<br>in context.</strong><small>SELECT A CONNECTION</small>
-</div>
-<button class="map-node selected" data-node="agentic-delivery" style="--x:18%;--y:23%" aria-pressed="true"><span>01 / ORCHESTRATION</span><strong>Agentic delivery</strong><small>Explore the workflow ↗</small></button><button class="map-node " data-node="ai-hub" style="--x:77%;--y:21%" aria-pressed="false"><span>02 / PORTABILITY</span><strong>AI Hub</strong><small>Explore the platform ↗</small></button><button class="map-node " data-node="developer-enablement" style="--x:82%;--y:73%" aria-pressed="false"><span>03 / ENABLEMENT</span><strong>Developer enablement</strong><small>Explore the handoff ↗</small></button><button class="map-node " data-node="enterprise-engineering" style="--x:19%;--y:78%" aria-pressed="false"><span>04 / FOUNDATIONS</span><strong>Enterprise engineering</strong><small>Explore the foundations ↗</small></button><span class="map-caption">A map of actual projects and their connections.</span>
-</div>
-
-<aside class="map-inspector" aria-live="polite">
-
-<div class="inspector-top">
-<span>CONNECTION <span id="map-number">01</span></span><span aria-hidden="true">↗</span>
-</div>
-
-<p class="eyebrow" id="map-category">
-Enterprise SaaS engagement
-</p>
-
-<h2 id="map-title">
-Agentic delivery
-</h2>
-
-<p id="map-summary">
-An event-driven agent fleet that moves a ticket through planning, implementation, review, and human approval.
-</p>
-
-<div class="map-metric">
-<strong id="map-metric">&lt; 5 weeks</strong><span id="map-metric-label">from prototype stabilization to rollout</span>
-</div>
-<a class="button" id="map-link" href="/work/agentic-delivery/">Open case study ↗</a>
+<div class="stage dark">
+<canvas class="stage-field" aria-hidden="true"></canvas>
+<section class="hero wrap">
+<div class="hero-copy">
+<p class="eyebrow">Forward deployed engineering / agentic systems</p>
+<h1>Turning AI into <em>dependable,</em> everyday engineering.</h1>
+<p class="hero-lede">I work inside engineering teams to build agentic delivery systems and developer platforms, and I stay through the handoff so the people who run them can change them.</p>
+<aside class="now-card" aria-label="Current role">
+<span class="pulse" aria-hidden="true"></span>
+<p><strong>Associate Director, Senior Forward Deployed Engineer</strong><span>Vista Equity Partners · since November 2026 · Remote</span></p>
 </aside>
-
 </div>
 
-<script type="application/json" id="project-data">
-[{"id": "agentic-delivery", "number": "01", "title": "Agentic delivery", "subtitle": "From stalled prototype to repeatable delivery.", "category": "Enterprise SaaS engagement", "year": "2026", "role": "AI enablement, architecture & rollout", "summary": "An event-driven agent fleet that moves a ticket through planning, implementation, review, and human approval.", "metric": "\u003c 5 weeks", "metricLabel": "from prototype stabilization to rollout", "tags": ["Multi-agent systems", "Claude Code", "Cosmos", "MCP", "Jira / GitHub"], "challenge": "The client's autonomous delivery pipeline was not reliably firing. Multiple agent fleets, brittle configuration, and unclear operational ownership made it difficult to distinguish a workflow problem from an integration failure.", "approach": "I traced Jira state through webhook delivery, trigger evaluation, and agent sessions, isolating stale event-source identifiers. With the pipeline running end to end, I consolidated the fleets and made the workflow portable enough for other product teams to adopt.", "decisions": [{"title": "Make state explicit", "text": "Ticket-driven state transitions, durable external state, and per-agent idempotency make retries understandable and recoverable."}, {"title": "Put judgment at the gates", "text": "Two mandatory human approval points and bounded retries keep consequential decisions visible to the people responsible for the code."}, {"title": "Design for the next team", "text": "Environment-based configuration, team-scoped run state, service-account credentials, and reusable wiring references support repeatable onboarding."}], "outcomes": ["Moved from a non-firing prototype to production rollout and team onboarding in under five weeks.", "Restored repeated end-to-end completion, including approval gates and terminal states.", "Consolidated two fleets and retired six superseded agent bundles.", "Delivered reusable onboarding guides, configuration references, and live configuration drift checks."], "lesson": "The hard part of an agentic system is often the surrounding software: state, credentials, retries, ownership, and the path back when something goes wrong.", "scope": "Client identity and implementation identifiers are omitted. This case study describes my contribution to a consulting engagement."}, {"id": "ai-hub", "number": "02", "title": "AI Hub", "subtitle": "Team knowledge that travels between tools.", "category": "Internal developer platform", "year": "2026", "role": "Product architecture, full stack & releases", "summary": "A desktop app and CLI for governing and distributing reusable skills, playbooks, source evidence, and project context.", "metric": "32", "metricLabel": "desktop releases in July\u2013August 2026", "tags": ["TypeScript", "React", "Electron", "CLI", "GitHub Actions"], "challenge": "Useful AI context can become trapped in a single editor or model, duplicated across repositories, and separated from the evidence that originally supported it. Teams need a maintainable source of truth that can adapt as their tools change.", "approach": "I built a portable Markdown/YAML content model with adapters for Codex, Claude Code, GitHub Copilot, Cursor, and Junie-oriented workflows. A desktop application and CLI handle discovery, validation, installation, synchronization, sharing, and source management.", "decisions": [{"title": "Separate knowledge from adapters", "text": "Personal, base, and project context resolve independently of any one AI development environment."}, {"title": "Keep the evidence connected", "text": "Lineage, provenance, source snapshots, and review locking preserve the connection between a reusable capability and its supporting material."}, {"title": "Treat local software as a security boundary", "text": "Sandboxing, IPC validation, path-traversal defenses, atomic imports, update integrity checks, and rollback address real failure paths."}], "outcomes": ["Published 32 desktop releases between July 2 and August 11, 2026.", "Reached recorded validation milestones of 191 core tests, 30 desktop tests, and seven end-to-end journeys.", "Delivered portable project and capability sharing with dependency validation, collision handling, and rollback.", "Built macOS delivery and a Windows packaging foundation; signing and Windows device validation remained separate release gates."], "lesson": "The tools will change. The team's knowledge, its provenance, and the way people govern it should survive that change.", "scope": "An internal Slalom project. Release and test counts are documented milestones, not claims about adoption or measured productivity gains."}, {"id": "developer-enablement", "number": "03", "title": "Developer enablement", "subtitle": "The handoff is part of the product.", "category": "Training & reusable engineering practices", "year": "2026", "role": "Reference implementation & instructional design", "summary": "Runnable reference projects, focused training, and reusable playbooks that help engineers build with AI and validate the result.", "metric": "11", "metricLabel": "modules in a validated training build", "tags": ["Java", "AEM", "Maven", "AI workflows", "Technical teaching"], "challenge": "A demonstration can make AI-assisted development look easy without teaching the engineer how to constrain the task, inspect the result, or recover when the output is wrong. Enablement needs a working environment and a repeatable learning loop.", "approach": "I created a pinned, multi-module AEM training repository, validated its build and Java tests, and paired it with concise demonstrations and captioned tutorials. The teaching sequence moves through constraints, planning, generation, critique, and validation.", "decisions": [{"title": "Start with something runnable", "text": "A known project, pinned dependencies, and a validated build keep the lesson focused on engineering practice rather than setup friction."}, {"title": "Make critique a normal step", "text": "Code generation is one stage in the workflow. Engineers practice inspecting assumptions and validating behavior before treating the output as complete."}, {"title": "Make teaching reusable", "text": "Shared capabilities cover discovery, spec-driven delivery, code review, human validation, Jira, and pull-request practices."}], "outcomes": ["Delivered a runnable AEM training environment with a validated 11-module Maven build and Java tests.", "Produced focused training videos with synchronized narration and captions.", "Created reusable training-production and engineering-workflow capabilities.", "Condensed training documentation while preserving the prompts, build steps, and validation material learners need."], "lesson": "A good accelerator is one that the next engineer understands well enough to change.", "scope": "Internal enablement work. No unsupported claims about learner counts or measured adoption are included."}, {"id": "enterprise-engineering", "number": "04", "title": "Enterprise engineering", "subtitle": "Useful software inside real constraints.", "category": "Consulting & digital experience", "year": "2022\u20132026", "role": "Full stack development & client delivery", "summary": "Enterprise web platforms, accessible component systems, and reusable accelerators across healthcare, financial services, and the public sector.", "metric": "2022 \u2192", "metricLabel": "enterprise consulting at Slalom", "tags": ["Java / Sling", "React", "JavaScript", "AEM", "Accessibility"], "challenge": "Enterprise delivery means working with existing platforms, distributed content teams, accessibility expectations, and real release constraints. The software must serve both the person using the site and the person maintaining it.", "approach": "I built and maintained Java/Sling, JavaScript, React, and AEM implementations, contributed to discovery and UAT, led demonstrations and training, and mentored developers. I also led work on a reusable Digital Front Door accelerator for future engagements.", "decisions": [{"title": "Give authors useful control", "text": "Authorable components, dialogs, content policies, and reusable modules let content teams manage experiences without relying on code changes."}, {"title": "Build access into the interaction", "text": "Keyboard flow, focus management, semantic markup, and screen-reader behavior are engineering concerns throughout implementation."}, {"title": "Reuse without hardcoding the client", "text": "Provider and location search, filtering, sorting, and a data abstraction layer support reuse across engagements and data sources."}], "outcomes": ["Delivered enterprise AEM components, responsive navigation, authoring features, and accessibility improvements.", "Built reusable provider and location modules for the Digital Front Door accelerator.", "Shipped AEM AI Starter Kit dashboard auto-refresh and metadata scoring with 16 automated tests.", "Promoted from Associate Consultant to Consultant within six months of joining Slalom."], "lesson": "The most useful systems accommodate the people, constraints, and workflows that already exist.", "scope": "Selected work across several Slalom engagements and internal accelerators. Accessibility improvements are described without claiming blanket site-wide compliance."}]
-</script>
-
+<div class="console" data-run>
+<div class="console-top"><span>delivery-run / <b data-run-id>idle</b></span><span>Simulation · runs in your browser</span></div>
+<svg class="graph idle" viewBox="0 0 720 205" role="img" aria-label="Delivery pipeline: ticket, planner, plan gate, builder, reviewer, change gate, shipped">
+<g class="edges"><path class="edge" data-edge="0" d="M50 100 C100 100,103 50,153 50"/><path class="edge" data-edge="1" d="M153 50 C203 50,207 100,257 100"/><path class="edge" data-edge="2" d="M257 100 C307 100,310 150,360 150"/><path class="edge" data-edge="3" d="M360 150 C410 150,413 100,463 100"/><path class="edge" data-edge="4" d="M463 100 C513 100,517 50,567 50"/><path class="edge" data-edge="5" d="M567 50 C617 50,620 100,670 100"/></g>
+<g class="particles"></g>
+<g class="node" data-node="ticket" transform="translate(50 100)"><circle r="15"/><text class="g-label" y="38" text-anchor="middle">TICKET</text></g><g class="node" data-node="planner" transform="translate(153 50)"><circle r="15"/><text class="g-label" y="38" text-anchor="middle">PLANNER</text></g><g class="node is-gate" data-node="gate1" transform="translate(257 100)"><rect x="-13" y="-13" width="26" height="26" rx="3" transform="rotate(45)"/><text class="g-label" y="38" text-anchor="middle">GATE 1 · YOU</text></g><g class="node" data-node="builder" transform="translate(360 150)"><circle r="15"/><text class="g-label" y="38" text-anchor="middle">BUILDER</text></g><g class="node" data-node="reviewer" transform="translate(463 100)"><circle r="15"/><text class="g-label" y="38" text-anchor="middle">REVIEWER</text></g><g class="node is-gate" data-node="gate2" transform="translate(567 50)"><rect x="-13" y="-13" width="26" height="26" rx="3" transform="rotate(45)"/><text class="g-label" y="38" text-anchor="middle">GATE 2 · YOU</text></g><g class="node" data-node="shipped" transform="translate(670 100)"><circle r="15"/><text class="g-label" y="38" text-anchor="middle">SHIPPED</text></g>
+</svg>
+<p class="run-status"><span class="pulse" aria-hidden="true"></span><span data-run-status>Waiting for a ticket</span></p>
+<div class="run-log" data-run-log role="log" aria-live="polite"></div>
+<div class="run-panel" data-run-panel>
+<p class="run-prompt">This is a working model of the delivery system I build for teams. <strong>Assign a ticket. You are the human at both gates.</strong></p>
+<div class="tickets">
+<a class="ticket" href="#path" data-ticket="brief"><span>CB-101</span>Brief me on Chase in 30 seconds</a>
+<a class="ticket" href="/work/agentic-delivery/" data-ticket="work"><span>CB-102</span>Show me the agentic delivery work</a>
+<a class="ticket" href="#lab" data-ticket="poker"><span>CB-103</span>Why does a poker player build agent systems?</a>
+<a class="ticket" href="/resume/" data-ticket="resume"><span>CB-104</span>Get me the resume</a>
+</div>
+</div>
+</div>
 </section>
 
-<section class="atlas-work wrap" id="work">
+</div>
 
-<div class="section-heading">
-
+<div class="band">
+<section class="section wrap" id="work">
+<div class="section-head">
 <div>
-
-<p class="eyebrow">
-The projects, in detail
-</p>
-
-<h2>
-Explore the terrain.
-</h2>
-
+<p class="eyebrow"><span>01</span>Selected work</p>
+<h2>Four systems, built to be handed over.</h2>
 </div>
-<span class="eyebrow">04 connected case studies</span>
+<p>Case studies from consulting engagements and internal platforms. Client names and private repositories are left out.</p>
 </div>
 
-<div class="atlas-case-list">
-<a href="/work/agentic-delivery/"><span class="atlas-case-no">01</span>
-<div>
-
-<h3>
-Agentic delivery
-</h3>
-
-<p>
-From stalled prototype to repeatable delivery.
-</p>
-
-</div>
-<span class="atlas-case-category">Enterprise SaaS engagement</span><span aria-hidden="true">↗</span></a><a href="/work/ai-hub/"><span class="atlas-case-no">02</span>
-<div>
-
-<h3>
-AI Hub
-</h3>
-
-<p>
-Team knowledge that travels between tools.
-</p>
-
-</div>
-<span class="atlas-case-category">Internal developer platform</span><span aria-hidden="true">↗</span></a><a href="/work/developer-enablement/"><span class="atlas-case-no">03</span>
-<div>
-
-<h3>
-Developer enablement
-</h3>
-
-<p>
-The handoff is part of the product.
-</p>
-
-</div>
-<span class="atlas-case-category">Training & reusable engineering practices</span><span aria-hidden="true">↗</span></a><a href="/work/enterprise-engineering/"><span class="atlas-case-no">04</span>
-<div>
-
-<h3>
-Enterprise engineering
-</h3>
-
-<p>
-Useful software inside real constraints.
-</p>
-
-</div>
-<span class="atlas-case-category">Consulting & digital experience</span><span aria-hidden="true">↗</span></a>
-</div>
-
-</section>
-
-<section class="atlas-interests wrap">
-
-<p class="eyebrow">
-Where my curiosity goes next
-</p>
-
-<div class="interest-grid">
-
-<article>
-<span class="interest-index">01</span>
-<h3>
-Agentic engineering
-</h3>
-
-<p>
-Autonomous workflows with explicit state, observable failures, and human judgment at the right points.
-</p>
-
-</article>
-
-<article>
-<span class="interest-index">02</span>
-<h3>
-Developer experience
-</h3>
-
-<p>
-Portable context, useful tooling, and systems that teams can operate and extend without their creator.
-</p>
-
-</article>
-
-<article>
-<span class="interest-index">03</span>
-<h3>
-Decision systems
-</h3>
-
-<p>
-Probability, incentives, feedback loops, and the difference between a good decision and a lucky outcome.
-</p>
-
-</article>
-
-<article>
-<span class="interest-index">04</span>
-<h3>
-Human enablement
-</h3>
-
-<p>
-Runnable examples, concise documentation, and teaching that changes how people actually work.
-</p>
-
-</article>
-
-</div>
-
-</section>
-
-<section class="atlas-about wrap" id="about">
-
-<div>
-
-<p class="eyebrow">
-An unconventional path
-</p>
-
-<h2>
-Different disciplines.<br>One way of thinking.
-</h2>
-
-<p class="lead">
-I'm a full stack consultant at Slalom, working across agentic delivery, developer platforms, and enterprise software. My work runs from discovery and architecture through implementation, security, release engineering, and the handoff to people who will operate it.
-</p>
-
-<p>
-Before software, I spent more than a decade as a professional poker player and won a World Series of Poker bracelet. That experience still shapes how I work: model the system, question the assumptions, and make the best decision the evidence supports.
-</p>
-
-</div>
-
-<ol class="atlas-timeline">
-
-<li>
-<span>2009–2020</span>
-<h3>
-Professional poker player
-</h3>
-
-<p>
-Probability, independent study, and decisions under uncertainty. World Series of Poker bracelet winner.
-</p>
-
-</li>
-
-<li>
-<span>2021</span>
-<h3>
-Software engineering
-</h3>
-
-<p>
-Full stack training at Bloom Institute of Technology and development at Range Trainer Pro.
-</p>
-
-</li>
-
-<li>
-<span>2022–NOW</span>
-<h3>
-Enterprise delivery → AI engineering
-</h3>
-
-<p>
-At Slalom since June 2022. Transfer to AI Engineering and promotion to Senior in progress.
-</p>
-
-</li>
-
+<ol class="case-list">
+<li><a href="/work/agentic-delivery/">
+<span class="case-no">01</span>
+<div><h3>Agentic delivery</h3><p>From stalled prototype to repeatable delivery.</p></div>
+<span class="case-cat">Enterprise SaaS engagement</span>
+<div class="case-figure"><strong>&lt; 5 weeks</strong><small>from prototype stabilization to rollout</small></div>
+<span class="case-arrow" aria-hidden="true">→</span>
+</a></li>
+<li><a href="/work/ai-hub/">
+<span class="case-no">02</span>
+<div><h3>AI Hub</h3><p>Team knowledge that travels between tools.</p></div>
+<span class="case-cat">Internal developer platform</span>
+<div class="case-figure"><strong>32</strong><small>desktop releases in July–August 2026</small></div>
+<span class="case-arrow" aria-hidden="true">→</span>
+</a></li>
+<li><a href="/work/developer-enablement/">
+<span class="case-no">03</span>
+<div><h3>Developer enablement</h3><p>The handoff is part of the product.</p></div>
+<span class="case-cat">Training &amp; reusable practices</span>
+<div class="case-figure"><strong>11</strong><small>modules in a validated training build</small></div>
+<span class="case-arrow" aria-hidden="true">→</span>
+</a></li>
+<li><a href="/work/enterprise-engineering/">
+<span class="case-no">04</span>
+<div><h3>Enterprise engineering</h3><p>Useful software inside real constraints.</p></div>
+<span class="case-cat">Consulting &amp; digital experience</span>
+<div class="case-figure"><strong>2022–26</strong><small>enterprise consulting at Slalom</small></div>
+<span class="case-arrow" aria-hidden="true">→</span>
+</a></li>
 </ol>
-
 </section>
+</div>
 
-<section class="contact-section wrap" id="contact">
-
+<div class="band band-alt">
+<section class="section wrap" id="path">
+<div class="path-intro">
 <div>
+<p class="eyebrow"><span>02</span>An unconventional path</p>
+<h2>Different disciplines. <em>One way of thinking.</em></h2>
+</div>
+<div>
+<p class="lead">I'm an Associate Director and Senior Forward Deployed Engineer at Vista Equity Partners. Before that I spent four years consulting at Slalom, on work that ran from discovery and architecture through implementation, security, release engineering, and the handoff to the people who operate it.</p>
+<p>Before software, I spent more than a decade as a professional poker player and won a World Series of Poker bracelet. That experience still shapes how I work: model the system, question the assumptions, and make the best decision the evidence supports.</p>
+</div>
+</div>
 
-<p class="eyebrow">
-Start a conversation
-</p>
+<ol class="route">
+<li>
+<span class="route-when">2009–2020</span>
+<h3>Professional poker player</h3>
+<p class="route-role">Self-employed</p>
+<p>Probability, independent study, and decisions under uncertainty. World Series of Poker bracelet winner.</p>
+</li>
+<li>
+<span class="route-when">2021</span>
+<h3>Software engineering</h3>
+<p class="route-role">Bloom Institute of Technology · Range Trainer Pro</p>
+<p>Full stack training, then React development on a poker-training application.</p>
+</li>
+<li>
+<span class="route-when">2022–2026</span>
+<h3>Slalom</h3>
+<p class="route-role">Consultant, Full Stack Developer</p>
+<p>Enterprise platforms for healthcare, financial services, and the public sector, then AI enablement: agentic delivery, AI Hub, and developer training.</p>
+</li>
+<li class="current">
+<span class="route-when">NOV 2026–NOW</span>
+<h3>Vista Equity Partners</h3>
+<p class="route-role">Associate Director, Senior Forward Deployed Engineer</p>
+<p>Forward deployed engineering with Vista Consulting Group. Remote.</p>
+</li>
+</ol>
+</section>
+</div>
 
-<h2>
-Make a connection.
-</h2>
+<div class="band">
+<section class="section wrap lab" id="lab" data-lab>
+<div class="section-head">
+<div>
+<p class="eyebrow"><span>03</span>Decision lab</p>
+<h2>A good decision, or a <em>lucky outcome?</em></h2>
+</div>
+<p>Poker taught me to grade the decision, not the result. Make one decision here, then watch how it plays out over a thousand runs. The simulation is real and runs in your browser.</p>
+</div>
 
-<p>
-AI engineering, agentic systems, developer tooling, or a problem worth thinking through.
-</p>
-<a class="email-link" href="mailto:cbianchi@protonmail.com">cbianchi@protonmail.com <span aria-hidden="true">↗</span></a><button class="text-button copy-email" type="button">Copy email address</button>
+<div class="lab-nav">
+<div class="lab-nav-top">
+<p><span class="small-label" data-lab-count>Scenario 1 of 19</span><strong data-lab-name>Flush draw</strong></p>
+<div class="lab-nav-buttons">
+<button class="round-button" type="button" data-lab-prev aria-label="Previous scenario">←</button>
+<button class="round-button" type="button" data-lab-next aria-label="Next scenario">→</button>
+<button class="text-button" type="button" data-lab-random>Random</button>
+</div>
+</div>
+<div class="lab-rail" data-lab-rail aria-label="All scenarios"></div>
+</div>
+
+<div class="lab-grid">
+<div class="lab-table">
+<div class="lab-cards">
+<div><span class="small-label">Your hand</span><div class="cards" data-lab-hero><span class="card red" aria-label="A♥"><b>A</b><i>♥</i></span><span class="card red" aria-label="7♥"><b>7</b><i>♥</i></span></div></div>
+<div><span class="small-label">Opponent</span><div class="cards" data-lab-villain><span class="card" aria-label="A♠"><b>A</b><i>♠</i></span><span class="card red" aria-label="K♦"><b>K</b><i>♦</i></span></div></div>
+<div class="lab-board"><span class="small-label">Board</span><div class="cards" data-lab-board><span class="card red" aria-label="K♥"><b>K</b><i>♥</i></span><span class="card red" aria-label="9♥"><b>9</b><i>♥</i></span><span class="card" aria-label="4♣"><b>4</b><i>♣</i></span><span class="card" aria-label="2♠"><b>2</b><i>♠</i></span><span class="card back" data-lab-river aria-label="River card, not yet dealt"></span></div></div>
+</div>
+<p class="lab-spot" data-lab-spot>You are behind with four to a flush and one card to come.</p>
+<div class="lab-bet">
+<div class="bet-head">
+<span class="small-label" id="lab-bet-label">Opponent's bet</span>
+<label class="bet-amount"><span aria-hidden="true">$</span><input type="number" inputmode="numeric" min="10" max="150" step="5" value="50" data-lab-amount aria-label="Opponent's bet in dollars"></label>
+</div>
+<div class="bet-presets" role="group" aria-label="Bet size presets">
+<button type="button" data-lab-preset="0.33">⅓ pot</button>
+<button type="button" data-lab-preset="0.5">½ pot</button>
+<button type="button" data-lab-preset="0.75">¾ pot</button>
+<button type="button" data-lab-preset="1">Pot</button>
+<button type="button" data-lab-preset="1.5">1.5× pot</button>
+</div>
+<div class="bet-slider">
+<button type="button" data-lab-step="-1" aria-label="Decrease bet">−</button>
+<input type="range" min="10" max="150" step="5" value="50" data-lab-bet aria-labelledby="lab-bet-label">
+<button type="button" data-lab-step="1" aria-label="Increase bet">+</button>
+</div>
+</div>
+<p class="lab-bettext" data-lab-bettext>Your opponent bets $50 into a $100 pot. Call $50 to win $150.</p>
+<div class="lab-actions">
+<button class="button" type="button" data-lab-act="call">Call $50</button>
+<button class="button button-quiet" type="button" data-lab-act="fold">Fold</button>
+</div>
+</div>
+
+<div class="lab-result">
+<canvas aria-hidden="true"></canvas>
+<div class="lab-verdict" data-lab-verdict aria-live="polite"><p>Call or fold?</p></div>
+<p class="lab-note">Your opponent's cards are face up so the odds are exact. There is no betting on the river.</p>
+<noscript><p class="lab-note">The lab needs JavaScript. The short version: a call is right when your chance of winning beats the price the pot is offering, whatever the next card turns out to be.</p></noscript>
+</div>
+</div>
+</section>
+</div>
+
+<div class="band band-alt">
+<section class="section wrap" id="focus">
+<div class="section-head">
+<div>
+<p class="eyebrow"><span>04</span>What I keep working on</p>
+<h2>Four questions I return to.</h2>
+</div>
+</div>
+
+<div class="focus-grid">
+<article>
+<span class="focus-index">01</span>
+<h3>Agentic engineering</h3>
+<p>Autonomous workflows with explicit state, observable failures, and human judgment at the right points.</p>
+</article>
+<article>
+<span class="focus-index">02</span>
+<h3>Developer experience</h3>
+<p>Portable context, useful tooling, and systems that teams can operate and extend without their creator.</p>
+</article>
+<article>
+<span class="focus-index">03</span>
+<h3>Decision systems</h3>
+<p>Probability, incentives, feedback loops, and the difference between a good decision and a lucky outcome.</p>
+</article>
+<article>
+<span class="focus-index">04</span>
+<h3>Human enablement</h3>
+<p>Runnable examples, concise documentation, and teaching that changes how people actually work.</p>
+</article>
+</div>
+</section>
+</div>
+
+<div class="band">
+<section class="contact-section wrap" id="contact">
+<div>
+<p class="eyebrow"><span>05</span>Start a conversation</p>
+<h2>Get in touch.</h2>
+<p>AI engineering, agentic systems, developer tooling, or a problem worth thinking through.</p>
+<a class="email-link" href="mailto:cbianchi@protonmail.com">cbianchi@protonmail.com</a>
+<button class="text-button copy-email" type="button">Copy email address</button>
 </div>
 
 <form class="contact-form">
-
-<h3>
-A little context goes a long way.
-</h3>
-<label>Your name<input name="name" autocomplete="name" required maxlength="100" placeholder="Name"></label><label>Your email<input name="email" type="email" autocomplete="email" required maxlength="200" placeholder="you@company.com"></label><label>What’s on your mind?<textarea name="message" required maxlength="4000" rows="3" placeholder="Tell me about it…"></textarea></label><button class="button" type="submit">Open email draft <span aria-hidden="true">↗</span></button>
-<p class="form-note">
-Opens your email app with a draft. Nothing is sent or stored by this site.
-</p>
-
-<p class="form-status" role="status">
-
-</p>
-
+<h3>A little context goes a long way.</h3>
+<label>Your name<input name="name" autocomplete="name" required maxlength="100" placeholder="Name"></label>
+<label>Your email<input name="email" type="email" autocomplete="email" required maxlength="200" placeholder="you@company.com"></label>
+<label>What’s on your mind?<textarea name="message" required maxlength="4000" rows="3" placeholder="Tell me about it…"></textarea></label>
+<button class="button" type="submit">Open email draft <span aria-hidden="true">→</span></button>
+<p class="form-note">Opens your email app with a draft. Nothing is sent or stored by this site.</p>
+<p class="form-status" role="status"></p>
 </form>
-
 </section>
+</div>
 
 </main>
 
 <footer class="footer wrap">
-<a href="/" class="footer-name">Chase Bianchi</a><span>AI engineering. Human judgment.</span>
+<a href="/" class="footer-name">Chase Bianchi</a>
+<span>AI engineering. Human judgment.</span>
 <div>
-<a href="https://github.com/ChaseBianchi" target="_blank" rel="noopener">GitHub · Personal ↗</a><a href="https://github.com/ChaseBianchiSlalom" target="_blank" rel="noopener">GitHub · Work ↗</a><a href="https://www.linkedin.com/in/chasebianchi" target="_blank" rel="noopener">LinkedIn ↗</a><a href="#main">Back to top ↑</a>
+<a href="https://github.com/ChaseBianchi" target="_blank" rel="noopener">GitHub · Personal ↗</a>
+<a href="https://github.com/ChaseBianchiSlalom" target="_blank" rel="noopener">GitHub · Slalom work ↗</a>
+<a href="https://www.linkedin.com/in/chasebianchi" target="_blank" rel="noopener">LinkedIn ↗</a>
+<a href="#main">Back to top ↑</a>
 </div>
-
 </footer>
 
 </body>

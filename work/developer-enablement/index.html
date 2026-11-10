@@ -1,23 +1,37 @@
 <!doctype html>
-<html lang="en" data-theme="atlas">
+<html lang="en">
 
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Developer enablement — Chase Bianchi</title><meta name="description" content="Runnable reference projects, focused training, and reusable playbooks that help engineers build with AI and validate the result."><meta name="theme-color" content="#080f1b"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/src/styles/atlas-base.css"><link rel="stylesheet" href="/src/styles/atlas.css">
-<script type="module" src="/src/atlas.js">
-
-</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Developer enablement — Chase Bianchi</title>
+<meta name="description" content="Runnable reference projects, focused training, and reusable playbooks that help engineers build with AI and validate the result.">
+<meta name="theme-color" content="#f3efe6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111315" media="(prefers-color-scheme: dark)">
+<script>try{var t=localStorage.getItem('theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){}</script>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.json">
 <link rel="canonical" href="https://www.chasebianchi.com/work/developer-enablement/">
+<link rel="stylesheet" href="/src/styles/site.css">
+<script type="module" src="/src/site.js"></script>
 </head>
 
-<body class="theme-atlas">
+<body>
 <a class="skip" href="#main">Skip to content</a>
+<div class="topbar" data-topbar>
 <header class="site-header wrap">
-<a href="/" class="brand" aria-label="Chase Bianchi home"><span class="brand-mark" aria-hidden="true">cb<span>_</span></span>Chase Bianchi</a><button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">Menu <span aria-hidden="true">+</span></button>
+<a href="/" class="brand" aria-label="Chase Bianchi home">Chase Bianchi <span class="brand-mark" aria-hidden="true">/ FDE</span></a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
 <nav id="nav-links" class="nav-links" aria-label="Main navigation">
-<a href="/#work">Work</a><a href="/#about">About</a><a href="/assets/chase-bianchi-resume.pdf" target="_blank" rel="noopener">Resume <span aria-hidden="true">↗</span></a><a href="/#contact" class="nav-contact">Get in touch <span aria-hidden="true">↗</span></a>
+<a href="/#work">Work</a>
+<a href="/#path">Experience</a>
+<a href="/#lab">Lab</a>
+<a href="/resume/">Resume</a>
+<a href="/#contact" class="nav-contact">Get in touch</a>
+<button class="theme-toggle" type="button" aria-label="Switch color theme"><span aria-hidden="true">◐</span> <span data-theme-label>Theme</span></button>
 </nav>
-
 </header>
+</div>
 
 <main id="main" class="case-page">
 
@@ -218,49 +232,36 @@ Internal enablement work. No unsupported claims about learner counts or measured
 </section>
 
 <section class="contact-section wrap" id="contact">
-
 <div>
-
-<p class="eyebrow">
-Start a conversation
-</p>
-
-<h2>
-Talk about the work.
-</h2>
-
-<p>
-AI engineering, agentic systems, developer tooling, or a problem worth thinking through.
-</p>
-<a class="email-link" href="mailto:cbianchi@protonmail.com">cbianchi@protonmail.com <span aria-hidden="true">↗</span></a><button class="text-button copy-email" type="button">Copy email address</button>
+<p class="eyebrow">Start a conversation</p>
+<h2>Talk about the work.</h2>
+<p>AI engineering, agentic systems, developer tooling, or a problem worth thinking through.</p>
+<a class="email-link" href="mailto:cbianchi@protonmail.com">cbianchi@protonmail.com</a>
+<button class="text-button copy-email" type="button">Copy email address</button>
 </div>
 
 <form class="contact-form">
-
-<h3>
-A little context goes a long way.
-</h3>
-<label>Your name<input name="name" autocomplete="name" required maxlength="100" placeholder="Name"></label><label>Your email<input name="email" type="email" autocomplete="email" required maxlength="200" placeholder="you@company.com"></label><label>What’s on your mind?<textarea name="message" required maxlength="4000" rows="3" placeholder="Tell me about it…"></textarea></label><button class="button" type="submit">Open email draft <span aria-hidden="true">↗</span></button>
-<p class="form-note">
-Opens your email app with a draft. Nothing is sent or stored by this site.
-</p>
-
-<p class="form-status" role="status">
-
-</p>
-
+<h3>A little context goes a long way.</h3>
+<label>Your name<input name="name" autocomplete="name" required maxlength="100" placeholder="Name"></label>
+<label>Your email<input name="email" type="email" autocomplete="email" required maxlength="200" placeholder="you@company.com"></label>
+<label>What’s on your mind?<textarea name="message" required maxlength="4000" rows="3" placeholder="Tell me about it…"></textarea></label>
+<button class="button" type="submit">Open email draft <span aria-hidden="true">→</span></button>
+<p class="form-note">Opens your email app with a draft. Nothing is sent or stored by this site.</p>
+<p class="form-status" role="status"></p>
 </form>
-
 </section>
 
 </main>
 
 <footer class="footer wrap">
-<a href="/" class="footer-name">Chase Bianchi</a><span>AI engineering. Human judgment.</span>
+<a href="/" class="footer-name">Chase Bianchi</a>
+<span>AI engineering. Human judgment.</span>
 <div>
-<a href="https://github.com/ChaseBianchi" target="_blank" rel="noopener">GitHub · Personal ↗</a><a href="https://github.com/ChaseBianchiSlalom" target="_blank" rel="noopener">GitHub · Work ↗</a><a href="https://www.linkedin.com/in/chasebianchi" target="_blank" rel="noopener">LinkedIn ↗</a><a href="#main">Back to top ↑</a>
+<a href="https://github.com/ChaseBianchi" target="_blank" rel="noopener">GitHub · Personal ↗</a>
+<a href="https://github.com/ChaseBianchiSlalom" target="_blank" rel="noopener">GitHub · Slalom work ↗</a>
+<a href="https://www.linkedin.com/in/chasebianchi" target="_blank" rel="noopener">LinkedIn ↗</a>
+<a href="#main">Back to top ↑</a>
 </div>
-
 </footer>
 
 </body>
